@@ -9,16 +9,16 @@
   --cor-secundaria: #f4c430;
   --cor-secundaria-hover: #d9ab1e;
   --cor-branca: #ffffff;
-  --cor-destaque: #00a896;
+  --cor-destaque: #2a959d;
   
   --cor-fundo: #f8f9fa;
-  --cor-fundo-alt: #ffffff;
+  --cor-fundo-alt: #fcfff2;
   --cor-card-fundo: #ffffff;
   --cor-texto: #2b2d42;
   --cor-texto-suave: #6c757d;
   --cor-borda: #e9ecef;
 
-  --cor-sucesso: #2a9d8f;
+  --cor-sucesso: #2a959d;
   --cor-erro: #e76f51;
 
   --fonte-titulo: 'Montserrat', sans-serif;
@@ -36,14 +36,14 @@
 }
 
 body.alto-contraste {
-  --cor-primaria: #ffff00;
+  --cor-primaria: #e1ff00;
   --cor-primaria-hover: #ffffff;
-  --cor-secundaria: #ffff00;
+  --cor-secundaria: #000000;
   --cor-secundaria-hover: #ffffff;
   --cor-branca: #000000;
   --cor-destaque: #00ffff;
   --cor-fundo: #000000;
-  --cor-fundo-alt: #121212;
+  --cor-fundo-alt: #000000;;
   --cor-card-fundo: #000000;
   --cor-texto: #ffffff;
   --cor-texto-suave: #dddddd;
@@ -198,13 +198,13 @@ button { cursor: pointer; border: none; background: none; }
 .itinerarios__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .card-itinerario { background-color: var(--cor-card-fundo); border-radius: var(--raio-borda); padding: 2.25rem; box-shadow: var(--sombra-card); border-left: 6px solid var(--cor-primaria); transition: var(--transicao-suave); }
 .card-itinerario:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); }
-.card-itinerario--tech { border-left-color: #00a896; }
+.card-itinerario--tech { border-left-color: #5498f2}
 .card-itinerario--humanas { border-left-color: #e76f51; }
 .card-itinerario--exatas { border-left-color: #f4c430; }
 .card-itinerario--saude { border-left-color: #2a9d8f; }
 .card-itinerario__header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 .card-itinerario__header i { font-size: 1.8rem; }
-.card-itinerario--tech .card-itinerario__header i { color: #00a896; }
+.card-itinerario--tech .card-itinerario__header i { color: #5498f2 }
 .card-itinerario--humanas .card-itinerario__header i { color: #e76f51; }
 .card-itinerario--exatas .card-itinerario__header i { color: #f4c430; }
 .card-itinerario--saude .card-itinerario__header i { color: #2a9d8f; }
@@ -492,12 +492,12 @@ button { cursor: pointer; border: none; background: none; }
 body.alto-contraste {
   --cor-primaria: #ffff00;
   --cor-primaria-hover: #ffffff;
-  --cor-secundaria: #ffff00;
+  --cor-secundaria: #0051ff;
   --cor-secundaria-hover: #ffffff;
   --cor-branca: #000000;
   --cor-destaque: #00ffff;
   --cor-fundo: #000000;
-  --cor-fundo-alt: #121212;
+  --cor-fundo-alt: #000000;
   --cor-card-fundo: #000000;
   --cor-texto: #ffffff;
   --cor-texto-suave: #dddddd;
