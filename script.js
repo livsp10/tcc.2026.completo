@@ -3,7 +3,7 @@
    Script Principal do MVP (script.js) - Refatorado com Dados Reais
    ========================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================================================
        1. MENU MOBILE & ACESSIBILIDADE
@@ -100,34 +100,34 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Fotos do Acervo Histórico",
             descricao: "Mobiliário, objetos científicos e galerias de diretores.",
             itens: [
-                { titulo: "Museu do Acervo", img: "museu.acer.jpg" },
-                { titulo: "Sala de Acervo", img: "sala.acer.jpg" },
-                { titulo: "Mesa Antiga do Acervo", img: "mesa.acervo.jpg" },
-                { titulo: "Mesas Antigas (Cadeiras)", img: "mesa.ant.acer.jpg" },
-                { titulo: "Objetos Históricos", img: "obj3.acer.jpg" },
-                { titulo: "Animais Empalhados", img: "emp.acerv.jpg" },
-                { titulo: "Galeria de Diretores Antigos", img: "diretores.ant.acer.jpg" },
-                { titulo: "Galeria de Professores Antigos", img: "profs.anti.acer.jpg" },
-                { titulo: "Retratos Antigos", img: "pessoas.acer.jpg" }
+                { titulo: "Museu do Acervo", img: "a.museu.acer.jpg" },
+                { titulo: "Sala de Acervo", img: "a.sala.acer.jpg" },
+                { titulo: "Mesa Antiga do Acervo", img: "a.mesa.acervo.jpg" },
+                { titulo: "Mesas Antigas (Cadeiras)", img: "a.mesa.ant.acer.jpg" },
+                { titulo: "Objetos Históricos", img: "a.obj3.acer.jpg" },
+                { titulo: "Animais Empalhados", img: "a.emp.acerv.jpg" },
+                { titulo: "Galeria de Diretores Antigos", img: "a.diretores.ant.acer.jpg" },
+                { titulo: "Galeria de Professores Antigos", img: "a.prof.anti.acer.jpg" },
+                { titulo: "Retratos Antigos", img: "a.pessoas.acer.jpg" }
             ]
         },
         biblioteca_acervo: {
             titulo: "Biblioteca Histórica",
             descricao: "Obras clássicas, anuários e livros raros da instituição.",
             itens: [
-                { titulo: "Coletânea Clássica", img: "coletanea.acer.jpg" },
-                { titulo: "Acervo Jânio Quadros", img: "janio.quadros.bi.acer.jpg" },
+                { titulo: "Coletânea Clássica", img: "l.coletanea.acer.jpg" },
+                { titulo: "Acervo Jânio Quadros", img: "l.janio.quadros.bi.acer.jpg" },
                 { titulo: "Livro Albert Einstein", img: "liv.eistein.acerv.jpg" },
                 { titulo: "Anais de Medicina", img: "liv.med.acer.jpg" },
                 { titulo: "Dicionários Antigos", img: "livro.gigante.acer.jpg" },
                 { titulo: "Recenseamento do Brazil", img: "livro2.acer.jpg" },
                 { titulo: "Os Lusíadas", img: "lusiadas.acer.jpg" },
                 { titulo: "Bíblias Sagradas", img: "biblia.acer.jpg" },
-                { titulo: "Coleção Buffon", img: "coleção.acer.jpg" },
-                { titulo: "Dicionário Geographico", img: "dici.acer.jpg" },
+                { titulo: "Coleção Buffon", img: "l.coleção.acer.jpg" },
+                { titulo: "Dicionário Geographico", img: "l.dici.acer.jpg" },
                 { titulo: "Livros Raros - Reserva", img: "liv.acer.jpg" },
                 { titulo: "Livros de Fisiologia", img: "livro.biblioteca.jpg" },
-                { titulo: "Obras Monteiro Lobato", img: "monteiro.l.acer.jpg" },
+                { titulo: "Obras Monteiro Lobato", img: "l.monteiro.l.acer.jpg" },
                 { titulo: "Livro 113 Anos - Capa", img: "pg1.png" },
                 { titulo: "Livro 113 Anos - Pg 2", img: "pg2.png" },
                 { titulo: "Livro 113 Anos - Pg 3", img: "pg3.png" },
@@ -151,30 +151,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 { titulo: "Livro 113 Anos - Pg 21", img: "pg21.png" },
                 { titulo: "Livro 113 Anos - Pg 22", img: "pg22.png" },
                 { titulo: "Livro 113 Anos - Pg 23", img: "pg23.png" },
-                { titulo: "Livro 113 Anos - Pg 24", img: "pg24.png" }
+                { titulo: "Livro 113 Anos - Pg 24", img: "pg24.png" },
+                { titulo: "Livro 113 Anos - Pg 25", img: "pg25.png" },
+                { titulo: "Livro 113 Anos - Pg 26", img: "pg26.png" },
+                { titulo: "Livro 113 Anos - Pg 27", img: "pg27.png" },
+                { titulo: "Livro 113 Anos - Pg 28", img: "pg28.png" },
+                { titulo: "Livro 113 Anos - Pg 29", img: "pg29.png" },
+                { titulo: "Livro 113 Anos - Pg 30", img: "pg30.png" },
+                { titulo: "Livro 113 Anos - Pg 31", img: "pg31.png" },
+                { titulo: "Livro 113 Anos - Pg 32", img: "pg32.png" },
+                { titulo: "Livro 113 Anos - Pg 33", img: "pg33.png" },
+                { titulo: "Livro 113 Anos - Pg 34", img: "pg34.png" },
+                { titulo: "Livro 113 Anos - Pg 35", img: "pg35.png" },
+                { titulo: "Livro 113 Anos - Pg 36", img: "pg36.png" },
+                { titulo: "Livro 113 Anos - Pg 37", img: "pg37.png" }
+                
             ]
         },
         curiosidades: {
             titulo: "Curiosidades e Arquitetura",
             descricao: "Detalhes construtivos, homenagens e brasões históricos da escola.",
-            itens: [
+            itens:[
                 { titulo: "Logo Madeira", img: "logo.mad.jpg" },
                 { titulo: "Logo Principal Parede", img: "logo.princ.jpg" },
-                { titulo: "Monumento Gramado (Longe)", img: "homenagem.longe.g.jpg" },
-                { titulo: "Monumento Gramado (Perto)", img: "homenagem.grama.jpg" },
-                { titulo: "Piso Antigo (Corredor)", img: "chao.corredor.jpg", legenda: "Azulejo hidráulico original" },
-                { titulo: "Piso de Madeira (Sala)", img: "chão.sala.jpg" },
-                { titulo: "Escada de Pedra", img: "escada.pedra.co.jpg" },
-                { titulo: "Tijolo Exposto (Sala)", img: "tijol.sala.jpg" },
-                { titulo: "Amostra de Tinta Antiga", img: "tinta.parede13.jpg" },
-                { titulo: "Pintura Antiga Parede", img: "pint.antiga.jpg" },
-                { titulo: "Teste de Tinta Histórica", img: "tin.antiga.jpg" },
-                { titulo: "Parede Profunda", img: "pared.prof.jpg" },
-                { titulo: "Tijolo Imperial", img: "tij.imperial.acer.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
-                { titulo: "Placa Jequitibá", img: "plac.jequi.acer.jpg" },
-                { titulo: "Placas Homenagem Acervo", img: "placas.acer.jpg" },
-                { titulo: "Mural de Placas Homenagem", img: "homenagem.corredor2.jpg" }
+                { titulo: "Monumento Gramado (Longe)", img: "c.homenagem.longe.g.jpg" },
+                { titulo: "Monumento Gramado (Perto)", img: "c.homenagem.grama.jpg" },
+                { titulo: "Piso Antigo (Corredor)", img: "c.chao.corredor.jpg", legenda: "Azulejo hidráulico original" },
+                { titulo: "Piso de Madeira (Sala)", img: "c.chão.sala.jpg" },
+                { titulo: "Escada de Pedra", img: "c.escada.pedra.co.jpg" },
+                { titulo: "Tijolo Exposto (Sala)", img: "c.tijol.sala.jpg" },
+                { titulo: "Amostra de Tinta Antiga", img: "c.tinta.parede13.jpg" },
+                { titulo: "Pintura Antiga Parede", img: "c.pint.antiga.jpg" },
+                { titulo: "Teste de Tinta Histórica", img: "c.tin.antiga.jpg" },
+                { titulo: "Parede Profunda", img: "c.pared.prof.jpg" },
+                { titulo: "Tijolo Imperial", img: "c.tij.imperial.acer.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
+                { titulo: "Placa Jequitibá", img: "c.plac.jequi.acer.jpg" },
+                { titulo: "Placas Homenagem Acervo", img: "c.placas.acer.jpg" },
+                { titulo: "Mural de Placas Homenagem", img: "c.homenagem.corredor2.jpg" },
+                { titulo: "Árvore Centenária", img: "c.arvore.100.jpg" },
+                { titulo: "Fotos antigas", img: "c.corredor.direção.jpn" },
+                { titulo: "Mural de Placas Homenagem", img: "c.homenagem.corredor2.jpg" },
+
             ]
+                
         }
     };
 
@@ -224,11 +243,14 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Professores de Linguagens",
             descricao: "Língua Portuguesa, Literatura, Inglês e Artes.",
             professores: [
-                { nome: "Profª. Adriana", disciplina: "Língua Portuguesa", img: "prof.adriana.jpeg" },
-                { nome: "Profª. Alexandra", disciplina: "Inglês", img: "prof.alexandra.jpeg" },
-                { nome: "Profª. Célia", disciplina: "Arte", img: "prof.celia.jpeg" },
-                { nome: "Profª. Cláudia", disciplina: "Linguagens", img: "prof.claudia.jpeg" },
-                { nome: "Profª. Patrícia", disciplina: "Literatura", img: "prof.patricia.jpeg" }
+                { nome: "Profª. Adriana", disciplina: "Educação Física", img: "prof.adriana.jpeg" },
+                { nome: "Profª. Alexandra", disciplina: "Língua Portuguesa", img: "prof.alexandra.jpeg" },
+                { nome: "Profª. Célia", disciplina: "Língua Portuguesa", img: "prof.celia.jpeg" },
+                { nome: "Prof. Matheus", disciplina: "Língua Portuguesa", img: "prof.matheus.jpeg" },
+                { nome: "Profª. M. Eduarda", disciplina: "Língua Portuguesa", img: "prof.m.eduarda.jpeg" },
+                { nome: "Profª. Patrícia", disciplina: "Artes", img: "prof.patricia.jpeg" },
+                { nome: "Profª. Sandra", disciplina: "Inglês", img: "prof.sandra.jpeg" },
+                { nome: "Prof. Victor", disciplina: "Redação e Leitura", img: "prof.victor.jpeg" }
             ]
         },
         exatas: {
@@ -236,9 +258,11 @@ document.addEventListener('DOMContentLoaded', () => {
             descricao: "Matemática e Raciocínio Lógico.",
             professores: [
                 { nome: "Profª. Carina", disciplina: "Matemática", img: "prof.carina.jpeg" },
-                { nome: "Prof. Denilson", disciplina: "Matemática", img: "prof.denilson.jpeg" },
-                { nome: "Profª. Dourado", disciplina: "Raciocínio Lógico", img: "prof.dourado.jpeg" },
-                { nome: "Prof. Matheus", disciplina: "Matemática", img: "prof.matheus.jpeg" }
+                { nome: "Prof. Denilson", disciplina: "Física", img: "prof.denilson.jpeg" },
+                { nome: "Prof. Flávio", disciplina: "Biologia", img: "prof.flavio.jpeg" },
+                { nome: "Prof. Lucas", disciplina: "Matemática", img: "prof.lucas.jpeg" },
+                { nome: "Profª. Sônia", disciplina: "Matemática", img: "prof.dourado.jpeg" },
+               
             ]
         },
         humanas: {
@@ -246,21 +270,20 @@ document.addEventListener('DOMContentLoaded', () => {
             descricao: "História, Geografia, Filosofia e Sociologia.",
             professores: [
                 { nome: "Prof. Guilherme", disciplina: "Sociologia", img: "prof.guilherme.soci.jpeg" },
-                { nome: "Profª. M. Eduarda", disciplina: "História", img: "prof.m.eduarda.jpeg" },
-                { nome: "Prof. Victor", disciplina: "Geografia", img: "prof.victor.jpeg" },
-                { nome: "Profª. Paty", disciplina: "Filosofia", img: "prof.paty.jpeg" }
+                { nome: "Profª. Paty", disciplina: "Geografia", img: "prof.paty.jpeg" },
+                { nome: "Profª. Paula", disciplina: "História", img: "prof.paula.jpeg" },
             ]
         },
         natureza: {
             titulo: "Professores de Ciências da Natureza",
             descricao: "Física, Química e Biologia.",
             professores: [
-                { nome: "Profª. Camila", disciplina: "Biologia", img: "prof.camila.jpeg" },
-                { nome: "Prof. Flávio", disciplina: "Física", img: "prof.flavio.jpeg" },
+                { nome: "Profª. Camila", disciplina: "Quimica", img: "prof.camila.jpeg" },
+                { nome: "Profª. Cláudia", disciplina: "Biologia", img: "prof.claudia.jpeg" },
+                { nome: "Prof. Flávio", disciplina: "Biologia", img: "prof.flavio.jpeg" },
                 { nome: "Prof. Guilherme", disciplina: "Química", img: "prof.gulherme.quim.jpeg" },
-                { nome: "Prof. Lucas", disciplina: "Ciências", img: "prof.lucas.jpeg" },
-                { nome: "Profª. Sandra", disciplina: "Biologia", img: "prof.sandra.jpeg" },
-                { nome: "Profª. Paula", disciplina: "Física", img: "prof.paula.jpeg" }
+                { nome: "Profª. Isabelle", disciplina: "Física", img: "prof.isabelle.jpeg" }
+                
             ]
         },
         tecnico: {
@@ -270,9 +293,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 { nome: "Prof. Alex", disciplina: "Dev. Sistemas", img: "prof.alex.tec.ds.jpeg" },
                 { nome: "Prof. Aparecido", disciplina: "Dev. Sistemas", img: "prof.aparecido.tec.ds.jpeg" },
                 { nome: "Profª. Gláucia", disciplina: "Dev. Sistemas", img: "prof.glaucia.tec.ds.jpeg" },
-                { nome: "Profª. Fran", disciplina: "Educação Física", img: "prof.fran.ef.jpeg" },
-                { nome: "Profª. Jacke", disciplina: "Educação Física", img: "prof.jacke.ef.jpeg" },
-                { nome: "Profª. Isabelle", disciplina: "Técnico", img: "prof.isabelle.jpeg" }
+                { nome: "Profª. Fran", disciplina: "Enfermagem", img: "prof.fran.ef.jpeg" },
+                { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "prof.jacke.ef.jpeg" },
+                { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "prof.fran.ef.jpeg" }
+            
             ]
         }
     };
