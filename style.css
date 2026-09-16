@@ -224,6 +224,33 @@ button { cursor: pointer; border: none; background: none; }
 .galeria__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
 .galeria__item { position: relative; border-radius: var(--raio-borda); overflow: hidden; box-shadow: var(--sombra-card); width: 100%; cursor: pointer; transition: transform 0.3s; }
 .galeria__item:hover { transform: scale(1.02); }
+/* ==========================================================================
+   11. SEÇÃO GALERIA DE FOTOS
+   ========================================================================== */
+.galeria__grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.5rem; 
+}
+
+/* Fotos ocultas por padrão */
+.galeria__item--oculta {
+  display: none;
+}
+
+/* Classe que será adicionada pelo JS para mostrar as fotos com animação */
+.galeria__item--oculta.visivel {
+  display: block;
+  animation: fadeInFotos 0.5s ease-out forwards;
+}
+
+@keyframes fadeInFotos {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.galeria__item { 
+/* ... restante do seu código existente ... */
 
 /* LIGHTBOX */
 .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2200; display: flex; align-items: center; justify-content: center; }
