@@ -70,7 +70,45 @@
                 <span class="lightbox-caption-text">${item.titulo || ''} ${item.legenda ? '- ' + item.legenda : ''}</span>
             `;
         }
+        // ... aqui termina o código do chatbot que já existe ...
+        setTimeout(() => {
+            const respostaBot = obterRespostaBot(text);
+            
+            if (respostaBot !== null) {
+                chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--bot"><p>${respostaBot}</p></div>`;
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        }, 600);
+    };
+
+    /* ==========================================================================
+       6. BOTÃO LER MAIS (GALERIA)
+       ========================================================================== */
+    const btnVerMaisGaleria = document.getElementById('btn-ver-mais-galeria');
+    const fotosOcultas = document.querySelectorAll('.galeria__item--oculta');
+
+    if (btnVerMaisGaleria) {
+        btnVerMaisGaleria.addEventListener('click', () => {
+            let fotosEstaoVisiveis = false;
+
+            // Alterna a classe 'visivel' em cada foto oculta
+            fotosOcultas.forEach(foto => {
+                foto.classList.toggle('visivel');
+                if (foto.classList.contains('visivel')) {
+                    fotosEstaoVisiveis = true;
+                }
+            });
+
+            // Atualiza o botão conforme o estado atual
+            if (fotosEstaoVisiveis) {
+                btnVerMaisGaleria.innerHTML = '<i class="fa-solid fa-minus" aria-hidden="true"></i> Ver menos fotos';
+            } else {
+                btnVerMaisGaleria.innerHTML = '<i class="fa-solid fa-plus" aria-hidden="true"></i> Ver mais fotos';
+            }
+        });
     }
+
+
 
     document.getElementById('lightbox-close')?.addEventListener('click', fecharLightbox);
     document.getElementById('lightbox-backdrop')?.addEventListener('click', fecharLightbox);
@@ -344,45 +382,100 @@
     });
 
     /* ==========================================================================
-       5. CHATBOT FLUTUANTE
+       5. CHATBOT FLUTUANTE (Com as novas regras importadas do Python)
        ========================================================================== */
-    const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
-    const chatbotWindow = document.getElementById('chatbot-window');
-    
-    chatbotToggleBtn?.addEventListener('click', () => {
-        const isHidden = chatbotWindow.hasAttribute('hidden');
-        if(isHidden) chatbotWindow.removeAttribute('hidden');
-        else chatbotWindow.setAttribute('hidden', '');
+       const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
+       const chatbotWindow = document.getElementById('chatbot-window');
+       
+       chatbotToggleBtn?.addEventListener('click', () => {
+           const isHidden = chatbotWindow.hasAttribute('hidden');
+           if(isHidden) chatbotWindow.removeAttribute('hidden');
+           else chatbotWindow.setAttribute('hidden', '');
+       });
+       
+       document.getElementById('chatbot-close-btn')?.addEventListener('click', () => chatbotWindow.setAttribute('hidden', ''));
+       
+       const chatbotForm = document.getElementById('chatbot-form');
+       const chatbotInput = document.getElementById('chatbot-input');
+       const chatbotMessages = document.getElementById('chatbot-messages');
+   
+       // Base de perguntas e respostas com letras minúsculas e sem acentos nas chaves
+       const baseConhecimento = {
+           "ajuda":"Eu sou um bot feito 100% em Python! (Adaptado para Web)",
+           "localização": "Aqui está a localização da escola, R. Culto à Ciência, 422 - Botafogo, Campinas - SP, 13020-060",
+           "endereço": "Aqui está o endereço da escola, R. Culto à Ciência, 422 - Botafogo, Campinas - SP, 13020-060",
+           "onde": "Aqui está o endereço da escola, R. Culto à Ciência, 422 - Botafogo, Campinas - SP, 13020-060",
+           "historia": "O Colégio Estadual Culto à Ciência, em Campinas (SP), fundado em 1874, é a escola mais antiga do Brasil a funcionar ininterruptamente no mesmo prédio. Criado por maçons da Loja Independência para promover o ensino laico e científico baseado no positivismo, o colégio é tombado como patrimônio histórico e é referência em educação, famoso por sua arquitetura clássica francesa e acervo centenário.",
+           "patrimonio-historico": "O Colégio Estadual Culto à Ciência, em Campinas (SP), fundado em 1874, é a escola mais antiga do Brasil a funcionar ininterruptamente no mesmo prédio. Criado por maçons da Loja Independência para promover o ensino laico e científico baseado no positivismo, o colégio é tombado como patrimônio histórico e é referência em educação, famoso por sua arquitetura clássica francesa e acervo centenário.",
+           "diretor": "O diretor atual da Escola Estadual Culto à Ciência se chama Glauber Maldonado Ferreira",
+           "vice": "A atual vice-diretora da Escola Estadual Culto à Ciência se chama Andreia Alves Ferreira",
+           "vice-diretor": "O atual vice-diretor da Escola Estadual Culto à Ciência se chama Andreia Alves Ferreira",
+           "fundou": "O fundador da escola...",
+           "fundador": " O fundador da escola...",
+           "criador": "O fundador da escola...",
+           "iniciou": "A Escola Estadual Culto à Ciência foi fundada no ano de....",
+           "fundaram": " A Escola Estadual Culto à Ciência foi fundada no ano de....",
+           "ano": "A Escola Estadual Culto à Ciência foi fundada no ano de....",
+           "fundacao": " A Escola Estadual Culto à Ciência foi fundada no ano de....",
+           "quais famosos": "Cláudia Raia",
+           "aulas": "Seg: 7h00-16h30 | Ter: 7h00-16h30 | Qua: 7h00-16h30 | Qui: 7h00-16h30 | Sex: 7h00-16h30 | Sáb: fechado | Dom: 7h00-16h30",
+           "horario": "Seg: 7h00-16h30 | Ter: 7h00-16h30 | Qua: 7h00-16h30 | Qui: 7h00-16h30 | Sex: 7h00-16h30 | Sáb: fechado | Dom: 7h00-16h30"
+       };
+   
+       function obterRespostaBot(mensagemUsuario) {
+           // Deixa minúsculo e remove acentos
+           const msg = mensagemUsuario.toLowerCase()
+                                      .normalize("NFD")
+                                      .replace(/[\u0300-\u036f]/g, "");
+   
+           // Regra Especial 1: Sair / Tchau (Fecha a janela do chat)
+           if (msg.includes("sair") || msg.includes("tchau")) {
+               chatbotWindow.setAttribute('hidden', '');
+               return null; 
+           }
+   
+           // Regra Especial 2: Saudações (Oi, Olá, Bom dia, Boa tarde, Boa noite)
+           if (msg.includes("ola") || msg.includes("oi") || msg.includes("bom dia") || msg.includes("boa tarde") || msg.includes("boa noite")) {
+               return "Bot: Seja bem-vindo(a) ao Site Culto Web, muito bom ter você aqui! Em que eu posso te ajudar?";
+           }
+   
+           // Regra Especial 3: Combinação de Palavras (Acolhimento AND Laranjinhas)
+           if (msg.includes("acolhimento") && msg.includes("laranjinhas")) {
+               return "Bot: O acolhimento ocorre no início das aulas, no começo do ano com a intenção de integrar e acolher os novos alunos da escola. Com a intenção de criar um ambiente confortável, seguro, harmonioso e agradável à comunidade escolar.";
+           }
+   
+           // Busca no dicionário de perguntas e respostas geral
+           for (let chave in baseConhecimento) {
+               if (msg.includes(chave)) {
+                   return baseConhecimento[chave];
+               }
+           }
+   
+           // Resposta padrão (Else)
+           return "Bot: Ainda estou aprendendo a entender isso...";
+       }
+   
+       chatbotForm?.addEventListener('submit', (e) => {
+           e.preventDefault();
+           const text = chatbotInput.value.trim();
+           if(!text) return;
+   
+           // Renderiza mensagem do usuário
+           chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--user"><p>${text}</p></div>`;
+           chatbotInput.value = '';
+           chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+   
+           // Processa e renderiza a resposta do Cultinho
+           setTimeout(() => {
+               const respostaBot = obterRespostaBot(text);
+               
+               // Se o bot retornou null (no caso do comando "sair"), não imprime nada na tela
+               if (respostaBot !== null) {
+                   chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--bot"><p>${respostaBot}</p></div>`;
+                   chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+               }
+           }, 600);
+       });
+   
     });
-    
-    document.getElementById('chatbot-close-btn')?.addEventListener('click', () => chatbotWindow.setAttribute('hidden', ''));
-    
-    const chatbotForm = document.getElementById('chatbot-form');
-    const chatbotInput = document.getElementById('chatbot-input');
-    const chatbotMessages = document.getElementById('chatbot-messages');
-
-    chatbotForm?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const text = chatbotInput.value.trim();
-        if(!text) return;
-
-        chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--user"><p>${text}</p></div>`;
-        chatbotInput.value = '';
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-
-        setTimeout(() => {
-            chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--bot"><p>Obrigado pelo contato! Esta é uma demonstração. Para contatos oficiais, use nosso formulário.</p></div>`;
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-        }, 800);
-    });
-
-    /* ==========================================================================
-       6. BOTÃO VOLTAR AO TOPO
-       ========================================================================== */
-    const btnTopo = document.getElementById('back-to-top-btn');
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 300) btnTopo.classList.add('is-visible');
-        else btnTopo.classList.remove('is-visible');
-    });
-    btnTopo?.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-});
+   
