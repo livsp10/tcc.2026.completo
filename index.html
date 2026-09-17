@@ -1,34 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!--
-        Escola Estadual Culto à Ciência — Campinas/SP
-         Site Institucional (Base para TCC)
-        
-        METADADOS E CONFIGURAÇÕES
-    -->
+   <!--configurações-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="MVP do Site Institucional da Escola Estadual Culto à Ciência em Campinas-SP. Tradição, Ensino Integral, Itinerários Formativos e Acervo Cultural.">
     <title>Escola Estadual Culto à Ciência | Campinas - SP</title>
 
-    <!-- FONTES EXTERNAS (GOOGLE FONTS) -->
+    <!-- fontes de letra -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- ÍCONES (FONT AWESOME) -->
+    <!-- icones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- ARQUIVOS DE ESTILO E SCRIPT DO MVP -->
+    <!-- links do codigo-->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
-    <!-- =========================================================================
-         BARRA DE ACESSIBILIDADE (FLUTUANTE)
-         ========================================================================= -->
+    <!--barra de acessibilidade flutuante-->
     <div class="accessibility-floating" id="barra-acessibilidade">
         <button type="button" id="btn-aumentar-fonte" class="accessibility-floating__btn" title="Aumentar Fonte">A+</button>
         <button type="button" id="btn-restaurar-fonte" class="accessibility-floating__btn" title="Tamanho Padrão">A</button>
@@ -38,9 +31,7 @@
         </button>
     </div>
 
-    <!-- =========================================================================
-         HEADER & NAVEGAÇÃO
-         ========================================================================= -->
+    <!--HEADER & NAVEGAÇÃO-->
     <header class="header" id="header">
         <div class="header__container">
             <a href="#hero" class="header__brand" aria-label="Página Inicial - Escola Estadual Culto à Ciência">
@@ -53,7 +44,7 @@
                 </div>
             </a>
 
-            <!-- Botão Hambúrguer Mobile -->
+            <!-- tres barrinhas do menu do celular-->
             <button type="button" class="header__hamburger" id="hamburger-btn" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
                 <span class="header__hamburger-bar"></span>
                 <span class="header__hamburger-bar"></span>
@@ -77,14 +68,10 @@
         </div>
     </header>
 
-    <!-- =========================================================================
-         CONTEÚDO PRINCIPAL (MAIN)
-         ========================================================================= -->
+    <!--principal (main) -->
     <main id="conteudo-principal">
 
-        <!-- =====================================================================
-             1. HERO / PÁGINA INICIAL
-             ===================================================================== -->
+        <!-- pagina inicial convidativa (hero) -->
         <section class="hero" id="hero" aria-label="Apresentação da Escola">
             <div class="hero__overlay"></div>
             <div class="hero__container">
@@ -102,8 +89,9 @@
                     </div>
                 </div>
 
-                <div class="hero__visual">
-                    <div class="mascote-box">
+               <div class="hero__visual">
+                <div class="mascote-box">
+                    <button type="button" class="mascote-btn-abrir" id="btn-abrir-cultinho" title="Falar com o Cultinho">
                         <div class="mascote" id="mascote-hero">
                             <div class="mascote__avatar">
                                 <img src="galeria/mascote.jpeg" alt="Mascote Cultinho" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
@@ -112,25 +100,20 @@
                                 </div>
                             </div>
                             <div class="mascote__speech">
-                                <span>Olá! Sou o <strong>Cultinho</strong>! Vamos explorar nossa escola?</span>
+                                <span>Olá! Sou o <strong>Cultinho</strong>! Clique aqui e vamos conversar?</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="hero__image-card">
-                        <img src="galeria/g.fachada.reta.jpg" alt="Fachada Histórica da Escola Culto à Ciência" style="width: 100%; height: 260px; object-fit: cover; display: block;">
-                        <div class="hero__card-tag">
-                            <i class="fa-solid fa-certificate" aria-hidden="true"></i>
-                            <span>Patrimônio Cultural de Campinas</span>
-                        </div>
-                    </div>
+                    </button>
                 </div>
-            </div>
-        </section>
 
-        <!-- =====================================================================
-             2. HISTÓRIA DA ESCOLA & LIVRO DIGITAL
-             ===================================================================== -->
+                <div class="hero__image-card">
+                    <img src="galeria/g.fachada.reta.jpg" alt="Fachada Histórica da Escola Culto à Ciência" style="width: 100%; height: 260px; object-fit: cover; display: block;">
+                </div>
+</div>
+</div>
+</section>
+
+        <!--historia da escola e livro-->
         <section class="section historia" id="historia" aria-labelledby="titulo-historia">
             <div class="container">
                 <header class="section__header">
@@ -197,9 +180,7 @@
             </div>
         </section>
 
-        <!-- =====================================================================
-             3. GESTÃO ESCOLAR
-             ===================================================================== -->
+        <!--gestao-->
         <section class="section gestao" id="gestao" aria-labelledby="titulo-gestao">
             <div class="container">
                 <header class="section__header">
@@ -254,9 +235,7 @@
             </div>
         </section>
 
-        <!-- =====================================================================
-             4. ÁREA DE PROFESSORES
-             ===================================================================== -->
+        <!--professores-->
         <section class="section professores" id="professores" aria-labelledby="titulo-professores">
             <div class="container">
                 <header class="section__header">
@@ -307,13 +286,19 @@
                             <h3 class="professores__name">Ensino Técnico</h3>
                         </div>
                     </button>
+    
+                     <button type="button" class="professores__pasta-card" data-area="especial" aria-label="Abrir pasta de Professores da Educação Especial">
+                        <div class="professores__pasta-icon"><i class="fa-solid fa-folder-open" aria-hidden="true"></i></div>
+                        <div class="professores__content">
+                            <span class="professores__area">Área do Conhecimento</span>
+                            <h3 class="professores__name">Educação Especial</h3>
+                        </div>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- =====================================================================
-             5. ENSINO INTEGRAL E ITINERÁRIOS
-             ===================================================================== -->
+        <!--integral e itnerário-->
         <section class="section integral" id="integral" aria-labelledby="titulo-integral">
             <div class="container">
                 <header class="section__header">
@@ -362,9 +347,7 @@
             </div>
         </section>
 
-        <!-- =====================================================================
-             PROJETOS DA ESCOLA
-             ===================================================================== -->
+        <!--projetos-->
         <section class="section projetos" id="projetos" aria-labelledby="titulo-projetos">
             <div class="container">
                 <header class="section__header">
@@ -423,9 +406,7 @@
             </div>
         </section>
 
-        <!-- =====================================================================
-             6. ACERVO CULTURAL & CURIOSIDADES
-             ===================================================================== -->
+        <!--acervo e curiosidades-->
         <section class="section acervo" id="acervo" aria-labelledby="titulo-acervo">
             <div class="container">
                 <header class="section__header">
@@ -437,7 +418,7 @@
                 </header>
 
                 <div class="acervo__grid">
-                    <!-- Pasta 1: Fotos Acervo -->
+                    <!--museu-->
                     <button type="button" class="acervo__item" data-category="fotos_acervo" aria-label="Abrir pasta de Fotos do Acervo">
                         <div class="acervo__placeholder-img">
                             <i class="fa-solid fa-camera-retro" aria-hidden="true"></i>
@@ -449,7 +430,7 @@
                         </div>
                     </button>
 
-                    <!-- Pasta 2: Biblioteca Acervo -->
+                    <!--biblioteca-->
                     <button type="button" class="acervo__item" data-category="biblioteca_acervo" aria-label="Abrir pasta da Biblioteca Histórica">
                         <div class="acervo__placeholder-img">
                             <i class="fa-solid fa-book-journal-whills" aria-hidden="true"></i>
@@ -461,7 +442,7 @@
                         </div>
                     </button>
 
-                    <!-- Pasta 3: Curiosidades -->
+                    <!--curiosidades -->
                     <button type="button" class="acervo__item" data-category="curiosidades" aria-label="Abrir pasta de Curiosidades">
                         <div class="acervo__placeholder-img">
                             <i class="fa-solid fa-magnifying-glass-location" aria-hidden="true"></i>
@@ -477,9 +458,7 @@
             </div>
         </section>
 
-        <!-- =====================================================================
-             7. GALERIA DE INSTALAÇÕES (FOTOS ROTEADAS AUTOMATICAMENTE)
-             ===================================================================== -->
+        <!--galeria-->
         <section class="section galeria" id="galeria" aria-labelledby="titulo-galeria">
             <div class="container">
                 <header class="section__header">
@@ -502,7 +481,7 @@
                     </div>
                 </div> 
 
-                <!-- BOTÃO MODIFICADO PARA SER UM LINK PARA A NOVA PÁGINA -->
+                <!-- link para a galeria-->
                 <div style="text-align: center; margin-top: 2.5rem;">
                     <a href="galeria.html" class="btn btn--primary">
                         <i class="fa-solid fa-images" aria-hidden="true"></i> Ver todas as fotos
@@ -512,7 +491,7 @@
             </div>
         </section>
 
-        <!-- Lightbox Modal de Ampliação Exclusivo para as Fotos do Acervo/Galeria -->
+        <!-- Lightbox Modal (amplia a foto)-->
         <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de Imagem" hidden>
             <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
             <div class="lightbox__content">
@@ -531,7 +510,7 @@
             </div>
         </div>
 
-        <!--8. CONTATO -->
+        <!--contato-->
         <section class="section contato" id="contato" aria-labelledby="titulo-contato">
             <div class="container">
                 <header class="section__header">
@@ -563,9 +542,7 @@
 
     </main>
 
-    <!-- =========================================================================
-         MODAIS DE PASTA (ACERVO E PROFESSORES)
-         ========================================================================= -->
+    <!--modal de pasta acervo e professores (ao clicar no card é aberta uma pasta, o js organiza as fotos da pasta)-->
     <div class="modal-acervo" id="modal-acervo" role="dialog" aria-modal="true" aria-label="Pasta de Itens do Acervo" hidden>
         <div class="modal-acervo__backdrop" id="modal-acervo-backdrop"></div>
         <div class="modal-acervo__window">
@@ -579,7 +556,7 @@
             <div class="modal-acervo__body">
                 <p class="modal-acervo__desc" id="modal-acervo-desc">Conteúdo da pasta.</p>
                 <div class="modal-acervo__grid" id="modal-acervo-grid">
-                    <!-- Conteúdo com tags <img> gerado dinamicamente via JS -->
+                    <!--o conteudo fica no js-->
                 </div>
             </div>
         </div>
@@ -598,13 +575,13 @@
             <div class="modal-professores__body">
                 <p class="modal-professores__desc" id="modal-professores-desc">Corpo docente.</p>
                 <div class="modal-professores__grid" id="modal-professores-grid">
-                    <!-- Cards com <img> dos professores gerados dinamicamente via JS -->
+                    <!-- imagens no js organizado em lista-->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- MODAL DOS PROJETOS -->
+    <!-- modal dos projetos-->
     <div class="modal-projetos" id="modal-projetos" role="dialog" aria-modal="true" aria-label="Fotos do Projeto" hidden>
         <div class="modal-projetos__backdrop" id="modal-projetos-backdrop"></div>
         <div class="modal-projetos__window">
@@ -618,17 +595,16 @@
             <div class="modal-projetos__body">
                 <p class="modal-projetos__desc" id="modal-projetos-desc">Galeria de fotos.</p>
                 <div class="modal-projetos__grid" id="modal-projetos-grid">
-                    <!-- Fotos injetadas via JS -->
+                    <!--fotos em lista no js-->
                 </div>
             </div>
         </div>
     </div>
 
-   <!-- =========================================================================
-     CHATBOT FLUTUANTE
-     ========================================================================= -->
+   <!--chat bor-->
 <aside class="chatbot" id="chatbot-container" aria-label="Assistente Virtual da Escola">
-    <!-- Botão Pílula -->
+
+    <!--formato do botão (pilula)-->
     <button type="button" class="chatbot__toggle" id="chatbot-toggle-btn" aria-label="Abrir assistente Cultinho" aria-expanded="false">
         <div class="chatbot__toggle-avatar">
             <img src="galeria/mascote.jpeg" alt="Cultinho Mini">
@@ -637,7 +613,7 @@
     </button>
 
     <div class="chatbot__window" id="chatbot-window" hidden>
-        <!-- Cabeçalho com Foto Alinhada e X de fechar -->
+        <!-- escrita alinhada com a foto e botao X de fechar -->
         <header class="chatbot__header">
             <div class="chatbot__header-info">
                 <div class="chatbot__mascote-header">
@@ -664,9 +640,7 @@
     </div>
 </aside>
 
-    <!-- =========================================================================
-         FOOTER
-         ========================================================================= -->
+    <!--pé-->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
