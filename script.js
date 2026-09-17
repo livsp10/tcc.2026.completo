@@ -39,7 +39,7 @@
     }
 
     /* ==========================================================================
-       2. LIGHTBOX GLOBAL (ACERVO E GALERIA)
+       2. LIGHTBOX GLOBAL (ACERVO E GALERIA E PROJETOS)
        ========================================================================== */
     const lightbox = document.getElementById('lightbox');
     const lightboxDisplay = document.getElementById('lightbox-display');
@@ -190,10 +190,8 @@
                 { titulo: "Mural de Placas Homenagem", img: "c.homenagem.corredor2.jpg" },
                 { titulo: "Árvore Centenária", img: "c.arvore.100.jpg" },
                 { titulo: "Fotos antigas", img: "c.corredor.direção.jpn" },
-                { titulo: "Mural de Placas Homenagem", img: "c.homenagem.corredor2.jpg" },
-
+                { titulo: "Mural de Placas Homenagem", img: "c.homenagem.corredor2.jpg" }
             ]
-                
         }
     };
 
@@ -261,8 +259,7 @@
                 { nome: "Prof. Denilson", disciplina: "Física", img: "prof.denilson.jpeg" },
                 { nome: "Prof. Flávio", disciplina: "Biologia", img: "prof.flavio.jpeg" },
                 { nome: "Prof. Lucas", disciplina: "Matemática", img: "prof.lucas.jpeg" },
-                { nome: "Profª. Sônia", disciplina: "Matemática", img: "prof.dourado.jpeg" },
-               
+                { nome: "Profª. Sônia", disciplina: "Matemática", img: "prof.dourado.jpeg" }
             ]
         },
         humanas: {
@@ -271,7 +268,7 @@
             professores: [
                 { nome: "Prof. Guilherme", disciplina: "Sociologia", img: "prof.guilherme.soci.jpeg" },
                 { nome: "Profª. Paty", disciplina: "Geografia", img: "prof.paty.jpeg" },
-                { nome: "Profª. Paula", disciplina: "História", img: "prof.paula.jpeg" },
+                { nome: "Profª. Paula", disciplina: "História", img: "prof.paula.jpeg" }
             ]
         },
         natureza: {
@@ -283,7 +280,6 @@
                 { nome: "Prof. Flávio", disciplina: "Biologia", img: "prof.flavio.jpeg" },
                 { nome: "Prof. Guilherme", disciplina: "Química", img: "prof.gulherme.quim.jpeg" },
                 { nome: "Profª. Isabelle", disciplina: "Física", img: "prof.isabelle.jpeg" }
-                
             ]
         },
         tecnico: {
@@ -296,7 +292,6 @@
                 { nome: "Profª. Fran", disciplina: "Enfermagem", img: "prof.fran.ef.jpeg" },
                 { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "prof.jacke.ef.jpeg" },
                 { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "prof.fran.ef.jpeg" }
-            
             ]
         }
     };
@@ -334,11 +329,78 @@
     document.getElementById('modal-professores-close')?.addEventListener('click', () => { modalProfessores.setAttribute('hidden', ''); document.body.style.overflow = ''; });
     document.getElementById('modal-professores-backdrop')?.addEventListener('click', () => { modalProfessores.setAttribute('hidden', ''); document.body.style.overflow = ''; });
 
+
+    /* ==========================================================================
+       4.5 REPOSITÓRIO DE PROJETOS (SLAMS E SARAUS)
+       ========================================================================== */
+    const repositorioProjetos = {
+        slam: {
+            titulo: "Galeria do Slam",
+            // VOCÊ PODE USAR O <br> AQUI ABAIXO TRANQUILAMENTE AGORA:
+            descricao: "Registros das nossas batalhas de poesia.<br>Alunos esbanjando talento!",
+            itens: [
+                { titulo: "Apresentação Slam 1", img: "slam_foto1.jpg" },
+                { titulo: "Apresentação Slam 2", img: "slam_foto2.jpg" },
+                { titulo: "Apresentação Slam 3", img: "slam_foto3.jpg" }
+            ]
+        },
+        sarau: {
+            titulo: "Galeria do Sarau",
+            descricao: "Registros das apresentações artísticas e culturais.<br>Música, dança e arte.",
+            itens: [
+                { titulo: "Música no Sarau", img: "sarau_foto1.jpg" },
+                { titulo: "Dança no Sarau", img: "sarau_foto2.jpg" }
+            ]
+        }
+    };
+
+    const modalProjetos = document.getElementById('modal-projetos');
+    const modalProjetosGrid = document.getElementById('modal-projetos-grid');
+    const modalProjetosTitulo = document.getElementById('modal-projetos-titulo');
+    const modalProjetosDesc = document.getElementById('modal-projetos-desc');
+
+    document.querySelectorAll('.btn-projeto-modal').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const proj = btn.getAttribute('data-projeto');
+            if(!repositorioProjetos[proj]) return;
+            const dados = repositorioProjetos[proj];
+            
+            modalProjetosTitulo.textContent = dados.titulo;
+            // AQUI ESTÁ A MUDANÇA (innerHTML) PARA O <br> FUNCIONAR NA DESCRIÇÃO:
+            modalProjetosDesc.innerHTML = dados.descricao;
+            modalProjetosGrid.innerHTML = '';
+
+            dados.itens.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'modal-acervo__item'; 
+                div.innerHTML = `
+                    <img src="${item.img}" alt="${item.titulo}">
+                    <span>${item.titulo}</span>
+                `;
+                div.addEventListener('click', () => abrirLightbox(dados.itens, index));
+                modalProjetosGrid.appendChild(div);
+            });
+
+            if (modalProjetos) {
+                modalProjetos.removeAttribute('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    document.getElementById('modal-projetos-close')?.addEventListener('click', () => { modalProjetos?.setAttribute('hidden', ''); document.body.style.overflow = ''; });
+    document.getElementById('modal-projetos-backdrop')?.addEventListener('click', () => { modalProjetos?.setAttribute('hidden', ''); document.body.style.overflow = ''; });
+
+
+    /* ==========================================================================
+       FECHAR MODAIS NO TECLADO (INCLUINDO O DE PROJETOS)
+       ========================================================================== */
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             fecharLightbox();
             modalAcervo?.setAttribute('hidden', '');
             modalProfessores?.setAttribute('hidden', '');
+            modalProjetos?.setAttribute('hidden', ''); /* Linha nova para fechar Projetos no Esc */
             document.body.style.overflow = '';
         }
     });
@@ -377,18 +439,17 @@
     });
 
     /* ==========================================================================
-       6. BOTÃO VOLTAR AO TOPO
+       6. BOTÃO VOLTAR AO TOPO & LER MAIS GALERIA
        ========================================================================== */
     const btnTopo = document.getElementById('back-to-top-btn');
     window.addEventListener('scroll', () => {
-        if(window.scrollY > 300) btnTopo.classList.add('is-visible');
-        else btnTopo.classList.remove('is-visible');
+        if(btnTopo) {
+            if(window.scrollY > 300) btnTopo.classList.add('is-visible');
+            else btnTopo.classList.remove('is-visible');
+        }
     });
     btnTopo?.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
-});
- /* ==========================================================================
-       6. BOTÃO LER MAIS (GALERIA)
-       ========================================================================== */
+
     const btnVerMaisGaleria = document.getElementById('btn-ver-mais-galeria');
     const fotosOcultas = document.querySelectorAll('.galeria__item--oculta');
 
@@ -413,8 +474,7 @@
         });
     }
 
-
-
+    // Duplicatas antigas do fechamento de lightbox que já constavam no seu arquivo original
     document.getElementById('lightbox-close')?.addEventListener('click', fecharLightbox);
     document.getElementById('lightbox-backdrop')?.addEventListener('click', fecharLightbox);
     
@@ -434,3 +494,5 @@
             abrirLightbox(imgs, index);
         });
     });
+
+});
