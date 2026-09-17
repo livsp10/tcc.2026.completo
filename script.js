@@ -100,15 +100,15 @@
             titulo: "Fotos do Acervo Histórico",
             descricao: "Mobiliário, objetos científicos e galerias de diretores.",
             itens: [
-                { titulo: "Museu do Acervo", img: "a.museu.acer.jpg" },
-                { titulo: "Sala de Acervo", img: "a.sala.acer.jpg" },
-                { titulo: "Mesa Antiga do Acervo", img: "a.mesa.acervo.jpg" },
-                { titulo: "Mesas Antigas (Cadeiras)", img: "a.mesa.ant.acer.jpg" },
-                { titulo: "Objetos Históricos", img: "a.obj3.acer.jpg" },
-                { titulo: "Animais Empalhados", img: "a.emp.acerv.jpg" },
-                { titulo: "Galeria de Diretores Antigos", img: "a.diretores.ant.acer.jpg" },
-                { titulo: "Galeria de Professores Antigos", img: "a.prof.anti.acer.jpg" },
-                { titulo: "Retratos Antigos", img: "a.pessoas.acer.jpg" }
+                { titulo: "Museu do Acervo", img: "museu/a.museu.acer.jpg" },
+                { titulo: "Sala de Acervo", img: "museu/a.sala.acer.jpg" },
+                { titulo: "Mesa Antiga do Acervo", img: "museu/a.mesa.acervo.jpg" },
+                { titulo: "Mesas Antigas (Cadeiras)", img: "museu/a.mesa.ant.acer.jpg" },
+                { titulo: "Objetos Históricos", img: "museu/a.obj3.acer.jpg" },
+                { titulo: "Animais Empalhados", img: "museu/a.emp.acerv.jpg" },
+                { titulo: "Galeria de Diretores Antigos", img: "museu/a.diretores.ant.acer.jpg" },
+                { titulo: "Galeria de Professores Antigos", img: "museu/a.prof.anti.acer.jpg" },
+                { titulo: "Retratos Antigos", img: "museu/a.pessoas.acer.jpg" }
             ]
         },
         biblioteca_acervo: {
@@ -116,19 +116,19 @@
             descricao: "Obras clássicas, anuários e livros raros da instituição.",
             // AQUI FICAM APENAS AS FOTOS DA BIBLIOTECA
             itens: [
-                { titulo: "Coletânea Clássica", img: "l.coletanea.acer.jpg" },
-                { titulo: "Acervo Jânio Quadros", img: "l.janio.quadros.bi.acer.jpg" },
-                { titulo: "Livro Albert Einstein", img: "liv.eistein.acerv.jpg" },
-                { titulo: "Anais de Medicina", img: "liv.med.acer.jpg" },
-                { titulo: "Dicionários Antigos", img: "livro.gigante.acer.jpg" },
-                { titulo: "Recenseamento do Brazil", img: "livro2.acer.jpg" },
-                { titulo: "Os Lusíadas", img: "lusiadas.acer.jpg" },
-                { titulo: "Bíblias Sagradas", img: "biblia.acer.jpg" },
-                { titulo: "Coleção Buffon", img: "l.coleção.acer.jpg" },
-                { titulo: "Dicionário Geographico", img: "l.dici.acer.jpg" },
-                { titulo: "Livros Raros - Reserva", img: "liv.acer.jpg" },
-                { titulo: "Livros de Fisiologia", img: "livro.biblioteca.jpg" },
-                { titulo: "Obras Monteiro Lobato", img: "l.monteiro.l.acer.jpg" }
+                { titulo: "Coletânea Clássica", img: "bilioteca/l.coletanea.acer.jpg" },
+                { titulo: "Acervo Jânio Quadros", img: "bilioteca/l.janio.quadros.bi.acer.jpg" },
+                { titulo: "Livro Albert Einstein", img: "bilioteca/liv.eistein.acerv.jpg" },
+                { titulo: "Anais de Medicina", img: "bilioteca/liv.med.acer.jpg" },
+                { titulo: "Dicionários Antigos", img: "bilioteca/livro.gigante.acer.jpg" },
+                { titulo: "Recenseamento do Brazil", img: "bilioteca/livro2.acer.jpg" },
+                { titulo: "Os Lusíadas", img: "bilioteca/lusiadas.acer.jpg" },
+                { titulo: "Bíblias Sagradas", img: "bilioteca/biblia.acer.jpg" },
+                { titulo: "Coleção Buffon", img: "bilioteca/l.coleção.acer.jpg" },
+                { titulo: "Dicionário Geographico", img: "bilioteca/l.dici.acer.jpg" },
+                { titulo: "Livros Raros - Reserva", img: "bilioteca/liv.acer.jpg" },
+                { titulo: "Livros de Fisiologia", img: "bilioteca/livro.biblioteca.jpg" },
+                { titulo: "Obras Monteiro Lobato", img: "bilioteca/l.monteiro.l.acer.jpg" }
             ]
         },
         livro_digital: {
@@ -136,43 +136,43 @@
             descricao: "Páginas do Livro Digital.",
             // AQUI FICAM APENAS AS PÁGINAS DO LIVRO
             itens: [
-                { titulo: "Capa", img: "pg1.png" },
-                { titulo: "Página 2", img: "pg2.png" },
-                { titulo: "Página 3", img: "pg3.png" },
-                { titulo: "Página 4", img: "pg4.png" },
-                { titulo: "Página 5", img: "pg5.png" },
-                { titulo: "Página 6", img: "pg6.png" },
-                { titulo: "Página 7", img: "pg7.png" },
-                { titulo: "Página 8", img: "pg8.png" },
-                { titulo: "Página 9", img: "pg9.png" },
-                { titulo: "Página 10", img: "pg10.png" },
-                { titulo: "Página 11", img: "pg11.png" },
-                { titulo: "Página 12", img: "pg12.png" },
-                { titulo: "Página 13", img: "pg13.png" },
-                { titulo: "Página 14", img: "pg14.png" },
-                { titulo: "Página 15", img: "pg15.png" },
-                { titulo: "Página 16", img: "pg16.png" },
-                { titulo: "Página 17", img: "pg17.png" },
-                { titulo: "Página 18", img: "pg18.png" },
-                { titulo: "Página 19", img: "pg19.png" },
-                { titulo: "Página 20", img: "pg20.png" },
-                { titulo: "Página 21", img: "pg21.png" },
-                { titulo: "Página 22", img: "pg22.png" },
-                { titulo: "Página 23", img: "pg23.png" },
-                { titulo: "Página 24", img: "pg24.png" },
-                { titulo: "Página 25", img: "pg25.png" },
-                { titulo: "Página 26", img: "pg26.png" },
-                { titulo: "Página 27", img: "pg27.png" },
-                { titulo: "Página 28", img: "pg28.png" },
-                { titulo: "Página 29", img: "pg29.png" },
-                { titulo: "Página 30", img: "pg30.png" },
-                { titulo: "Página 31", img: "pg31.png" },
-                { titulo: "Página 32", img: "pg32.png" },
-                { titulo: "Página 33", img: "pg34.png" },
-                { titulo: "Página 34", img: "pg35.png" },
-                { titulo: "Página 35", img: "pg36.png" },
-                { titulo: "Página 36", img: "pg37.png" },
-                { titulo: "Página 37", img: "pg40.png" }
+                { titulo: "Capa", img: "livro/pg1.png" },
+                { titulo: "Página 2", img: "livro/pg2.png" },
+                { titulo: "Página 3", img: "livro/pg3.png" },
+                { titulo: "Página 4", img: "livro/pg4.png" },
+                { titulo: "Página 5", img: "livro/pg5.png" },
+                { titulo: "Página 6", img: "livro/pg6.png" },
+                { titulo: "Página 7", img: "livro/pg7.png" },
+                { titulo: "Página 8", img: "livro/pg8.png" },
+                { titulo: "Página 9", img: "livro/pg9.png" },
+                { titulo: "Página 10", img: "livro/pg10.png" },
+                { titulo: "Página 11", img: "livro/pg11.png" },
+                { titulo: "Página 12", img: "livro/pg12.png" },
+                { titulo: "Página 13", img: "livro/pg13.png" },
+                { titulo: "Página 14", img: "livro/pg14.png" },
+                { titulo: "Página 15", img: "livro/pg15.png" },
+                { titulo: "Página 16", img: "livro/pg16.png" },
+                { titulo: "Página 17", img: "livro/pg17.png" },
+                { titulo: "Página 18", img: "livro/pg18.png" },
+                { titulo: "Página 19", img: "livro/pg19.png" },
+                { titulo: "Página 20", img: "livro/pg20.png" },
+                { titulo: "Página 21", img: "livro/pg21.png" },
+                { titulo: "Página 22", img: "livro/pg22.png" },
+                { titulo: "Página 23", img: "livro/pg23.png" },
+                { titulo: "Página 24", img: "livro/pg24.png" },
+                { titulo: "Página 25", img: "livro/pg25.png" },
+                { titulo: "Página 26", img: "livro/pg26.png" },
+                { titulo: "Página 27", img: "livro/pg27.png" },
+                { titulo: "Página 28", img: "livro/pg28.png" },
+                { titulo: "Página 29", img: "livro/pg29.png" },
+                { titulo: "Página 30", img: "livro/pg30.png" },
+                { titulo: "Página 31", img: "livro/pg31.png" },
+                { titulo: "Página 32", img: "livro/pg32.png" },
+                { titulo: "Página 33", img: "livro/pg34.png" },
+                { titulo: "Página 34", img: "livro/pg35.png" },
+                { titulo: "Página 35", img: "livro/pg36.png" },
+                { titulo: "Página 36", img: "livro/pg37.png" },
+                { titulo: "Página 37", img: "livro/pg40.png" }
                 
             ]
         },
@@ -180,25 +180,25 @@
             titulo: "Curiosidades e Arquitetura",
             descricao: "Detalhes construtivos, homenagens e brasões históricos da escola.",
             itens:[
-                { titulo: "Logo Madeira", img: "logo.mad.jpg" },
-                { titulo: "Logo Principal Parede", img: "logo.princ.jpg" },
-                { titulo: "Monumento Gramado (Longe)", img: "c.homenagem.longe.g.jpg" },
-                { titulo: "Monumento Gramado (Perto)", img: "c.homenagem.grama.jpg" },
-                { titulo: "Piso Antigo (Corredor)", img: "c.chao.corredor.jpg", legenda: "Azulejo hidráulico original" },
-                { titulo: "Piso de Madeira (Sala)", img: "c.chão.sala.jpg" },
-                { titulo: "Escada de Pedra", img: "c.escada.pedra.co.jpg" },
-                { titulo: "Tijolo Exposto (Sala)", img: "c.tijol.sala.jpg" },
-                { titulo: "Amostra de Tinta Antiga", img: "c.tinta.parede13.jpg" },
-                { titulo: "Pintura Antiga Parede", img: "c.pint.antiga.jpg" },
-                { titulo: "Teste de Tinta Histórica", img: "c.tin.antiga.jpg" },
-                { titulo: "Parede Profunda", img: "c.pared.prof.jpg" },
-                { titulo: "Tijolo Imperial", img: "c.tij.imperial.acer.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
-                { titulo: "Placa Jequitibá", img: "c.plac.jequi.acer.jpg" },
-                { titulo: "Placas Homenagem Acervo", img: "c.placas.acer.jpg" },
-                { titulo: "Mural de Placas Homenagem", img: "c.homenagem.corredor2.jpg" },
-                { titulo: "Árvore Centenária", img: "c.arvore.100.jpg" },
-                { titulo: "Fotos antigas", img: "c.corredor.direção.jpn" },
-                { titulo: "Mural de Placas Homenagem", img: "c.homenagem.corredor2.jpg" }
+                { titulo: "Logo Madeira", img: "curiosidades/logo.mad.jpg" },
+                { titulo: "Logo Principal Parede", img: "curiosidades/logo.princ.jpg" },
+                { titulo: "Monumento Gramado (Longe)", img: "curiosidades/c.homenagem.longe.g.jpg" },
+                { titulo: "Monumento Gramado (Perto)", img: "curiosidades/c.homenagem.grama.jpg" },
+                { titulo: "Piso Antigo (Corredor)", img: "curiosidades/c.chao.corredor.jpg", legenda: "Azulejo hidráulico original" },
+                { titulo: "Piso de Madeira (Sala)", img: "curiosidades/c.chão.sala.jpg" },
+                { titulo: "Escada de Pedra", img: "curiosidades/c.escada.pedra.co.jpg" },
+                { titulo: "Tijolo Exposto (Sala)", img: "curiosidades/c.tijol.sala.jpg" },
+                { titulo: "Amostra de Tinta Antiga", img: "curiosidades/c.tinta.parede13.jpg" },
+                { titulo: "Pintura Antiga Parede", img: "curiosidades/c.pint.antiga.jpg" },
+                { titulo: "Teste de Tinta Histórica", img: "curiosidades/c.tin.antiga.jpg" },
+                { titulo: "Parede Profunda", img: "curiosidades/c.pared.prof.jpg" },
+                { titulo: "Tijolo Imperial", img: "curiosidades/c.tij.imperial.acer.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
+                { titulo: "Placa Jequitibá", img: "curiosidades/c.plac.jequi.acer.jpg" },
+                { titulo: "Placas Homenagem Acervo", img: "curiosidades/c.placas.acer.jpg" },
+                { titulo: "Mural de Placas Homenagem", img: "curiosidades/c.homenagem.corredor2.jpg" },
+                { titulo: "Árvore Centenária", img: "curiosidades/c.arvore.100.jpg" },
+                { titulo: "Fotos antigas", img: "curiosidades/c.corredor.direção.jpn" },
+                { titulo: "Mural de Placas Homenagem", img: "curiosidades/c.homenagem.corredor2.jpg" }
             ]
         }
     };
@@ -249,57 +249,56 @@
             titulo: "Professores de Linguagens",
             descricao: "Língua Portuguesa, Literatura, Inglês e Artes.",
             professores: [
-                { nome: "Profª. Adriana", disciplina: "Educação Física", img: "prof.adriana.jpeg" },
-                { nome: "Profª. Alexandra", disciplina: "Língua Portuguesa", img: "prof.alexandra.jpeg" },
-                { nome: "Profª. Célia", disciplina: "Língua Portuguesa", img: "prof.celia.jpeg" },
-                { nome: "Prof. Matheus", disciplina: "Língua Portuguesa", img: "prof.matheus.jpeg" },
-                { nome: "Profª. M. Eduarda", disciplina: "Língua Portuguesa", img: "prof.m.eduarda.jpeg" },
-                { nome: "Profª. Patrícia", disciplina: "Artes", img: "prof.patricia.jpeg" },
-                { nome: "Profª. Sandra", disciplina: "Inglês", img: "prof.sandra.jpeg" },
-                { nome: "Prof. Victor", disciplina: "Redação e Leitura", img: "prof.victor.jpeg" }
+                { nome: "Profª. Adriana", disciplina: "Educação Física", img: "professores/prof.adriana.jpeg" },
+                { nome: "Profª. Alexandra", disciplina: "Língua Portuguesa", img: "professores/prof.alexandra.jpeg" },
+                { nome: "Profª. Célia", disciplina: "Língua Portuguesa", img: "professores/prof.celia.jpeg" },
+                { nome: "Prof. Matheus", disciplina: "Língua Portuguesa", img: "professores/prof.matheus.jpeg" },
+                { nome: "Profª. M. Eduarda", disciplina: "Língua Portuguesa", img: "professores/prof.m.eduarda.jpeg" },
+                { nome: "Profª. Patrícia", disciplina: "Artes", img: "professores/prof.patricia.jpeg" },
+                { nome: "Profª. Sandra", disciplina: "Inglês", img: "professores/prof.sandra.jpeg" },
+                { nome: "Prof. Victor", disciplina: "Língua Portuguesa", img: "professores/prof.victor.jpeg" }
             ]
         },
         exatas: {
             titulo: "Professores de Exatas",
             descricao: "Matemática e Raciocínio Lógico.",
             professores: [
-                { nome: "Profª. Carina", disciplina: "Matemática", img: "prof.carina.jpeg" },
-                { nome: "Prof. Denilson", disciplina: "Física", img: "prof.denilson.jpeg" },
-                { nome: "Prof. Flávio", disciplina: "Biologia", img: "prof.flavio.jpeg" },
-                { nome: "Prof. Lucas", disciplina: "Matemática", img: "prof.lucas.jpeg" },
-                { nome: "Profª. Sônia", disciplina: "Matemática", img: "prof.dourado.jpeg" }
+                { nome: "Profª. Carina", disciplina: "Matemática", img: "professores/prof.carina.jpeg" },
+                { nome: "Prof. Denilson", disciplina: "Física", img: "professores/prof.denilson.jpeg" },
+                { nome: "Prof. Lucas", disciplina: "Matemática", img: "professores/prof.lucas.jpeg" },
+                { nome: "Profª. Sônia", disciplina: "Matemática", img: "professores/prof.dourado.jpeg" }
             ]
         },
         humanas: {
             titulo: "Professores de Ciências Humanas",
             descricao: "História, Geografia, Filosofia e Sociologia.",
             professores: [
-                { nome: "Prof. Guilherme", disciplina: "Sociologia", img: "prof.guilherme.soci.jpeg" },
-                { nome: "Profª. Paty", disciplina: "Geografia", img: "prof.paty.jpeg" },
-                { nome: "Profª. Paula", disciplina: "História", img: "prof.paula.jpeg" }
+                { nome: "Prof. Guilherme", disciplina: "Sociologia", img: "professores/prof.guilherme.soci.jpeg" },
+                { nome: "Profª. Paty", disciplina: "Geografia", img: "professores/prof.paty.jpeg" },
+                { nome: "Profª. Paula", disciplina: "História", img: "professores/prof.paula.jpeg" }
             ]
         },
         natureza: {
             titulo: "Professores de Ciências da Natureza",
             descricao: "Física, Química e Biologia.",
             professores: [
-                { nome: "Profª. Camila", disciplina: "Quimica", img: "prof.camila.jpeg" },
-                { nome: "Profª. Cláudia", disciplina: "Biologia", img: "prof.claudia.jpeg" },
-                { nome: "Prof. Flávio", disciplina: "Biologia", img: "prof.flavio.jpeg" },
-                { nome: "Prof. Guilherme", disciplina: "Química", img: "prof.gulherme.quim.jpeg" },
-                { nome: "Profª. Isabelle", disciplina: "Física", img: "prof.isabelle.jpeg" }
+                { nome: "Profª. Camila", disciplina: "Quimica", img: "professores/prof.camila.jpeg" },
+                { nome: "Profª. Cláudia", disciplina: "Biologia", img: "professores/prof.claudia.jpeg" },
+                { nome: "Prof. Flávio", disciplina: "Biologia", img: "professores/prof.flavio.jpeg" },
+                { nome: "Prof. Guilherme", disciplina: "Química", img: "professores/prof.gulherme.quim.jpeg" },
+                { nome: "Profª. Isabelle", disciplina: "Física", img: "professores/prof.isabelle.jpeg" }
             ]
         },
         tecnico: {
             titulo: "Professores do Técnico",
             descricao: "Desenvolvimento de Sistemas e Saúde/Ed. Física.",
             professores: [
-                { nome: "Prof. Alex", disciplina: "Dev. Sistemas", img: "prof.alex.tec.ds.jpeg" },
-                { nome: "Prof. Aparecido", disciplina: "Dev. Sistemas", img: "prof.aparecido.tec.ds.jpeg" },
-                { nome: "Profª. Gláucia", disciplina: "Dev. Sistemas", img: "prof.glaucia.tec.ds.jpeg" },
-                { nome: "Profª. Fran", disciplina: "Enfermagem", img: "prof.fran.ef.jpeg" },
-                { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "prof.jacke.ef.jpeg" },
-                { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "prof.fran.ef.jpeg" }
+                { nome: "Prof. Alex", disciplina: "Dev. Sistemas", img: "professores/prof.alex.tec.ds.jpeg" },
+                { nome: "Prof. Aparecido", disciplina: "Dev. Sistemas", img: "professores/prof.aparecido.tec.ds.jpeg" },
+                { nome: "Profª. Gláucia", disciplina: "Dev. Sistemas", img: "professores/prof.glaucia.tec.ds.jpeg" },
+                { nome: "Profª. Fran", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" },
+                { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "professores/prof.jacke.ef.jpeg" },
+                { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" }
             ]
         }
     };
@@ -347,17 +346,17 @@
             // VOCÊ PODE USAR O <br> AQUI ABAIXO TRANQUILAMENTE AGORA:
             descricao: "Registros das nossas batalhas de poesia.<br>Alunos esbanjando talento!",
             itens: [
-                { titulo: "Apresentação Slam 1", img: "slam_foto1.jpg" },
-                { titulo: "Apresentação Slam 2", img: "slam_foto2.jpg" },
-                { titulo: "Apresentação Slam 3", img: "slam_foto3.jpg" }
+                { titulo: "Apresentação Slam 1", img: "slam/slam.jpg" },
+                { titulo: "Apresentação Slam 2", img: "slam/slam.jpg" },
+                { titulo: "Apresentação Slam 3", img: "slam/slam.jpg" }
             ]
         },
         sarau: {
             titulo: "Galeria do Sarau",
             descricao: "Registros das apresentações artísticas e culturais.<br>Música, dança e arte.",
             itens: [
-                { titulo: "Música no Sarau", img: "sarau_foto1.jpg" },
-                { titulo: "Dança no Sarau", img: "sarau_foto2.jpg" }
+                { titulo: "Música no Sarau", img: "sarau/sarau.jpg" },
+                { titulo: "Dança no Sarau", img: "sarau/sarau.jpg" }
             ]
         }
     };
