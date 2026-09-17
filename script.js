@@ -95,7 +95,7 @@
     /* ==========================================================================
        3. REPOSITÓRIO DE ACERVO (FOTOS, BIBLIOTECA, CURIOSIDADES)
        ========================================================================== */
-    const repositorioAcervo = {
+   const repositorioAcervo = {
         fotos_acervo: {
             titulo: "Fotos do Acervo Histórico",
             descricao: "Mobiliário, objetos científicos e galerias de diretores.",
@@ -114,6 +114,7 @@
         biblioteca_acervo: {
             titulo: "Biblioteca Histórica",
             descricao: "Obras clássicas, anuários e livros raros da instituição.",
+            // AQUI FICAM APENAS AS FOTOS DA BIBLIOTECA
             itens: [
                 { titulo: "Coletânea Clássica", img: "l.coletanea.acer.jpg" },
                 { titulo: "Acervo Jânio Quadros", img: "l.janio.quadros.bi.acer.jpg" },
@@ -127,44 +128,51 @@
                 { titulo: "Dicionário Geographico", img: "l.dici.acer.jpg" },
                 { titulo: "Livros Raros - Reserva", img: "liv.acer.jpg" },
                 { titulo: "Livros de Fisiologia", img: "livro.biblioteca.jpg" },
-                { titulo: "Obras Monteiro Lobato", img: "l.monteiro.l.acer.jpg" },
-                { titulo: "Livro 113 Anos - Capa", img: "pg1.png" },
-                { titulo: "Livro 113 Anos - Pg 2", img: "pg2.png" },
-                { titulo: "Livro 113 Anos - Pg 3", img: "pg3.png" },
-                { titulo: "Livro 113 Anos - Pg 4", img: "pg4.png" },
-                { titulo: "Livro 113 Anos - Pg 5", img: "pg5.png" },
-                { titulo: "Livro 113 Anos - Pg 6", img: "pg6.png" },
-                { titulo: "Livro 113 Anos - Pg 7", img: "pg7.png" },
-                { titulo: "Livro 113 Anos - Pg 8", img: "pg8.png" },
-                { titulo: "Livro 113 Anos - Pg 9", img: "pg9.png" },
-                { titulo: "Livro 113 Anos - Pg 10", img: "pg10.png" },
-                { titulo: "Livro 113 Anos - Pg 11", img: "pg11.png" },
-                { titulo: "Livro 113 Anos - Pg 12", img: "pg12.png" },
-                { titulo: "Livro 113 Anos - Pg 13", img: "pg13.png" },
-                { titulo: "Livro 113 Anos - Pg 14", img: "pg14.png" },
-                { titulo: "Livro 113 Anos - Pg 15", img: "pg15.png" },
-                { titulo: "Livro 113 Anos - Pg 16", img: "pg16.png" },
-                { titulo: "Livro 113 Anos - Pg 17", img: "pg17.png" },
-                { titulo: "Livro 113 Anos - Pg 18", img: "pg18.png" },
-                { titulo: "Livro 113 Anos - Pg 19", img: "pg19.png" },
-                { titulo: "Livro 113 Anos - Pg 20", img: "pg20.png" },
-                { titulo: "Livro 113 Anos - Pg 21", img: "pg21.png" },
-                { titulo: "Livro 113 Anos - Pg 22", img: "pg22.png" },
-                { titulo: "Livro 113 Anos - Pg 23", img: "pg23.png" },
-                { titulo: "Livro 113 Anos - Pg 24", img: "pg24.png" },
-                { titulo: "Livro 113 Anos - Pg 25", img: "pg25.png" },
-                { titulo: "Livro 113 Anos - Pg 26", img: "pg26.png" },
-                { titulo: "Livro 113 Anos - Pg 27", img: "pg27.png" },
-                { titulo: "Livro 113 Anos - Pg 28", img: "pg28.png" },
-                { titulo: "Livro 113 Anos - Pg 29", img: "pg29.png" },
-                { titulo: "Livro 113 Anos - Pg 30", img: "pg30.png" },
-                { titulo: "Livro 113 Anos - Pg 31", img: "pg31.png" },
-                { titulo: "Livro 113 Anos - Pg 32", img: "pg32.png" },
-                { titulo: "Livro 113 Anos - Pg 33", img: "pg33.png" },
-                { titulo: "Livro 113 Anos - Pg 34", img: "pg34.png" },
-                { titulo: "Livro 113 Anos - Pg 35", img: "pg35.png" },
-                { titulo: "Livro 113 Anos - Pg 36", img: "pg36.png" },
-                { titulo: "Livro 113 Anos - Pg 37", img: "pg37.png" }
+                { titulo: "Obras Monteiro Lobato", img: "l.monteiro.l.acer.jpg" }
+            ]
+        },
+        livro_digital: {
+            titulo: "Livro 113 Anos",
+            descricao: "Páginas do Livro Digital.",
+            // AQUI FICAM APENAS AS PÁGINAS DO LIVRO
+            itens: [
+                { titulo: "Capa", img: "pg1.png" },
+                { titulo: "Página 2", img: "pg2.png" },
+                { titulo: "Página 3", img: "pg3.png" },
+                { titulo: "Página 4", img: "pg4.png" },
+                { titulo: "Página 5", img: "pg5.png" },
+                { titulo: "Página 6", img: "pg6.png" },
+                { titulo: "Página 7", img: "pg7.png" },
+                { titulo: "Página 8", img: "pg8.png" },
+                { titulo: "Página 9", img: "pg9.png" },
+                { titulo: "Página 10", img: "pg10.png" },
+                { titulo: "Página 11", img: "pg11.png" },
+                { titulo: "Página 12", img: "pg12.png" },
+                { titulo: "Página 13", img: "pg13.png" },
+                { titulo: "Página 14", img: "pg14.png" },
+                { titulo: "Página 15", img: "pg15.png" },
+                { titulo: "Página 16", img: "pg16.png" },
+                { titulo: "Página 17", img: "pg17.png" },
+                { titulo: "Página 18", img: "pg18.png" },
+                { titulo: "Página 19", img: "pg19.png" },
+                { titulo: "Página 20", img: "pg20.png" },
+                { titulo: "Página 21", img: "pg21.png" },
+                { titulo: "Página 22", img: "pg22.png" },
+                { titulo: "Página 23", img: "pg23.png" },
+                { titulo: "Página 24", img: "pg24.png" },
+                { titulo: "Página 25", img: "pg25.png" },
+                { titulo: "Página 26", img: "pg26.png" },
+                { titulo: "Página 27", img: "pg27.png" },
+                { titulo: "Página 28", img: "pg28.png" },
+                { titulo: "Página 29", img: "pg29.png" },
+                { titulo: "Página 30", img: "pg30.png" },
+                { titulo: "Página 31", img: "pg31.png" },
+                { titulo: "Página 32", img: "pg32.png" },
+                { titulo: "Página 33", img: "pg34.png" },
+                { titulo: "Página 34", img: "pg35.png" },
+                { titulo: "Página 35", img: "pg36.png" },
+                { titulo: "Página 36", img: "pg37.png" },
+                { titulo: "Página 37", img: "pg40.png" }
                 
             ]
         },
@@ -229,8 +237,8 @@
     document.getElementById('modal-acervo-backdrop')?.addEventListener('click', () => { modalAcervo.setAttribute('hidden', ''); document.body.style.overflow = '';});
 
     document.getElementById('btn-ler-livro')?.addEventListener('click', () => {
-        const idx = repositorioAcervo.biblioteca_acervo.itens.findIndex(i => i.img === 'pg1.png');
-        if(idx !== -1) abrirLightbox(repositorioAcervo.biblioteca_acervo.itens, idx);
+        abrirLightbox(repositorioAcervo.livro_digital.itens, 0);
+    });
     });
 
     /* ==========================================================================
@@ -494,5 +502,3 @@
             abrirLightbox(imgs, index);
         });
     });
-
-});
