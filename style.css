@@ -497,7 +497,7 @@ button { cursor: pointer; border: none; background: none; }
   .header__nav.is-open { right: 0; }
   .header__menu { flex-direction: column; align-items: flex-start; }
   .header__link { color: var(--cor-branca); }
-  .historia__cards, .itinerarios__grid, .contato__grid, .projetos__grid, .gestao__grid { grid-template-columns: 1fr; }
+ .historia__cards, .itinerarios__grid, .contato__grid, .projetos__grid, .gestao__grid, .acervo__grid, .galeria__grid, .professores__grid { grid-template-columns: 1fr; }
   .chatbot__window { width: 290px; right: -10px; }
   .mascote { flex-direction: column; }
   .mascote__speech::before { display: none; }
