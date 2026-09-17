@@ -1,13 +1,7 @@
-/* ==========================================================================
-   Escola Estadual Culto à Ciência — Campinas/SP
-   Script Principal do MVP (script.js) - Refatorado com Dados Reais
-   ========================================================================== */
 
    document.addEventListener('DOMContentLoaded', () => {
 
-    /* ==========================================================================
-       1. MENU MOBILE & ACESSIBILIDADE
-       ========================================================================== */
+    /* menu mobile e acessibilidade*/
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const mainNav = document.getElementById('main-nav');
     
@@ -38,9 +32,7 @@
         if (localStorage.getItem('contraste') === 'true') document.body.classList.add('alto-contraste');
     }
 
-    /* ==========================================================================
-       2. LIGHTBOX GLOBAL (ACERVO E GALERIA E PROJETOS)
-       ========================================================================== */
+    /* lightbox acervo galeria e projetos */
     const lightbox = document.getElementById('lightbox');
     const lightboxDisplay = document.getElementById('lightbox-display');
     const lightboxPrev = document.getElementById('lightbox-prev');
@@ -92,9 +84,7 @@
         });
     });
 
-    /* ==========================================================================
-       3. REPOSITÓRIO DE ACERVO (FOTOS, BIBLIOTECA, CURIOSIDADES)
-       ========================================================================== */
+    /*repositorio de fotos do acervo em lista (ordem que vai seguir dentro do modal) MUSEU, BIBLIOTECA, CURIOSIDADES E LIVRO*/
    const repositorioAcervo = {
         fotos_acervo: {
             titulo: "Fotos do Acervo Histórico",
@@ -114,27 +104,25 @@
         biblioteca_acervo: {
             titulo: "Biblioteca Histórica",
             descricao: "Obras clássicas, anuários e livros raros da instituição.",
-            // AQUI FICAM APENAS AS FOTOS DA BIBLIOTECA
             itens: [
-                { titulo: "Coletânea Clássica", img: "bilioteca/l.coletanea.acer.jpg" },
-                { titulo: "Acervo Jânio Quadros", img: "bilioteca/l.janio.quadros.bi.acer.jpg" },
-                { titulo: "Livro Albert Einstein", img: "bilioteca/liv.eistein.acerv.jpg" },
-                { titulo: "Anais de Medicina", img: "bilioteca/liv.med.acer.jpg" },
-                { titulo: "Dicionários Antigos", img: "bilioteca/livro.gigante.acer.jpg" },
-                { titulo: "Recenseamento do Brazil", img: "bilioteca/livro2.acer.jpg" },
-                { titulo: "Os Lusíadas", img: "bilioteca/lusiadas.acer.jpg" },
-                { titulo: "Bíblias Sagradas", img: "bilioteca/biblia.acer.jpg" },
-                { titulo: "Coleção Buffon", img: "bilioteca/l.coleção.acer.jpg" },
-                { titulo: "Dicionário Geographico", img: "bilioteca/l.dici.acer.jpg" },
-                { titulo: "Livros Raros - Reserva", img: "bilioteca/liv.acer.jpg" },
-                { titulo: "Livros de Fisiologia", img: "bilioteca/livro.biblioteca.jpg" },
-                { titulo: "Obras Monteiro Lobato", img: "bilioteca/l.monteiro.l.acer.jpg" }
+                { titulo: "Coletânea Clássica", img: "biblioteca/l.coletanea.acer.jpg" },
+                { titulo: "Acervo Jânio Quadros", img: "biblioteca/l.janio.quadros.bi.acer.jpg" },
+                { titulo: "Livro Albert Einstein", img: "biblioteca/liv.eistein.acerv.jpg" },
+                { titulo: "Anais de Medicina", img: "biblioteca/liv.med.acer.jpg" },
+                { titulo: "Dicionários Antigos", img: "biblioteca/livro.gigante.acer.jpg" },
+                { titulo: "Recenseamento do Brazil", img: "biblioteca/livro2.acer.jpg" },
+                { titulo: "Os Lusíadas", img: "biblioteca/lusiadas.acer.jpg" },
+                { titulo: "Bíblias Sagradas", img: "biblioteca/biblia.acer.jpg" },
+                { titulo: "Coleção Buffon", img: "biblioteca/l.coleção.acer.jpg" },
+                { titulo: "Dicionário Geographico", img: "biblioteca/l.dici.acer.jpg" },
+                { titulo: "Livros Raros - Reserva", img: "biblioteca/liv.acer.jpg" },
+                { titulo: "Livros de Fisiologia", img: "biblioteca/livro.biblioteca.jpg" },
+                { titulo: "Obras Monteiro Lobato", img: "biblioteca/l.monteiro.l.acer.jpg" }
             ]
         },
         livro_digital: {
             titulo: "Livro 113 Anos",
             descricao: "Páginas do Livro Digital.",
-            // AQUI FICAM APENAS AS PÁGINAS DO LIVRO
             itens: [
                 { titulo: "Capa", img: "livro/pg1.png" },
                 { titulo: "Página 2", img: "livro/pg2.png" },
@@ -198,7 +186,6 @@
                 { titulo: "Mural de Placas Homenagem", img: "curiosidades/c.homenagem.corredor2.jpg" },
                 { titulo: "Árvore Centenária", img: "curiosidades/c.arvore.100.jpg" },
                 { titulo: "Fotos antigas", img: "curiosidades/c.corredor.direção.jpn" },
-                { titulo: "Mural de Placas Homenagem", img: "curiosidades/c.homenagem.corredor2.jpg" }
             ]
         }
     };
@@ -241,9 +228,7 @@
     });
     });
 
-    /* ==========================================================================
-       4. REPOSITÓRIO DE PROFESSORES
-       ========================================================================== */
+    /*repositorio fotos dos professores */
     const repositorioProfessores = {
         linguagens: {
             titulo: "Professores de Linguagens",
@@ -300,6 +285,15 @@
                 { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "professores/prof.jacke.ef.jpeg" },
                 { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" }
             ]
+        },
+        especial: {
+            titulo: "Professores de Apoio",
+            descricao: "Apoio",
+            professores: [
+                { nome: "Profª Mônica", disciplina: ".", img: "professores/prof.especial1.jpeg" },
+                { nome: "Profª Cintia", disciplina: ".", img: "professores/prof.especial2.jpeg" },
+               
+            ]
         }
     };
 
@@ -337,14 +331,11 @@
     document.getElementById('modal-professores-backdrop')?.addEventListener('click', () => { modalProfessores.setAttribute('hidden', ''); document.body.style.overflow = ''; });
 
 
-    /* ==========================================================================
-       4.5 REPOSITÓRIO DE PROJETOS (SLAMS E SARAUS)
-       ========================================================================== */
+    /* repositorio fotos do sarau e slam*/
     const repositorioProjetos = {
         slam: {
             titulo: "Galeria do Slam",
-            // VOCÊ PODE USAR O <br> AQUI ABAIXO TRANQUILAMENTE AGORA:
-            descricao: "Registros das nossas batalhas de poesia.<br>Alunos esbanjando talento!",
+            descricao: "Registros das nossas batalhas de poesia.",
             itens: [
                 { titulo: "Apresentação Slam 1", img: "slam/slam.jpg" },
                 { titulo: "Apresentação Slam 2", img: "slam/slam.jpg" },
@@ -353,7 +344,7 @@
         },
         sarau: {
             titulo: "Galeria do Sarau",
-            descricao: "Registros das apresentações artísticas e culturais.<br>Música, dança e arte.",
+            descricao: "Registros das apresentações artísticas e culturais.",
             itens: [
                 { titulo: "Música no Sarau", img: "sarau/sarau.jpg" },
                 { titulo: "Dança no Sarau", img: "sarau/sarau.jpg" }
@@ -373,9 +364,8 @@
             const dados = repositorioProjetos[proj];
             
             modalProjetosTitulo.textContent = dados.titulo;
-            // AQUI ESTÁ A MUDANÇA (innerHTML) PARA O <br> FUNCIONAR NA DESCRIÇÃO:
-            modalProjetosDesc.innerHTML = dados.descricao;
-            modalProjetosGrid.innerHTML = '';
+            modalProjetosDesc.textContent= dados.descricao;
+            modalProjetosGrid.textContent = '';
 
             dados.itens.forEach((item, index) => {
                 const div = document.createElement('div');
@@ -399,22 +389,18 @@
     document.getElementById('modal-projetos-backdrop')?.addEventListener('click', () => { modalProjetos?.setAttribute('hidden', ''); document.body.style.overflow = ''; });
 
 
-    /* ==========================================================================
-       FECHAR MODAIS NO TECLADO (INCLUINDO O DE PROJETOS)
-       ========================================================================== */
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
+    /* fecha os modais abertos e volta toda pagina ao normal caso seja apertada a tecla ESC */
+    document.addEventListener('keydown', (e) => { /*o comando keydown fica "ouvindo o teclado" */
+        if (e.key === 'Escape') { /*se a tecla ESC for apertada fecha tudo */
             fecharLightbox();
             modalAcervo?.setAttribute('hidden', '');
             modalProfessores?.setAttribute('hidden', '');
-            modalProjetos?.setAttribute('hidden', ''); /* Linha nova para fechar Projetos no Esc */
+            modalProjetos?.setAttribute('hidden', ''); 
             document.body.style.overflow = '';
         }
     });
 
-    /* ==========================================================================
-       5. CHATBOT FLUTUANTE
-       ========================================================================== */
+    /*chat bot */
     const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
     const chatbotWindow = document.getElementById('chatbot-window');
     
@@ -444,10 +430,16 @@
             chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }, 800);
     });
+    const btnAbrirCultinho = document.getElementById('btn-abrir-cultinho');
+    
+    btnAbrirCultinho?.addEventListener('click', () => {
+        if(chatbotWindow) {
+            chatbotWindow.removeAttribute('hidden');
+            // Opcional: rola a tela para o chat ou foca no input se quiser
+        }
+    });
 
-    /* ==========================================================================
-       6. BOTÃO VOLTAR AO TOPO & LER MAIS GALERIA
-       ========================================================================== */
+    /* ler mais da galeria */
     const btnTopo = document.getElementById('back-to-top-btn');
     window.addEventListener('scroll', () => {
         if(btnTopo) {
@@ -457,31 +449,6 @@
     });
     btnTopo?.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
 
-    const btnVerMaisGaleria = document.getElementById('btn-ver-mais-galeria');
-    const fotosOcultas = document.querySelectorAll('.galeria__item--oculta');
-
-    if (btnVerMaisGaleria) {
-        btnVerMaisGaleria.addEventListener('click', () => {
-            let fotosEstaoVisiveis = false;
-
-            // Alterna a classe 'visivel' em cada foto oculta
-            fotosOcultas.forEach(foto => {
-                foto.classList.toggle('visivel');
-                if (foto.classList.contains('visivel')) {
-                    fotosEstaoVisiveis = true;
-                }
-            });
-
-            // Atualiza o botão conforme o estado atual
-            if (fotosEstaoVisiveis) {
-                btnVerMaisGaleria.innerHTML = '<i class="fa-solid fa-minus" aria-hidden="true"></i> Ver menos fotos';
-            } else {
-                btnVerMaisGaleria.innerHTML = '<i class="fa-solid fa-plus" aria-hidden="true"></i> Ver mais fotos';
-            }
-        });
-    }
-
-    // Duplicatas antigas do fechamento de lightbox que já constavam no seu arquivo original
     document.getElementById('lightbox-close')?.addEventListener('click', fecharLightbox);
     document.getElementById('lightbox-backdrop')?.addEventListener('click', fecharLightbox);
     
