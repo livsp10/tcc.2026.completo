@@ -406,6 +406,71 @@
         </section>
 
         <!-- =====================================================================
+             PROJETOS DA ESCOLA (NOVA SEÇÃO)
+             ===================================================================== -->
+        <section class="section projetos" id="projetos" aria-labelledby="titulo-projetos">
+            <div class="container">
+                <header class="section__header">
+                    <span class="section__subtitle">Iniciativas e Eventos</span>
+                    <h2 class="section__title" id="titulo-projetos">Projetos da Escola</h2>
+                    <p class="section__description">
+                        Conheça os projetos extracurriculares e eventos culturais desenvolvidos pelos nossos alunos e professores, que enriquecem a experiência educacional no Culto à Ciência.
+                    </p>
+                </header>
+
+                <div class="projetos__grid">
+                    <!-- Card 1: Feira de Ciências (Link) -->
+                    <a href="https://sites.google.com/prof.educacao.sp.gov.br/cultoaciencia/culto-%C3%A0-ci%C3%AAncia/9%C2%AA-feira-de-ci%C3%AAncias" target="_blank" rel="noopener noreferrer" class="card-projeto">
+                        <div class="card-projeto__img">
+                            <img src="capa_feira.jpg" alt="Feira de Ciências" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="card-projeto__content">
+                            <h3 class="card-projeto__title">Feira de Ciências</h3>
+                            <p class="card-projeto__desc">Clique para acessar o site oficial com os trabalhos da nossa feira.</p>
+                            <span class="card-projeto__link-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Site</span>
+                        </div>
+                    </a>
+
+                    <!-- Card 2: Slam (Pasta de Fotos) -->
+                    <button type="button" class="card-projeto btn-projeto-modal" data-projeto="slam">
+                        <div class="card-projeto__img">
+                            <img src="capa_slam.jpg" alt="Slam" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="card-projeto__content">
+                            <h3 class="card-projeto__title">Slam</h3>
+                            <p class="card-projeto__desc">Batalhas de poesia e forte expressão cultural dos nossos alunos.</p>
+                            <span class="card-projeto__link-text"><i class="fa-solid fa-images"></i> Ver Fotos</span>
+                        </div>
+                    </button>
+
+                    <!-- Card 3: Sarau (Pasta de Fotos) -->
+                    <button type="button" class="card-projeto btn-projeto-modal" data-projeto="sarau">
+                        <div class="card-projeto__img">
+                            <img src="capa_sarau.jpg" alt="Sarau" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="card-projeto__content">
+                            <h3 class="card-projeto__title">Sarau</h3>
+                            <p class="card-projeto__desc">Apresentações artísticas, música, dança e literatura na escola.</p>
+                            <span class="card-projeto__link-text"><i class="fa-solid fa-images"></i> Ver Fotos</span>
+                        </div>
+                    </button>
+
+                    <!-- Card 4: Consciência Negra (Link) -->
+                    <a href="https://sites.google.com/prof.educacao.sp.gov.br/cultoaciencia/culto-%C3%A0-ci%C3%AAncia/9%C2%AA-feira-de-ci%C3%AAncias" target="_blank" rel="noopener noreferrer" class="card-projeto">
+                        <div class="card-projeto__img">
+                            <img src="capa_consciencia.jpg" alt="Consciência Negra" style="width:100%; height:100%; object-fit:cover;">
+                        </div>
+                        <div class="card-projeto__content">
+                            <h3 class="card-projeto__title">Consciência Negra</h3>
+                            <p class="card-projeto__desc">Projetos e exposições valorizando a cultura e história afro-brasileira.</p>
+                            <span class="card-projeto__link-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Site</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================================
              6. ACERVO CULTURAL & CURIOSIDADES
              ===================================================================== -->
         <section class="section acervo" id="acervo" aria-labelledby="titulo-acervo">
@@ -578,7 +643,7 @@
     </main>
 
     <!-- =========================================================================
-         MODAIS DE PASTA (ACERVO E PROFESSORES)
+         MODAIS DE PASTA (ACERVO E PROFESSORES E PROJETOS)
          ========================================================================= -->
     <div class="modal-acervo" id="modal-acervo" role="dialog" aria-modal="true" aria-label="Pasta de Itens do Acervo" hidden>
         <div class="modal-acervo__backdrop" id="modal-acervo-backdrop"></div>
@@ -613,6 +678,26 @@
                 <p class="modal-professores__desc" id="modal-professores-desc">Corpo docente.</p>
                 <div class="modal-professores__grid" id="modal-professores-grid">
                     <!-- Cards com <img> dos professores gerados dinamicamente via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DOS PROJETOS (NOVO) -->
+    <div class="modal-projetos" id="modal-projetos" role="dialog" aria-modal="true" aria-label="Fotos do Projeto" hidden>
+        <div class="modal-projetos__backdrop" id="modal-projetos-backdrop"></div>
+        <div class="modal-projetos__window">
+            <header class="modal-projetos__header">
+                <div class="modal-projetos__header-title">
+                    <i class="fa-solid fa-images" aria-hidden="true"></i>
+                    <h3 id="modal-projetos-titulo">Fotos do Projeto</h3>
+                </div>
+                <button type="button" class="modal-projetos__close" id="modal-projetos-close" aria-label="Fechar pasta">&times;</button>
+            </header>
+            <div class="modal-projetos__body">
+                <p class="modal-projetos__desc" id="modal-projetos-desc">Galeria de fotos.</p>
+                <div class="modal-projetos__grid" id="modal-projetos-grid">
+                    <!-- Fotos injetadas via JS -->
                 </div>
             </div>
         </div>
