@@ -12,7 +12,7 @@
   --cor-destaque: #2a959d;
   
   --cor-fundo: #f8f9fa;
-  --cor-fundo-alt: #fcfff2;
+  --cor-fundo-alt: #fdfdf1;
   --cor-card-fundo: #ffffff;
   --cor-texto: #2b2d42;
   --cor-texto-suave: #6c757d;
@@ -497,7 +497,7 @@ button { cursor: pointer; border: none; background: none; }
   .header__nav.is-open { right: 0; }
   .header__menu { flex-direction: column; align-items: flex-start; }
   .header__link { color: var(--cor-branca); }
-  .historia__cards, .itinerarios__grid, .contato__grid { grid-template-columns: 1fr; }
+  .historia__cards, .itinerarios__grid, .contato__grid, .projetos__grid, .gestao__grid { grid-template-columns: 1fr; }
   .chatbot__window { width: 290px; right: -10px; }
   .mascote { flex-direction: column; }
   .mascote__speech::before { display: none; }
@@ -542,53 +542,49 @@ body.alto-contraste .historia__livro-digital {
 }
 
 /* ==========================================================================
-   BARRA DE ACESSIBILIDADE
+   BARRA DE ACESSIBILIDADE FLUTUANTE
    ========================================================================== */
-.accessibility-bar {
-  background-color: var(--cor-primaria);
-  color: var(--cor-branca);
-  font-size: 0.85rem;
-  padding: 0.4rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 1001;
-}
-
-.accessibility-bar__container {
+.accessibility-floating {
+  position: fixed;
+  top: 90px; /* Fica logo abaixo do cabeçalho */
+  right: 15px;
+  z-index: 2000;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  flex-direction: column; /* Coloca os botões um embaixo do outro */
+  gap: 8px;
+  background-color: var(--cor-branca);
+  padding: 8px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--cor-primaria);
 }
 
-.accessibility-bar__title {
-  font-weight: 600;
-}
-
-.accessibility-bar__buttons {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.accessibility-bar__btn {
-  color: var(--cor-branca);
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 0.2rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  transition: var(--transicao-suave);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-}
-
-.accessibility-bar__btn:hover {
-  background-color: var(--cor-secundaria);
+.accessibility-floating__btn {
+  background-color: transparent;
   color: var(--cor-primaria);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transicao-suave);
+}
+
+.accessibility-floating__btn:hover {
+  background-color: var(--cor-secundaria);
+  transform: scale(1.1);
+}
+
+/* Garante o estilo correto no modo de alto contraste */
+body.alto-contraste .accessibility-floating {
+  background-color: #000000;
+  border-color: #ffffff;
+}
+body.alto-contraste .accessibility-floating__btn {
+  color: #ffffff;
 }
 
 /* ==========================================================================
