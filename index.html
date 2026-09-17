@@ -26,21 +26,16 @@
 </head>
 <body>
 
-    <!-- =========================================================================
-         BARRA DE ACESSIBILIDADE
+   <!-- =========================================================================
+         BARRA DE ACESSIBILIDADE (FLUTUANTE)
          ========================================================================= -->
-    <div class="accessibility-bar" id="barra-acessibilidade">
-        <div class="accessibility-bar__container">
-            <span class="accessibility-bar__title">Acessibilidade:</span>
-            <div class="accessibility-bar__buttons">
-                <button type="button" id="btn-aumentar-fonte" class="accessibility-bar__btn" aria-label="Aumentar tamanho da fonte" title="Aumentar Fonte">A+</button>
-                <button type="button" id="btn-restaurar-fonte" class="accessibility-bar__btn" aria-label="Restaurar tamanho da fonte padrão" title="Tamanho Padrão">A</button>
-                <button type="button" id="btn-diminuir-fonte" class="accessibility-bar__btn" aria-label="Diminuir tamanho da fonte" title="Diminuir Fonte">A-</button>
-                <button type="button" id="btn-alto-contraste" class="accessibility-bar__btn" aria-label="Alternar modo de alto contraste" title="Alto Contraste">
-                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i> Alto Contraste
-                </button>
-            </div>
-        </div>
+    <div class="accessibility-floating" id="barra-acessibilidade">
+        <button type="button" id="btn-aumentar-fonte" class="accessibility-floating__btn" title="Aumentar Fonte">A+</button>
+        <button type="button" id="btn-restaurar-fonte" class="accessibility-floating__btn" title="Tamanho Padrão">A</button>
+        <button type="button" id="btn-diminuir-fonte" class="accessibility-floating__btn" title="Diminuir Fonte">A-</button>
+        <button type="button" id="btn-alto-contraste" class="accessibility-floating__btn" title="Alto Contraste">
+            <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+        </button>
     </div>
 
     <!-- =========================================================================
@@ -242,7 +237,7 @@
                     </p>
                 </header>
 
-                <div class="gestao__grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="gestao__grid">
                     <article class="card-gestao">
                         <div class="card-gestao__image-container">
                             <!-- ARQUIVO: diretor.glauber.jpeg | SEÇÃO: Gestão | COMO ALTERAR: Troque o src="" -->
