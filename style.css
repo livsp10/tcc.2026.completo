@@ -53,11 +53,12 @@ body.alto-contraste {
   --sombra-header: none;
 }
 
+/* Adicionada a classe card-projeto e modal-projetos__window ao alto contraste */
 body.alto-contraste .card-historia,
 body.alto-contraste .card-gestao,
 body.alto-contraste .professores__pasta-card,
 body.alto-contraste .card-itinerario,
-body.alto-contraste .card-projeto,
+body.alto-contraste .card-projeto, 
 body.alto-contraste .acervo__item,
 body.alto-contraste .acervo__doc-card,
 body.alto-contraste .contato__info,
@@ -677,4 +678,36 @@ body.alto-contraste .historia__livro-digital {
     flex-direction: column;
     gap: 0.5rem;
   }
+}
+
+/* ==========================================================================
+   PROJETOS (MÓDULO NOVO ADICIONADO)
+   ========================================================================== */
+.projetos__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.card-projeto { display: block; background-color: var(--cor-card-fundo); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); overflow: hidden; text-align: left; box-shadow: var(--sombra-card); transition: var(--transicao-suave); text-decoration: none; color: inherit; width: 100%; cursor: pointer;}
+.card-projeto:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); border-color: var(--cor-secundaria); }
+.card-projeto__img { height: 180px; background-color: #ddd; position: relative; }
+.card-projeto__content { padding: 1.5rem; }
+.card-projeto__title { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--cor-primaria); font-family: var(--fonte-titulo); font-weight: 700; }
+.card-projeto__desc { font-size: 0.9rem; color: var(--cor-texto-suave); margin-bottom: 1rem; line-height: 1.4; }
+.card-projeto__link-text { font-size: 0.85rem; font-weight: 700; color: var(--cor-destaque); display: flex; align-items: center; gap: 0.5rem; }
+
+/* Modal Projetos */
+.modal-projetos { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2100; display: flex; align-items: center; justify-content: center; }
+.modal-projetos[hidden] { display: none; }
+.modal-projetos__backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 31, 58, 0.85); backdrop-filter: blur(5px); }
+.modal-projetos__window { position: relative; z-index: 2101; background-color: var(--cor-card-fundo); width: 90%; max-width: 900px; max-height: 85vh; border-radius: var(--raio-borda); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; overflow: hidden; border: 2px solid var(--cor-destaque); }
+.modal-projetos__header { background-color: var(--cor-primaria); color: var(--cor-branca); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--cor-destaque); }
+.modal-projetos__header-title { display: flex; align-items: center; gap: 0.75rem; }
+.modal-projetos__header-title i { color: var(--cor-destaque); font-size: 1.5rem; }
+.modal-projetos__close { color: var(--cor-branca); font-size: 2rem; line-height: 1; }
+.modal-projetos__body { padding: 1.5rem; overflow-y: auto; }
+.modal-projetos__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.25rem; }
+
+/* Responsividade Projetos */
+@media (max-width: 1024px) {
+  .projetos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .projetos__grid { grid-template-columns: 1fr; }
 }
