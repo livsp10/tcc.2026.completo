@@ -1,5 +1,5 @@
 
-   document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     /* menu mobile e acessibilidade*/
     const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -401,43 +401,81 @@
     });
 
     /*chat bot */
-    const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
-    const chatbotWindow = document.getElementById('chatbot-window');
-    
-    chatbotToggleBtn?.addEventListener('click', () => {
-        const isHidden = chatbotWindow.hasAttribute('hidden');
-        if(isHidden) chatbotWindow.removeAttribute('hidden');
-        else chatbotWindow.setAttribute('hidden', '');
-    });
-    
-    document.getElementById('chatbot-close-btn')?.addEventListener('click', () => chatbotWindow.setAttribute('hidden', ''));
-    
-    const chatbotForm = document.getElementById('chatbot-form');
-    const chatbotInput = document.getElementById('chatbot-input');
-    const chatbotMessages = document.getElementById('chatbot-messages');
+    /*chat bot dinâmico */
+const chatbotToggleBtn = document.getElementById('chatbot-toggle-btn');
+const chatbotWindow = document.getElementById('chatbot-window');
 
-    chatbotForm?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const text = chatbotInput.value.trim();
-        if(!text) return;
+chatbotToggleBtn?.addEventListener('click', () => {
+    const isHidden = chatbotWindow.hasAttribute('hidden');
+    if(isHidden) chatbotWindow.removeAttribute('hidden');
+    else chatbotWindow.setAttribute('hidden', '');
+});
 
-        chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--user"><p>${text}</p></div>`;
-        chatbotInput.value = '';
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+document.getElementById('chatbot-close-btn')?.addEventListener('click', () => chatbotWindow.setAttribute('hidden', ''));
 
-        setTimeout(() => {
-            chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--bot"><p>Obrigado pelo contato! Esta é uma demonstração. Para contatos oficiais, use nosso formulário.</p></div>`;
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-        }, 800);
-    });
-    const btnAbrirCultinho = document.getElementById('btn-abrir-cultinho');
+const chatbotForm = document.getElementById('chatbot-form');
+const chatbotInput = document.getElementById('chatbot-input');
+const chatbotMessages = document.getElementById('chatbot-messages');
+
+// 1. BASE DE CONHECIMENTO DO CULTINHO (Adicione mais perguntas e respostas aqui)
+const bancoDeRespostas = {
+    "historia": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!",
+    "historico": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!",
+    "endereco": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
+    "localização": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
+    "telefone": "Você pode entrar em contato conosco pelo telefone (19) 3232-3511.",
+    "contato": "Você pode falar conosco pelo telefone (19) 3232-3511 ou pelo formulário de contato abaixo.",
+    "cursos": "Oferecemos Ensino Médio Integral (PEI) e Itinerários Formativos em Linguagens, Exatas, além dos técnicos em Desenvolvimento de Sistemas e Enfermagem!",
+    "tecnico": "Temos os cursos técnicos integrados de Desenvolvimento de Sistemas e Enfermagem, com foco prático para o mercado de trabalho.",
+    "ajuda": "Eu posso te ajudar com informações sobre a 'historia' da escola, nosso 'endereço', 'telefone' ou sobre os 'cursos' oferecidos! O que quer saber?",
+    "oi": "Olá! Eu sou o Cultinho, assistente virtual da escola. Digite sua dúvida ou digite 'ajuda' para ver o que posso fazer!",
+    "ola": "Olá! Eu sou o Cultinho, assistente virtual da escola. Digite sua dúvida ou digite 'ajuda' para ver o que posso fazer!"
+};
+
+chatbotForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const text = chatbotInput.value.trim();
+    if(!text) return;
+
+    // Adiciona a mensagem do usuário na tela
+    chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--user"><p>${text}</p></div>`;
+    chatbotInput.value = '';
+    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+
+    // 2. LÓGICA DE BUSCA DA RESPOSTA
+    // Remove acentos e deixa tudo em letras minúsculas para facilitar a busca
+    const termoBusca = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
-    btnAbrirCultinho?.addEventListener('click', () => {
-        if(chatbotWindow) {
-            chatbotWindow.removeAttribute('hidden');
-            // Opcional: rola a tela para o chat ou foca no input se quiser
+    // Resposta padrão caso o robô não entenda
+    let respostaBot = "Desculpe, não entendi muito bem. Você pode tentar palavras-chave como 'história', 'cursos', 'endereço' ou 'telefone'. Para assuntos oficiais, use nosso formulário!";
+
+    // Verifica se a palavra digitada existe na nossa base de conhecimento
+    if (bancoDeRespostas[termoBusca]) {
+        respostaBot = bancoDeRespostas[termoBusca];
+    } else {
+        // Busca secundária: verifica se a palavra-chave está contida dentro de uma frase maior digitada
+        for (let chave in bancoDeRespostas) {
+            if (termoBusca.includes(chave)) {
+                respostaBot = bancoDeRespostas[chave];
+                break;
+            }
         }
-    });
+    }
+
+    // Simula o tempo de resposta do robô
+    setTimeout(() => {
+        chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--bot"><p>${respostaBot}</p></div>`;
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }, 600);
+});
+
+const btnAbrirCultinho = document.getElementById('btn-abrir-cultinho');
+btnAbrirCultinho?.addEventListener('click', () => {
+    if(chatbotWindow) {
+        chatbotWindow.removeAttribute('hidden');
+    }
+});
+
 
     /* ler mais da galeria */
     const btnTopo = document.getElementById('back-to-top-btn');
