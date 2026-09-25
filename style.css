@@ -33,7 +33,7 @@
 }
 
 body.alto-contraste {
-  --cor-primaria: #e1ff00;
+  --cor-primaria: #fdfddf;
   --cor-primaria-hover: #ffffff;
   --cor-secundaria: #000000;
   --cor-secundaria-hover: #ffffff;
@@ -303,7 +303,7 @@ button { cursor: pointer; border: none; background: none; }
   left: 0; 
   width: 100%; 
   height: 100%; 
-  background-image: radial-gradient(rgba(244, 196, 48, 0.1) 1px, transparent 1px); 
+  background-image: radial-gradient(rgba(208, 244, 48, 0.1) 1px, transparent 1px); 
   background-size: 30px 30px; opacity: 0.5; }
 
 .hero__container { 
@@ -649,7 +649,49 @@ button { cursor: pointer; border: none; background: none; }
 .card-itinerario--saude .card-itinerario__header i { 
   color: #2a9d8f; }
 
-/* ACERVO CULTURAL & CURIOSIDADES */
+  /* projetos */
+.projetos__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+.card-projeto { display: block; background-color: var(--cor-card-fundo); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); overflow: hidden; text-align: left; box-shadow: var(--sombra-card); transition: var(--transicao-suave); text-decoration: none; color: inherit; width: 100%; cursor: pointer;}
+.card-projeto:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); border-color: var(--cor-secundaria); }
+.card-projeto__img { height: 180px; background-color: #ddd; position: relative; }
+.card-projeto__content { padding: 1.5rem; }
+.card-projeto__title { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--cor-primaria); font-family: var(--fonte-titulo); font-weight: 700; }
+.card-projeto__desc { font-size: 0.9rem; color: var(--cor-texto-suave); margin-bottom: 1rem; line-height: 1.4; }
+.card-projeto__link-text { font-size: 0.85rem; font-weight: 700; color: var(--cor-destaque); display: flex; align-items: center; gap: 0.5rem; }
+
+/* modal projetos */
+.modal-projetos { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2100; display: flex; align-items: center; justify-content: center; }
+.modal-projetos[hidden] { display: none; }
+.modal-projetos__backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 31, 58, 0.85); backdrop-filter: blur(5px); }
+.modal-projetos__window { position: relative; z-index: 2101; background-color: var(--cor-card-fundo); width: 90%; max-width: 900px; max-height: 85vh; border-radius: var(--raio-borda); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; overflow: hidden; border: 2px solid var(--cor-destaque); }
+.modal-projetos__header { background-color: var(--cor-primaria); color: var(--cor-branca); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--cor-destaque); }
+.modal-projetos__header-title { display: flex; align-items: center; gap: 0.75rem; }
+.modal-projetos__header-title i { color: var(--cor-destaque); font-size: 1.5rem; }
+.modal-projetos__close { color: var(--cor-branca); font-size: 2rem; line-height: 1; }
+.modal-projetos__body { padding: 1.5rem; overflow-y: auto; }
+.modal-projetos__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.25rem; }
+
+/* responsividade Projetos */
+@media (max-width: 1024px) {
+  .projetos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .projetos__grid { grid-template-columns: 1fr; }
+}
+/* estilo para o mascote funcionar como botão de abrir o chat */
+.mascote-btn-abrir {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: var(--transicao-suave);
+}
+.mascote-btn-abrir:hover {
+  transform: scale(1.03);
+}
+
+/* acervo*/
 .acervo__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 
 .acervo__item { 
@@ -701,13 +743,13 @@ button { cursor: pointer; border: none; background: none; }
   font-size: 0.875rem; 
   color: var(--cor-texto-suave); }
 
-/* GALERIA */
-/* Fotos ocultas por padrão */
+/* galeria */
+/* fotos ocultas por padrão */
 .galeria__item--oculta {
   display: none;
 }
 
-/* Classe que será adicionada pelo JS para mostrar as fotos com animação */
+/* classe que será adicionada pelo JS para mostrar as fotos com animação */
 .galeria__item--oculta.visivel {
   display: block;
   animation: fadeInFotos 0.5s ease-out forwards;
@@ -734,7 +776,7 @@ button { cursor: pointer; border: none; background: none; }
 
 .galeria__item:hover { transform: scale(1.02); }
 
-/* LIGHTBOX */
+/*lightbox*/
 .lightbox { 
   position: fixed; 
   top: 0; 
@@ -794,7 +836,7 @@ button { cursor: pointer; border: none; background: none; }
   font-family: var(--fonte-titulo); 
   font-size: 1.1rem;}
 
-/* MODAIS PASTA */
+/* modais pastas */
 .modal-acervo, .modal-professores { 
   position: fixed; 
   top: 0; 
@@ -817,7 +859,20 @@ button { cursor: pointer; border: none; background: none; }
   background-color: rgba(11, 31, 58, 0.85); 
   backdrop-filter: blur(5px); }
 
-.modal-acervo__window, .modal-professores__window { position: relative; z-index: 2101; background-color: var(--cor-card-fundo); width: 90%; max-width: 900px; max-height: 85vh; border-radius: var(--raio-borda); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; overflow: hidden; border: 2px solid var(--cor-secundaria); }
+.modal-acervo__window, .modal-professores__window { 
+  position: relative; 
+  z-index: 2101; 
+  background-color: var(--cor-card-fundo); 
+  width: 90%; 
+  max-width: 900px; 
+  max-height: 85vh; 
+  border-radius: var(--raio-borda); 
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  border: 2px solid var(--cor-secundaria); }
+  
 .modal-professores__window { 
   border-color: var(--cor-destaque); 
   max-width: 1000px; }
@@ -920,9 +975,7 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--cor-texto-suave); 
   font-size: 0.8rem; }
 
-/* ==========================================================================
-   CHATBOT FLUTUANTE (PÍLULA ORIGINAL + CABEÇALHO MELHORADO)
-   ========================================================================== */
+/* chatbot flutuante */
 .chatbot {
   position: fixed;
   bottom: 25px;
@@ -930,7 +983,7 @@ button { cursor: pointer; border: none; background: none; }
   z-index: 1500;
 }
 
-/* Botão estilo "Pílula" */
+/*botão do chat*/
 .chatbot__toggle {
   background-color: var(--cor-primaria);
   color: var(--cor-branca);
@@ -966,7 +1019,7 @@ button { cursor: pointer; border: none; background: none; }
   object-fit: cover;
 }
 
-/* Janela do Chat */
+/*caixinha do chat*/
 .chatbot__window {
   position: absolute;
   bottom: 70px;
@@ -986,7 +1039,7 @@ button { cursor: pointer; border: none; background: none; }
   display: none;
 }
 
-/* Cabeçalho Melhorado */
+/* cabeçalho*/
 .chatbot__header {
   background-color: var(--cor-primaria);
   color: var(--cor-branca);
@@ -1003,7 +1056,7 @@ button { cursor: pointer; border: none; background: none; }
   gap: 0.75rem;
 }
 
-/* Foto do mascote bem alinhada no cabeçalho */
+/*foto do mascote no chat do cabeçalho */
 .chatbot__mascote-header {
   width: 45px;
   height: 45px;
@@ -1047,7 +1100,7 @@ button { cursor: pointer; border: none; background: none; }
   color: var(--cor-secundaria);
 }
 
-/* Mensagens */
+/* mensagens */
 .chatbot__messages {
   flex-grow: 1;
   padding: 1rem;
@@ -1112,7 +1165,7 @@ button { cursor: pointer; border: none; background: none; }
   background-color: var(--cor-primaria-hover);
 }
 
-/* Responsividade do Chatbot */
+/* responsividade do Chatbot */
 @media (max-width: 768px) {
   .chatbot__window {
     width: 290px;
@@ -1134,7 +1187,17 @@ button { cursor: pointer; border: none; background: none; }
 
 @media (max-width: 768px) {
   .header__hamburger { display: flex; }
-  .header__nav { position: fixed; top: 0; right: -100%; width: 260px; height: 100vh; background-color: var(--cor-primaria); padding: 5rem 1.5rem 2rem 1.5rem; transition: var(--transicao-suave); }
+
+  .header__nav { 
+    position: fixed; 
+    top: 0; 
+    right: -100%; 
+    width: 260px; 
+    height: 100vh; 
+    background-color: var(--cor-primaria); 
+    padding: 5rem 1.5rem 2rem 1.5rem; 
+    transition: var(--transicao-suave); }
+
   .header__nav.is-open { right: 0; }
   .header__menu { flex-direction: column; align-items: flex-start; }
   .header__link { color: var(--cor-branca); }
@@ -1144,22 +1207,20 @@ button { cursor: pointer; border: none; background: none; }
   .mascote__speech::before { display: none; }
 }
 
-/* ==========================================================================
-   ALTO CONTRASTE (Variáveis e Bordas)
-   ========================================================================== */
+
 body.alto-contraste {
-  --cor-primaria: #ffff00;
+  --cor-primaria: #fafad1bc;
   --cor-primaria-hover: #ffffff;
-  --cor-secundaria: #0051ff;
+  --cor-secundaria: #010b21;
   --cor-secundaria-hover: #ffffff;
-  --cor-branca: #000000;
-  --cor-destaque: #00ffff;
-  --cor-fundo: #000000;
-  --cor-fundo-alt: #000000;
-  --cor-card-fundo: #000000;
-  --cor-texto: #ffffff;
-  --cor-texto-suave: #dddddd;
-  --cor-borda: #ffffff;
+  --cor-branca: #010b21;
+  --cor-destaque: #f7f7ab;
+  --cor-fundo: #010b21;
+  --cor-fundo-alt: #010b21;
+  --cor-card-fundo: #010b21;
+  --cor-texto: #f7f7ab;
+  --cor-texto-suave: #f7f7ab;
+  --cor-borda: #f7f7ab;
   --sombra-card: none;
   --sombra-hover: none;
   --sombra-header: none;
@@ -1182,9 +1243,7 @@ body.alto-contraste .historia__livro-digital {
   background-color: #000000 !important;
 }
 
-/* ==========================================================================
-   BARRA DE ACESSIBILIDADE FLUTUANTE
-   ========================================================================== */
+/*acessibilidade flutuante */
 .accessibility-floating {
   position: fixed;
   top: 90px; /* Fica logo abaixo do cabeçalho */
@@ -1228,9 +1287,7 @@ body.alto-contraste .accessibility-floating__btn {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   FOOTER (PÉ DA PÁGINA)
-   ========================================================================== */
+/*pé da pagina*/
 .footer {
   background-color: #061121;
   color: var(--cor-branca);
@@ -1298,11 +1355,9 @@ body.alto-contraste .accessibility-floating__btn {
 }
 
 
-/* ==========================================================================
-   AJUSTE DE TAMANHO DOS BOTÕES FLUTUANTES NO CELULAR
-   ========================================================================== */
+/* botão flutuante: tamanho do chatbot e acessibilidade no celular */
 @media (max-width: 768px) {
-    /* Diminui a pílula do chat do Cultinho para não ocupar muito espaço */
+    /* diminui o botão do chat para não ocupar muito espaço */
     .chatbot__toggle {
         padding: 0.4rem 1rem 0.4rem 0.4rem;
         font-size: 0.8rem;
@@ -1313,7 +1368,7 @@ body.alto-contraste .accessibility-floating__btn {
         height: 35px;
     }
 
-    /* Diminui os botões da barra de acessibilidade lateral */
+    /* diminui os botões da barra de acessibilidade lateral */
     .accessibility-floating {
         top: 80px;
         right: 10px;
@@ -1328,46 +1383,3 @@ body.alto-contraste .accessibility-floating__btn {
     }
 }
 
-/* ==========================================================================
-   PROJETOS (MÓDULO NOVO ADICIONADO)
-   ========================================================================== */
-.projetos__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
-.card-projeto { display: block; background-color: var(--cor-card-fundo); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); overflow: hidden; text-align: left; box-shadow: var(--sombra-card); transition: var(--transicao-suave); text-decoration: none; color: inherit; width: 100%; cursor: pointer;}
-.card-projeto:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); border-color: var(--cor-secundaria); }
-.card-projeto__img { height: 180px; background-color: #ddd; position: relative; }
-.card-projeto__content { padding: 1.5rem; }
-.card-projeto__title { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--cor-primaria); font-family: var(--fonte-titulo); font-weight: 700; }
-.card-projeto__desc { font-size: 0.9rem; color: var(--cor-texto-suave); margin-bottom: 1rem; line-height: 1.4; }
-.card-projeto__link-text { font-size: 0.85rem; font-weight: 700; color: var(--cor-destaque); display: flex; align-items: center; gap: 0.5rem; }
-
-/* Modal Projetos */
-.modal-projetos { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2100; display: flex; align-items: center; justify-content: center; }
-.modal-projetos[hidden] { display: none; }
-.modal-projetos__backdrop { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 31, 58, 0.85); backdrop-filter: blur(5px); }
-.modal-projetos__window { position: relative; z-index: 2101; background-color: var(--cor-card-fundo); width: 90%; max-width: 900px; max-height: 85vh; border-radius: var(--raio-borda); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); display: flex; flex-direction: column; overflow: hidden; border: 2px solid var(--cor-destaque); }
-.modal-projetos__header { background-color: var(--cor-primaria); color: var(--cor-branca); padding: 1.25rem 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--cor-destaque); }
-.modal-projetos__header-title { display: flex; align-items: center; gap: 0.75rem; }
-.modal-projetos__header-title i { color: var(--cor-destaque); font-size: 1.5rem; }
-.modal-projetos__close { color: var(--cor-branca); font-size: 2rem; line-height: 1; }
-.modal-projetos__body { padding: 1.5rem; overflow-y: auto; }
-.modal-projetos__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.25rem; }
-
-/* Responsividade Projetos */
-@media (max-width: 1024px) {
-  .projetos__grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-  .projetos__grid { grid-template-columns: 1fr; }
-}
-/* Estilo para o mascote funcionar como botão de abrir o chat */
-.mascote-btn-abrir {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  text-align: left;
-  transition: var(--transicao-suave);
-}
-.mascote-btn-abrir:hover {
-  transform: scale(1.03);
-}
