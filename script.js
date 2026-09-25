@@ -90,36 +90,80 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Fotos do Acervo Histórico",
             descricao: "Mobiliário, objetos científicos e galerias de diretores.",
             itens: [
-                { titulo: "Museu do Acervo", img: "museu/a.museu.acer.jpg" },
-                { titulo: "Sala de Acervo", img: "museu/a.sala.acer.jpg" },
-                { titulo: "Mesa Antiga do Acervo", img: "museu/a.mesa.acervo.jpg" },
-                { titulo: "Mesas Antigas (Cadeiras)", img: "museu/a.mesa.ant.acer.jpg" },
-                { titulo: "Objetos Históricos", img: "museu/a.obj3.acer.jpg" },
-                { titulo: "Animais Empalhados", img: "museu/a.emp.acerv.jpg" },
-                { titulo: "Galeria de Diretores Antigos", img: "museu/a.diretores.ant.acer.jpg" },
-                { titulo: "Galeria de Professores Antigos", img: "museu/a.prof.anti.acer.jpg" },
-                { titulo: "Retratos Antigos", img: "museu/a.pessoas.acer.jpg" }
+                { titulo: "Museu do Acervo", img: "museu/acervo1.jpg" },
+                { titulo: "Sala de Acervo", img: "museu/acervo2.jpg" },
+                { titulo: "Mesa Antiga do Acervo", img: "museu/acervo3.jpg" },
+                { titulo: "Mesas Antigas", img: "museu/acervo4.jpg" },
+                { titulo: "Objetos Históricos", img: "museu/acervo5.jpg" },
+                { titulo: "Objetos Históricos", img: "museu/acervo6.jpg" },
+                { titulo: "Objetos Históricos", img: "museu/acervo7.jpg" },
+                { titulo: "Cadeiras Antigas", img: "museu/acervo8.jpg" },
+                { titulo: "Cadeiras Antigas", img: "museu/acervo9.jpg" },
+                { titulo: "Jequitibá", img: "museu/acervo10.jpg" },
+                { titulo: "Homenagens", img: "museu/acervo11.jpg" },
+                { titulo: "Parede de Troféus", img: "museu/acervo12.jpg" },
+                { titulo: "Museu do Acervo", img: "museu/acervo13.jpg" },
+                { titulo: "Telescópio", img: "museu/acervo14.jpg" },
+                { titulo: "Telescópio", img: "museu/acervo15.jpg" },
+                { titulo: "Objetos Históricos", img: "museu/acervo16.jpg" },
+                { titulo: "Animais Empalhados", img: "museu/acervo17.jpg" },
+                { titulo: "Animais Empalhados", img: "museu/acervo18.jpg" },
+                { titulo: "Animais Empalhados", img: "museu/acervo19.jpg" },
+                { titulo: "Animais Empalhados", img: "museu/acervo20.jpg" },
+                { titulo: "Animais Empalhados", img: "museu/acervo21.jpg" },
+                { titulo: "Animais Empalhados", img: "museu/acervo22.jpg" },
+                { titulo: "Professores Antigos", img: "museu/acervo23.jpg" },
+                { titulo: "Professores Antigos", img: "museu/acervo24.jpg" },
+                { titulo: "Diretores Antigos", img: "museu/acervo25.jpg" },
+                { titulo: "Objetos Históricos", img: "museu/acervo26.jpg" },
+                { titulo: "Professores Conhecidos", img: "museu/acervo27.jpg" },
+                { titulo: "Professores Conhecidos", img: "museu/acervo28.jpg" },
+                { titulo: "Tijolo Imperial", img: "museu/acervo29.jpg" },
+                { titulo: "Sala Acervo", img: "museu/acervo30.jpg" },
+                { titulo: "Homenagens", img: "museu/acervo31.jpg" },
+                { titulo: "Carteiras Antigas", img: "museu/acervo32.jpg" },
+                { titulo: "Mesa Histórica", img: "museu/acervo33.jpg" },
+                { titulo: "Retratos Antigos", img: "museu/acervo34.jpg" },
             ]
+            
         },
-        biblioteca_acervo: {
-            titulo: "Biblioteca Histórica",
-            descricao: "Obras clássicas, anuários e livros raros da instituição.",
-            itens: [
-                { titulo: "Coletânea Clássica", img: "biblioteca/l.coletanea.acer.jpg" },
-                { titulo: "Acervo Jânio Quadros", img: "biblioteca/l.janio.quadros.bi.acer.jpg" },
-                { titulo: "Livro Albert Einstein", img: "biblioteca/liv.eistein.acerv.jpg" },
-                { titulo: "Anais de Medicina", img: "biblioteca/liv.med.acer.jpg" },
-                { titulo: "Dicionários Antigos", img: "biblioteca/livro.gigante.acer.jpg" },
-                { titulo: "Recenseamento do Brazil", img: "biblioteca/livro2.acer.jpg" },
-                { titulo: "Os Lusíadas", img: "biblioteca/lusiadas.acer.jpg" },
-                { titulo: "Bíblias Sagradas", img: "biblioteca/biblia.acer.jpg" },
-                { titulo: "Coleção Buffon", img: "biblioteca/l.coleção.acer.jpg" },
-                { titulo: "Dicionário Geographico", img: "biblioteca/l.dici.acer.jpg" },
-                { titulo: "Livros Raros - Reserva", img: "biblioteca/liv.acer.jpg" },
-                { titulo: "Livros de Fisiologia", img: "biblioteca/livro.biblioteca.jpg" },
-                { titulo: "Obras Monteiro Lobato", img: "biblioteca/l.monteiro.l.acer.jpg" }
-            ]
-        },
+            biblioteca_acervo: {
+                titulo: "Biblioteca Histórica",
+                descricao: "Obras clássicas, anuários e livros raros da instituição.",
+                itens: [
+                    { titulo: "Nossa Biblioteca ", img: "biblioteca/biblio.1.jpg" },
+                    { titulo: "Caminhoá Botânica", img: "biblioteca/biblio.2.jpg" },
+                    { titulo: "Geografia de Língua Escrava", img: "biblioteca/biblio.4.jpg" },
+                    { titulo: "Recenseamento do Brazil", img: "biblioteca/biblio.5.jpg" },
+                    { titulo: "Reserva Especial", img: "biblioteca/biblio.6.jpg" },
+                    { titulo: "Coletânea de Livros", img: "biblioteca/biblio.7.jpg" },
+                    { titulo: "Coletânea de Livros", img: "biblioteca/biblio.9.jpg" },
+                    { titulo: "Livro Manuscrito", img: "biblioteca/biblio.10.jpg" },
+                    { titulo: "Coletânea de Livros Manuscritos ", img: "biblioteca/biblio.11.jpg" },
+                    { titulo: "Coletânea de Enciclopédia", img: "biblioteca/biblio.12.jpg" },
+                    { titulo: "Coletânea de Livros", img: "biblioteca/biblio.13.jpg" },
+                    { titulo: "Coletânea de Livros", img: "biblioteca/biblio.14.jpg" },
+                    { titulo: "Coletânea de Livros", img: "biblioteca/biblio.15.jpg" },
+                    { titulo: "Santos Drummond", img: "biblioteca/biblio.16.jpg" },
+                    { titulo: "Santos Drummond", img: "biblioteca/biblio.17.jpg" },
+                    { titulo: "Bíblias Sagradas", img: "biblioteca/biblio.18.jpg" },
+                    { titulo: "Geografia do Brasil", img: "biblioteca/biblio.19.jpg" },
+                    { titulo: "Personagens da nossa história ", img: "biblioteca/biblio.20.jpg" },
+                    { titulo: "Livros Históricos", img: "biblioteca/biblio.21.jpg" },
+                    { titulo: "Coleção Buffon", img: "biblioteca/biblio.22.jpg" },
+                    { titulo: "Dicionário Geographico", img: "biblioteca/biblio.23.jpg" },
+                    { titulo: "Dicionário Geographico", img: "biblioteca/biblio.24.jpg" },
+                    { titulo: "Obras Monteiro Lobato", img: "biblioteca/biblio.25.jpg" },
+                    { titulo: "Dicionário Geographico", img: "biblioteca/biblio.26.jpg" },
+                    { titulo: "Livro Albert Einstein", img: "biblioteca/biblio.27.jpg" },
+                    { titulo: "Anais de Medicina", img: "biblioteca/biblio.28.jpg" },
+                    { titulo: "Coletânea de Fisiologia", img: "biblioteca/biblio.29.jpg" },
+                    { titulo: "Dicionários Antigos", img: "biblioteca/biblio.30.jpg" },
+                    { titulo: "Os Lusíadas", img: "biblioteca/biblio.32.jpg" },
+                    { titulo: "Acervo Jânio Quadros", img: "biblioteca/biblio.33.jpg" }
+                ]
+            },
+            
         livro_digital: {
             titulo: "Livro 113 Anos",
             descricao: "Páginas do Livro Digital.",
@@ -168,24 +212,22 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Curiosidades e Arquitetura",
             descricao: "Detalhes construtivos, homenagens e brasões históricos da escola.",
             itens:[
-                { titulo: "Logo Madeira", img: "curiosidades/logo.mad.jpg" },
-                { titulo: "Logo Principal Parede", img: "curiosidades/logo.princ.jpg" },
-                { titulo: "Monumento Gramado (Longe)", img: "curiosidades/c.homenagem.longe.g.jpg" },
-                { titulo: "Monumento Gramado (Perto)", img: "curiosidades/c.homenagem.grama.jpg" },
-                { titulo: "Piso Antigo (Corredor)", img: "curiosidades/c.chao.corredor.jpg", legenda: "Azulejo hidráulico original" },
-                { titulo: "Piso de Madeira (Sala)", img: "curiosidades/c.chão.sala.jpg" },
-                { titulo: "Escada de Pedra", img: "curiosidades/c.escada.pedra.co.jpg" },
-                { titulo: "Tijolo Exposto (Sala)", img: "curiosidades/c.tijol.sala.jpg" },
-                { titulo: "Amostra de Tinta Antiga", img: "curiosidades/c.tinta.parede13.jpg" },
-                { titulo: "Pintura Antiga Parede", img: "curiosidades/c.pint.antiga.jpg" },
-                { titulo: "Teste de Tinta Histórica", img: "curiosidades/c.tin.antiga.jpg" },
-                { titulo: "Parede Profunda", img: "curiosidades/c.pared.prof.jpg" },
-                { titulo: "Tijolo Imperial", img: "curiosidades/c.tij.imperial.acer.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
-                { titulo: "Placa Jequitibá", img: "curiosidades/c.plac.jequi.acer.jpg" },
-                { titulo: "Placas Homenagem Acervo", img: "curiosidades/c.placas.acer.jpg" },
-                { titulo: "Mural de Placas Homenagem", img: "curiosidades/c.homenagem.corredor2.jpg" },
-                { titulo: "Árvore Centenária", img: "curiosidades/c.arvore.100.jpg" },
-                { titulo: "Fotos antigas", img: "curiosidades/c.corredor.direção.jpn" },
+                { titulo: "Árvore Centenária", img: "curiosidades/curiosidade1.jpg" },
+                { titulo: "Piso Hidráulico Português", img: "curiosidades/curiosidade2.jpg" },
+                { titulo: "Piso de Madeira ", img: "curiosidades/curiosidade3.jpg" },
+                { titulo: "Fotos Antigas", img: "curiosidades/curiosidade4.jpg" },
+                { titulo: "Escada de Pedra", img: "curiosidades/curiosidade5.jpg", legenda: "Azulejo hidráulico original" },
+                { titulo: "Homenagens", img: "curiosidades/curiosidade6.jpg" },
+                { titulo: "Monumento Gramado", img: "curiosidades/curiosidade8.jpg" },
+                { titulo: "Monumento Gramado", img: "curiosidades/curiosidade9.jpg" },
+                { titulo: "Parede Profunda", img: "curiosidades/curiosidade9.jpg" },
+                { titulo: "Pintura Antiga", img: "curiosidades/curiosidade10.jpg" },
+                { titulo: "Parede Histórica", img: "curiosidades/curiosidade11.jpg" },
+                { titulo: "Tintas Antigas", img: "curiosidades/curiosidade12.jpg" },
+                { titulo: "Teste de Tintas", img: "curiosidades/curiosidade13.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
+                { titulo: "Professores Homenagiados", img: "curiosidades/curiosidade14.jpg" },
+                { titulo: "Professores Homenagiados", img: "curiosidades/curiosidade15.jpg" },
+                { titulo: "Pia Antiga", img: "curiosidades/curiosidade16.jpg" },
             ]
         }
     };
@@ -232,24 +274,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const repositorioProfessores = {
         linguagens: {
             titulo: "Professores de Linguagens",
-            descricao: "Língua Portuguesa, Literatura, Inglês e Artes.",
+            descricao: "Língua Portuguesa, Literatura, Inglês, Arte, Redação e Leitura, O.E .",
             professores: [
                 { nome: "Profª. Adriana", disciplina: "Educação Física", img: "professores/prof.adriana.jpeg" },
                 { nome: "Profª. Alexandra", disciplina: "Língua Portuguesa", img: "professores/prof.alexandra.jpeg" },
                 { nome: "Profª. Célia", disciplina: "Língua Portuguesa", img: "professores/prof.celia.jpeg" },
                 { nome: "Prof. Matheus", disciplina: "Língua Portuguesa", img: "professores/prof.matheus.jpeg" },
                 { nome: "Profª. M. Eduarda", disciplina: "Língua Portuguesa", img: "professores/prof.m.eduarda.jpeg" },
-                { nome: "Profª. Patrícia", disciplina: "Artes", img: "professores/prof.patricia.jpeg" },
+                { nome: "Profª. Patrícia", disciplina: "Arte", img: "professores/prof.patricia.jpeg" },
                 { nome: "Profª. Sandra", disciplina: "Inglês", img: "professores/prof.sandra.jpeg" },
                 { nome: "Prof. Victor", disciplina: "Língua Portuguesa", img: "professores/prof.victor.jpeg" }
             ]
         },
         exatas: {
             titulo: "Professores de Exatas",
-            descricao: "Matemática e Raciocínio Lógico.",
+            descricao: "Matemática e O.E.",
             professores: [
                 { nome: "Profª. Carina", disciplina: "Matemática", img: "professores/prof.carina.jpeg" },
-                { nome: "Prof. Denilson", disciplina: "Física", img: "professores/prof.denilson.jpeg" },
                 { nome: "Prof. Lucas", disciplina: "Matemática", img: "professores/prof.lucas.jpeg" },
                 { nome: "Profª. Sônia", disciplina: "Matemática", img: "professores/prof.dourado.jpeg" }
             ]
@@ -258,40 +299,41 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Professores de Ciências Humanas",
             descricao: "História, Geografia, Filosofia e Sociologia.",
             professores: [
-                { nome: "Prof. Guilherme", disciplina: "Sociologia", img: "professores/prof.guilherme.soci.jpeg" },
+                { nome: "Prof. Guilherme", disciplina: "Filosofia/Sociologia", img: "professores/prof.guilherme.soci.jpeg" },
                 { nome: "Profª. Paty", disciplina: "Geografia", img: "professores/prof.paty.jpeg" },
                 { nome: "Profª. Paula", disciplina: "História", img: "professores/prof.paula.jpeg" }
             ]
         },
         natureza: {
             titulo: "Professores de Ciências da Natureza",
-            descricao: "Física, Química e Biologia.",
+            descricao: "Física, Química, Biologia e Práticas Experimentais.",
             professores: [
                 { nome: "Profª. Camila", disciplina: "Quimica", img: "professores/prof.camila.jpeg" },
                 { nome: "Profª. Cláudia", disciplina: "Biologia", img: "professores/prof.claudia.jpeg" },
                 { nome: "Prof. Flávio", disciplina: "Biologia", img: "professores/prof.flavio.jpeg" },
                 { nome: "Prof. Guilherme", disciplina: "Química", img: "professores/prof.gulherme.quim.jpeg" },
-                { nome: "Profª. Isabelle", disciplina: "Física", img: "professores/prof.isabelle.jpeg" }
+                { nome: "Profª. Isabelle", disciplina: "Física", img: "professores/prof.isabelle.jpeg" },
+                { nome: "Prof. Denilson", disciplina: "Física", img: "professores/prof.denilson.jpeg" },
             ]
         },
         tecnico: {
             titulo: "Professores do Técnico",
-            descricao: "Desenvolvimento de Sistemas e Saúde/Ed. Física.",
+            descricao: "Desenvolvimento de Sistemas e Efermagem.",
             professores: [
                 { nome: "Prof. Alex", disciplina: "Dev. Sistemas", img: "professores/prof.alex.tec.ds.jpeg" },
                 { nome: "Prof. Aparecido", disciplina: "Dev. Sistemas", img: "professores/prof.aparecido.tec.ds.jpeg" },
                 { nome: "Profª. Gláucia", disciplina: "Dev. Sistemas", img: "professores/prof.glaucia.tec.ds.jpeg" },
                 { nome: "Profª. Fran", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" },
                 { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "professores/prof.jacke.ef.jpeg" },
-                { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" }
+                { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "professores/prof.lidia.ef.jpeg" }
             ]
         },
         especial: {
             titulo: "Professores de Apoio",
             descricao: "Apoio",
             professores: [
-                { nome: "Profª Mônica", disciplina: ".", img: "professores/prof.especial1.jpeg" },
-                { nome: "Profª Cintia", disciplina: ".", img: "professores/prof.especial2.jpeg" },
+                { nome: "Profª Mônica", disciplina: "Educação Especial", img: "professores/prof.especial1.jpeg" },
+                { nome: "Profª Cintia", disciplina: "Apoio ao Protagonismo", img: "professores/prof.especial1.jpeg" },
                
             ]
         }
@@ -331,63 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modal-professores-backdrop')?.addEventListener('click', () => { modalProfessores.setAttribute('hidden', ''); document.body.style.overflow = ''; });
 
 
-    /* repositorio fotos do sarau e slam*/
-    const repositorioProjetos = {
-        slam: {
-            titulo: "Galeria do Slam",
-            descricao: "Registros das nossas batalhas de poesia.",
-            itens: [
-                { titulo: "Apresentação Slam 1", img: "slam/slam.jpg" },
-                { titulo: "Apresentação Slam 2", img: "slam/slam.jpg" },
-                { titulo: "Apresentação Slam 3", img: "slam/slam.jpg" }
-            ]
-        },
-        sarau: {
-            titulo: "Galeria do Sarau",
-            descricao: "Registros das apresentações artísticas e culturais.",
-            itens: [
-                { titulo: "Música no Sarau", img: "sarau/sarau.jpg" },
-                { titulo: "Dança no Sarau", img: "sarau/sarau.jpg" }
-            ]
-        }
-    };
-
-    const modalProjetos = document.getElementById('modal-projetos');
-    const modalProjetosGrid = document.getElementById('modal-projetos-grid');
-    const modalProjetosTitulo = document.getElementById('modal-projetos-titulo');
-    const modalProjetosDesc = document.getElementById('modal-projetos-desc');
-
-    document.querySelectorAll('.btn-projeto-modal').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const proj = btn.getAttribute('data-projeto');
-            if(!repositorioProjetos[proj]) return;
-            const dados = repositorioProjetos[proj];
-            
-            modalProjetosTitulo.textContent = dados.titulo;
-            modalProjetosDesc.textContent= dados.descricao;
-            modalProjetosGrid.textContent = '';
-
-            dados.itens.forEach((item, index) => {
-                const div = document.createElement('div');
-                div.className = 'modal-acervo__item'; 
-                div.innerHTML = `
-                    <img src="${item.img}" alt="${item.titulo}">
-                    <span>${item.titulo}</span>
-                `;
-                div.addEventListener('click', () => abrirLightbox(dados.itens, index));
-                modalProjetosGrid.appendChild(div);
-            });
-
-            if (modalProjetos) {
-                modalProjetos.removeAttribute('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-        });
-    });
-
-    document.getElementById('modal-projetos-close')?.addEventListener('click', () => { modalProjetos?.setAttribute('hidden', ''); document.body.style.overflow = ''; });
-    document.getElementById('modal-projetos-backdrop')?.addEventListener('click', () => { modalProjetos?.setAttribute('hidden', ''); document.body.style.overflow = ''; });
-
 
     /* fecha os modais abertos e volta toda pagina ao normal caso seja apertada a tecla ESC */
     document.addEventListener('keydown', (e) => { /*o comando keydown fica "ouvindo o teclado" */
@@ -417,19 +402,63 @@ const chatbotForm = document.getElementById('chatbot-form');
 const chatbotInput = document.getElementById('chatbot-input');
 const chatbotMessages = document.getElementById('chatbot-messages');
 
-// 1. BASE DE CONHECIMENTO DO CULTINHO (Adicione mais perguntas e respostas aqui)
+//respostas 
 const bancoDeRespostas = {
-    "historia": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!",
-    "historico": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!",
-    "endereco": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
+    
+
+    "titulo": "Não existem registros históricos de títulos esportivos de relevância nacional ou regional associados ao Colégio Culto à Ciência, mas, embora nem a Associação Atlética Ponte Preta (fundada em 1900) e nem o Guarani Futebol Clube (fundado em 1911) tenham nascido oficialmente dentro das salas de aula do Culto à Ciência, a escola foi o ponto de encontro crucial para os jovens que os criaram.",
+    "titulos":"Não existem registros históricos de títulos esportivos de relevância nacional ou regional associados ao Colégio Culto à Ciência, mas, embora nem a Associação Atlética Ponte Preta (fundada em 1900) e nem o Guarani Futebol Clube (fundado em 1911) tenham nascido oficialmente dentro das salas de aula do Culto à Ciência, a escola foi o ponto de encontro crucial para os jovens que os criaram.",
+    "historia": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT! Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
+    "escola": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT! Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
+    "diretor":"O diretor atual da Escola Estadual Culto à Ciência se chama Glauber Maldonado Ferreira",
+    "vice diretor":"O atual vice-diretor da Escola Estadual Culto à Ciência se chama Andreia Alves Ferreira",
+    "vice":"O atual vice-diretor da Escola Estadual Culto à Ciência se chama Andreia Alves Ferreira",
+    "professores":"Saiba mais sobre os professores na aba 'PROFESSORES' no menu!",
+    "fundador":"O Colégio Culto à Ciência não foi fundado por uma única pessoa, mas sim por um grupo de idealistas, fazendeiros, comerciantes e intelectuais, muitos deles ligados à maçonaria da Loja 'Independência', reunidos na associação civil sem fins lucrativos Sociedade Culto à Ciência. Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
+    "fundada":"A Escola Estadual Culto à Ciência foi fundada no ano de 1873. Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
+    "fundaçao":"A Escola Estadual Culto à Ciência foi fundada no ano de 1873. Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
+    "anos":"Com base no ano de sua fundação em 1873, a Escola Estadual Culto à Ciência tem hoje 153 anos de história.",
+    "pessoas":"O aluno mais famoso foi Alberto Santos Dumont, o Pai da Aviação, que estudou lá na década de 1880. Na televisão e no jornalismo, a escola teve alunos icônicos como o apresentador Fausto Silva (Faustão) e o jornalista Júlio de Mesquita, do jornal O Estado de S. Paulo.",
+    "colégio": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!",
+    "historia": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!","endereco": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
     "localização": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
     "telefone": "Você pode entrar em contato conosco pelo telefone (19) 3232-3511.",
     "contato": "Você pode falar conosco pelo telefone (19) 3232-3511 ou pelo formulário de contato abaixo.",
-    "cursos": "Oferecemos Ensino Médio Integral (PEI) e Itinerários Formativos em Linguagens, Exatas, além dos técnicos em Desenvolvimento de Sistemas e Enfermagem!",
+    "curso":"A escola oferece os Itinerários Formativos de Matemática e Ciências da Natureza, Linguagens e Ciências Humanas e Sociais, Téc. em Enfermagem e Téc. em Desenvolvimento de Sistemas",
+    "cursos":"A escola oferece os Itinerários Formativos de Matemática e Ciências da Natureza, Linguagens e Ciências Humanas e Sociais, Téc. em Enfermagem e Téc. em Desenvolvimento de Sistemas",
+    "horarios":"A secretaria da escola fica disponível das 9h-11h30, 13h-15h30",
+    "secretaria":"A secretaria da escola fica disponível das 9h-11h30, 13h-15h30",
+    "horario":"A secretaria da escola fica disponível das 9h-11h30, 13h-15h30",
+    "funcionamento":"A secretaria da escola fica disponível das 9h-11h30, 13h-15h30",
+    "aulas": "As aulas ocorrem de Segunda a Sexta, das 7h30-16h30",
+    "aula":"As aulas ocorrem de Segunda a Sexta, das 7h30-16h30",
+    "biblioteca": "Nossa biblioteca conta com um espaço incrível para pesquisas, leitura e jogos. Ela fica aberta durante os intervalos para estudos, jogos e empréstimos de livros.",
+    "regras": "Sobre regras de convivência,você pode consultar o seu tutor.",
+    "laboratorios": "Contamos com laboratórios equipados de Biologia, Química, Física, Informática e Enfermagem para apoiar as aulas práticas dos itinerários e dos cursos técnicos!",
+    "laboratorio": "Contamos com laboratórios equipados de Biologia, Química, Física, Informática e Enfermagem para apoiar as aulas práticas dos itinerários e dos cursos técnicos!",
+    "refeição": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
+    "almoço": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
+    "lanche": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
+    "merenda": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
+    "celular": "O uso de celulares é proibido nas escolas brasileiras (conforme a Lei Federal nº 15.100, sancionada em 13 de janeiro de 2025) para proteger a concentração, o aprendizado e a saúde mental de crianças e adolescentes da educação básica.",
+    "celulares": "O uso de celulares é proibido nas escolas brasileiras (conforme a Lei Federal nº 15.100, sancionada em 13 de janeiro de 2025) para proteger a concentração, o aprendizado e a saúde mental de crianças e adolescentes da educação básica.",
+    "vestimenta": "O uso do uniforme da escola é obrigatório para a segurança de todos. Caso tenha dúvidas sobre peças permitidas, consulte a coordenação!",
+    "uniforme": "O uso do uniforme da escola é obrigatório para a segurança de todos. Caso tenha dúvidas sobre peças permitidas, consulte a coordenação!",
+    "itinerario":"A escola oferece os Itinerários Formativos de Matemática e Ciências da Natureza, Linguagens e Ciências Humanas e Sociais, Téc. em Enfermagem e Téc. em Desenvolvimento de Sistemas",
+    "itinerarios":"A escola oferece os Itinerários Formativos de Matemática e Ciências da Natureza, Linguagens e Ciências Humanas e Sociais, Téc. em Enfermagem e Téc. em Desenvolvimento de Sistemas",
     "tecnico": "Temos os cursos técnicos integrados de Desenvolvimento de Sistemas e Enfermagem, com foco prático para o mercado de trabalho.",
-    "ajuda": "Eu posso te ajudar com informações sobre a 'historia' da escola, nosso 'endereço', 'telefone' ou sobre os 'cursos' oferecidos! O que quer saber?",
+    "ajuda": "Eu posso te ajudar com informações sobre a HISTÓRIA da escola, nosso ENDEREÇO, TELEFONE, CURSOS e ITINERÁRIOS oferecidos, HORÁRIOS de funcionamento! O que quer saber?",
+    "livro":"Temos um Livro Digital caso você queira saber mais afundo sobre a História da Escola Culto À Ciência",
     "oi": "Olá! Eu sou o Cultinho, assistente virtual da escola. Digite sua dúvida ou digite 'ajuda' para ver o que posso fazer!",
-    "ola": "Olá! Eu sou o Cultinho, assistente virtual da escola. Digite sua dúvida ou digite 'ajuda' para ver o que posso fazer!"
+    "ola": "Olá! Eu sou o Cultinho, assistente virtual da escola. Digite sua dúvida ou digite 'ajuda' para ver o que posso fazer!",
+    "valeu": "De nada! O Cultinho está sempre aqui para ajudar. Se precisar de mais alguma coisa, é só chamar! 😉",
+    "obrigado": "De nada! O Cultinho está sempre aqui para ajudar. Se precisar de mais alguma coisa, é só chamar! 😉",
+    "obrigada": "De nada! O Cultinho está sempre aqui para ajudar. Se precisar de mais alguma coisa, é só chamar! 😉",
+    "ate logo": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
+    "ate mais": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
+    "ate tchau": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
+    "adeus": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
+    "default": "Desculpe, eu ainda estou aprendendo e não entendi muito bem. 😅 Você pode tentar usar palavras-chave mais simples ou digitar 'ajuda' para ver o que eu sei responder!",
 };
 
 chatbotForm?.addEventListener('submit', (e) => {
@@ -437,17 +466,16 @@ chatbotForm?.addEventListener('submit', (e) => {
     const text = chatbotInput.value.trim();
     if(!text) return;
 
-    // Adiciona a mensagem do usuário na tela
+    // coloca a mensagem do usuário na tela
     chatbotMessages.innerHTML += `<div class="chatbot__message chatbot__message--user"><p>${text}</p></div>`;
     chatbotInput.value = '';
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
 
-    // 2. LÓGICA DE BUSCA DA RESPOSTA
-    // Remove acentos e deixa tudo em letras minúsculas para facilitar a busca
+    // remove acentos e deixa tudo em letras minúsculas para facilitar a busca
     const termoBusca = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
     // Resposta padrão caso o robô não entenda
-    let respostaBot = "Desculpe, não entendi muito bem. Você pode tentar palavras-chave como 'história', 'cursos', 'endereço' ou 'telefone'. Para assuntos oficiais, use nosso formulário!";
+    let respostaBot = "Desculpe, não entendi muito bem.               Eu posso te ajudar com informações sobre a HISTÓRIA da escola, nosso ENDEREÇO, SECRETARIA, TELEFONE, CURSOS e ITINERÁRIOS oferecidos, HORÁRIOS de funcionamento e das AULAS!                                                        Caso eu ainda não consiga responder a sua dúvida, procure a SECRETARIA da escola ou ligue no número disponivel.";
 
     // Verifica se a palavra digitada existe na nossa base de conhecimento
     if (bancoDeRespostas[termoBusca]) {
