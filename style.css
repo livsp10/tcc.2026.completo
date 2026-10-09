@@ -1223,7 +1223,7 @@ button { cursor: pointer; border: none; background: none; }
 
 
 body.alto-contraste {
-  --cor-primaria: #fafad1bc;
+  --cor-primaria: #fffcd3ef;
   --cor-primaria-hover: #ffffff;
   --cor-secundaria: #010b21;
   --cor-secundaria-hover: #ffffff;
