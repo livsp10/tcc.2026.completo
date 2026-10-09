@@ -1223,17 +1223,17 @@ button { cursor: pointer; border: none; background: none; }
 
 
 body.alto-contraste {
-  --cor-primaria: #fffcd3ef;
+  --cor-primaria: #89cef9;
   --cor-primaria-hover: #ffffff;
-  --cor-secundaria: #010b21;
-  --cor-secundaria-hover: #ffffff;
-  --cor-branca: #010b21;
+  --cor-secundaria: #132a5c;
+  --cor-secundaria-hover: #1b6fa3;
+  --cor-branca: #fcfce1;
   --cor-destaque: #f7f7ab;
   --cor-fundo: #010b21;
   --cor-fundo-alt: #010b21;
   --cor-card-fundo: #010b21;
-  --cor-texto: #f7f7ab;
-  --cor-texto-suave: #f7f7ab;
+  --cor-texto: #fdfdf5;
+  --cor-texto-suave: #fafae8;
   --cor-borda: #f7f7ab;
   --sombra-card: none;
   --sombra-hover: none;
