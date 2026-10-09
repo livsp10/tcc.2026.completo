@@ -91,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
             descricao: "Mobiliário, objetos científicos e galerias de diretores.",
             itens: [
                 { titulo: "Museu do Acervo", img: "museu/acervo1.jpg" },
-                { titulo: "Sala de Acervo", img: "museu/acervo2.jpg" },
                 { titulo: "Mesa Antiga do Acervo", img: "museu/acervo3.jpg" },
                 { titulo: "Mesas Antigas", img: "museu/acervo4.jpg" },
                 { titulo: "Objetos Históricos", img: "museu/acervo5.jpg" },
@@ -112,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { titulo: "Animais Empalhados", img: "museu/acervo20.jpg" },
                 { titulo: "Animais Empalhados", img: "museu/acervo21.jpg" },
                 { titulo: "Animais Empalhados", img: "museu/acervo22.jpg" },
-                { titulo: "Professores Antigos", img: "museu/acervo23.jpg" },
-                { titulo: "Professores Antigos", img: "museu/acervo24.jpg" },
+                { titulo: "Professores Importantes", img: "museu/acervo23.jpg" },
+                { titulo: "Professores Importantes", img: "museu/acervo24.jpg" },
                 { titulo: "Diretores Antigos", img: "museu/acervo25.jpg" },
                 { titulo: "Objetos Históricos", img: "museu/acervo26.jpg" },
                 { titulo: "Professores Conhecidos", img: "museu/acervo27.jpg" },
@@ -121,9 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 { titulo: "Tijolo Imperial", img: "museu/acervo29.jpg" },
                 { titulo: "Sala Acervo", img: "museu/acervo30.jpg" },
                 { titulo: "Homenagens", img: "museu/acervo31.jpg" },
-                { titulo: "Carteiras Antigas", img: "museu/acervo32.jpg" },
+                { titulo: "Retratos Antigos", img: "museu/acervo32.jpg" },
                 { titulo: "Mesa Histórica", img: "museu/acervo33.jpg" },
-                { titulo: "Retratos Antigos", img: "museu/acervo34.jpg" },
+                { titulo: "Carteira Antiga", img: "museu/acervo34.jpg" },
             ]
             
         },
@@ -219,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { titulo: "Escada de Pedra", img: "curiosidades/curiosidade5.jpg", legenda: "Azulejo hidráulico original" },
                 { titulo: "Homenagens", img: "curiosidades/curiosidade6.jpg" },
                 { titulo: "Monumento Gramado", img: "curiosidades/curiosidade8.jpg" },
-                { titulo: "Monumento Gramado", img: "curiosidades/curiosidade9.jpg" },
+                { titulo: "Monumento Gramado", img: "curiosidades/curiosidade7.jpg" },
                 { titulo: "Parede Profunda", img: "curiosidades/curiosidade9.jpg" },
                 { titulo: "Pintura Antiga", img: "curiosidades/curiosidade10.jpg" },
                 { titulo: "Parede Histórica", img: "curiosidades/curiosidade11.jpg" },
@@ -227,6 +226,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { titulo: "Teste de Tintas", img: "curiosidades/curiosidade13.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
                 { titulo: "Professores Homenagiados", img: "curiosidades/curiosidade14.jpg" },
                 { titulo: "Professores Homenagiados", img: "curiosidades/curiosidade15.jpg" },
+                { titulo: "Professores Homenagiados", img: "museu/acervo2.jpg" },
                 { titulo: "Pia Antiga", img: "curiosidades/curiosidade16.jpg" },
             ]
         }
@@ -310,10 +310,11 @@ document.addEventListener('DOMContentLoaded', () => {
             professores: [
                 { nome: "Profª. Camila", disciplina: "Quimica", img: "professores/prof.camila.jpeg" },
                 { nome: "Profª. Cláudia", disciplina: "Biologia", img: "professores/prof.claudia.jpeg" },
+                { nome: "Prof. Denilson", disciplina: "Física", img: "professores/prof.denilson.jpeg" },
                 { nome: "Prof. Flávio", disciplina: "Biologia", img: "professores/prof.flavio.jpeg" },
                 { nome: "Prof. Guilherme", disciplina: "Química", img: "professores/prof.gulherme.quim.jpeg" },
                 { nome: "Profª. Isabelle", disciplina: "Física", img: "professores/prof.isabelle.jpeg" },
-                { nome: "Prof. Denilson", disciplina: "Física", img: "professores/prof.denilson.jpeg" },
+               
             ]
         },
         tecnico: {
@@ -321,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
             descricao: "Desenvolvimento de Sistemas e Efermagem.",
             professores: [
                 { nome: "Prof. Alex", disciplina: "Dev. Sistemas", img: "professores/prof.alex.tec.ds.jpeg" },
-                { nome: "Prof. Aparecido", disciplina: "Dev. Sistemas", img: "professores/prof.aparecido.tec.ds.jpeg" },
+                { nome: "Prof. Aparecido", disciplina: "Dev. Sistemas", img: "professores/prof.aparecido.jpeg" },
                 { nome: "Profª. Gláucia", disciplina: "Dev. Sistemas", img: "professores/prof.glaucia.tec.ds.jpeg" },
                 { nome: "Profª. Fran", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" },
                 { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "professores/prof.jacke.ef.jpeg" },
@@ -332,8 +333,9 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Professores de Apoio",
             descricao: "Apoio",
             professores: [
+                { nome: "Profª Cintia", disciplina: "Apoio ao Protagonismo", img: "professores/prof.cintia.jpeg" },
                 { nome: "Profª Mônica", disciplina: "Educação Especial", img: "professores/prof.especial1.jpeg" },
-                { nome: "Profª Cintia", disciplina: "Apoio ao Protagonismo", img: "professores/prof.especial1.jpeg" },
+                
                
             ]
         }
@@ -410,18 +412,28 @@ const bancoDeRespostas = {
     "titulos":"Não existem registros históricos de títulos esportivos de relevância nacional ou regional associados ao Colégio Culto à Ciência, mas, embora nem a Associação Atlética Ponte Preta (fundada em 1900) e nem o Guarani Futebol Clube (fundado em 1911) tenham nascido oficialmente dentro das salas de aula do Culto à Ciência, a escola foi o ponto de encontro crucial para os jovens que os criaram.",
     "historia": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT! Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
     "escola": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT! Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
-    "diretor":"O diretor atual da Escola Estadual Culto à Ciência se chama Glauber Maldonado Ferreira",
-    "vice diretor":"O atual vice-diretor da Escola Estadual Culto à Ciência se chama Andreia Alves Ferreira",
-    "vice":"O atual vice-diretor da Escola Estadual Culto à Ciência se chama Andreia Alves Ferreira",
-    "professores":"Saiba mais sobre os professores na aba 'PROFESSORES' no menu!",
+    "diretor":"O diretor atual da Escola Estadual Culto à Ciência se chama Glauber Maldonado.",
+    "vice diretor":"O atual vice-diretor da Escola Estadual Culto à Ciência se chama Andreia Alves.",
+    "vice":"O atual vice-diretor da Escola Estadual Culto à Ciência se chama Andreia Alves.",
+    "professores":"Saiba mais sobre os professores clicando na aba 'PROFESSORES' no menu!",
+    "gestao":"Conheça a nossa Gestão clicando na aba 'GESTÃO' no menu!",
+    "projetos":"Conheça os nossos projetos clicando na aba 'PROJETOS' no menu!",
+    "galeria":"Veja a nossa galeria clicando na aba 'GALERIA' no menu!",
+    "integral":"Saiba mais sobre o Ensino Integral clicando na aba 'ENSINO INTEGRAL & ITINERÁRIOS' no menu!",
+    "acervo":"Saiba mais sobre o nosso Acervo clicando na aba 'ACERVO' no menu!",
+    "curiosidades":"Veja algumas curiosidades clicando na pasta Curiosidades na aba 'ACERVO' no menu!",
+    "curiosidade":"Veja algumas curiosidades clicando na pasta Curiosidades na aba 'ACERVO' no menu!",
+    "biblioteca":"Saiba mais sobre a nossa biblioteca clicando na pasta Biblioteca na aba 'ACERVO' no menu!",
+    "matricula":"Você pode entrar em contato conosco pelo telefone (19) 3232-3511, ou pode ir até a nossa secretaria que fica disponível das 9h-11h30, 13h-15h30",
     "fundador":"O Colégio Culto à Ciência não foi fundado por uma única pessoa, mas sim por um grupo de idealistas, fazendeiros, comerciantes e intelectuais, muitos deles ligados à maçonaria da Loja 'Independência', reunidos na associação civil sem fins lucrativos Sociedade Culto à Ciência. Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
     "fundada":"A Escola Estadual Culto à Ciência foi fundada no ano de 1873. Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
-    "fundaçao":"A Escola Estadual Culto à Ciência foi fundada no ano de 1873. Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
+    "fundacao":"A Escola Estadual Culto à Ciência foi fundada no ano de 1873. Também temos um Livro Digital disponível no nosso site caso você queira saber mais afundo sobre a História da Escola Culto À Ciência!",
     "anos":"Com base no ano de sua fundação em 1873, a Escola Estadual Culto à Ciência tem hoje 153 anos de história.",
+    "ano":"Com base no ano de sua fundação em 1873, a Escola Estadual Culto à Ciência tem hoje, 2026, 153 anos de história.",
     "pessoas":"O aluno mais famoso foi Alberto Santos Dumont, o Pai da Aviação, que estudou lá na década de 1880. Na televisão e no jornalismo, a escola teve alunos icônicos como o apresentador Fausto Silva (Faustão) e o jornalista Júlio de Mesquita, do jornal O Estado de S. Paulo.",
-    "colégio": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!",
+    "colegio": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!",
     "historia": "A Escola Estadual Culto à Ciência foi fundada em 1873 pela Sociedade Culto à Ciência, inspirada nos ideais iluministas e positivistas. Nosso prédio principal é tombado pelo CONDEPHAAT!","endereco": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
-    "localização": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
+    "localizacao": "Ficamos na R. Culto à Ciência, 422 - Botafogo, Campinas - SP, CEP 13020-060.",
     "telefone": "Você pode entrar em contato conosco pelo telefone (19) 3232-3511.",
     "contato": "Você pode falar conosco pelo telefone (19) 3232-3511 ou pelo formulário de contato abaixo.",
     "curso":"A escola oferece os Itinerários Formativos de Matemática e Ciências da Natureza, Linguagens e Ciências Humanas e Sociais, Téc. em Enfermagem e Téc. em Desenvolvimento de Sistemas",
@@ -436,7 +448,7 @@ const bancoDeRespostas = {
     "regras": "Sobre regras de convivência,você pode consultar o seu tutor.",
     "laboratorios": "Contamos com laboratórios equipados de Biologia, Química, Física, Informática e Enfermagem para apoiar as aulas práticas dos itinerários e dos cursos técnicos!",
     "laboratorio": "Contamos com laboratórios equipados de Biologia, Química, Física, Informática e Enfermagem para apoiar as aulas práticas dos itinerários e dos cursos técnicos!",
-    "refeição": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
+    "refeicao": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
     "almoço": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
     "lanche": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
     "merenda": "Como somos uma escola de Tempo Integral (PEI), oferecemos café da manhã, almoço e lanche da tarde para todos os alunos nos intervalos das aulas!",
@@ -449,16 +461,21 @@ const bancoDeRespostas = {
     "tecnico": "Temos os cursos técnicos integrados de Desenvolvimento de Sistemas e Enfermagem, com foco prático para o mercado de trabalho.",
     "ajuda": "Eu posso te ajudar com informações sobre a HISTÓRIA da escola, nosso ENDEREÇO, TELEFONE, CURSOS e ITINERÁRIOS oferecidos, HORÁRIOS de funcionamento! O que quer saber?",
     "livro":"Temos um Livro Digital caso você queira saber mais afundo sobre a História da Escola Culto À Ciência",
-    "oi": "Olá! Eu sou o Cultinho, assistente virtual da escola. Digite sua dúvida ou digite 'ajuda' para ver o que posso fazer!",
-    "ola": "Olá! Eu sou o Cultinho, assistente virtual da escola. Digite sua dúvida ou digite 'ajuda' para ver o que posso fazer!",
-    "valeu": "De nada! O Cultinho está sempre aqui para ajudar. Se precisar de mais alguma coisa, é só chamar! 😉",
+    "bom dia": "Bom dia! Eu sou o Cultinho, assistente virtual da escola. Como eu posso te ajudar hoje?",
+    "boa tarde": "Boa tarde! Eu sou o Cultinho, assistente virtual da escola. Como eu posso te ajudar hoje?",
+    "boa noite": "Boa Noite! Eu sou o Cultinho, assistente virtual da escola. Como eu posso te ajudar hoje?",
+    "oi": "Oii! Eu sou o Cultinho, assistente virtual da escola. Como eu posso te ajudar hoje?",
+    "ola": "Olá! Eu sou o Cultinho, assistente virtual da escola. Como eu posso te ajudar hoje?",
+    "valeu": "Imagina! O Cultinho está sempre aqui para ajudar. Se precisar de mais alguma coisa, é só chamar! 😉",
     "obrigado": "De nada! O Cultinho está sempre aqui para ajudar. Se precisar de mais alguma coisa, é só chamar! 😉",
     "obrigada": "De nada! O Cultinho está sempre aqui para ajudar. Se precisar de mais alguma coisa, é só chamar! 😉",
     "ate logo": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
     "ate mais": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
-    "ate tchau": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
+    "ate": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
+    "tchau": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
     "adeus": "Até logo! Tenha um ótimo dia de estudos no Culto! 🏫",
-    "default": "Desculpe, eu ainda estou aprendendo e não entendi muito bem. 😅 Você pode tentar usar palavras-chave mais simples ou digitar 'ajuda' para ver o que eu sei responder!",
+    
+    
 };
 
 chatbotForm?.addEventListener('submit', (e) => {
@@ -475,7 +492,7 @@ chatbotForm?.addEventListener('submit', (e) => {
     const termoBusca = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
     // Resposta padrão caso o robô não entenda
-    let respostaBot = "Desculpe, não entendi muito bem.               Eu posso te ajudar com informações sobre a HISTÓRIA da escola, nosso ENDEREÇO, SECRETARIA, TELEFONE, CURSOS e ITINERÁRIOS oferecidos, HORÁRIOS de funcionamento e das AULAS!                                                        Caso eu ainda não consiga responder a sua dúvida, procure a SECRETARIA da escola ou ligue no número disponivel.";
+    let respostaBot = "Desculpe, não entendi muito bem...";
 
     // Verifica se a palavra digitada existe na nossa base de conhecimento
     if (bancoDeRespostas[termoBusca]) {
