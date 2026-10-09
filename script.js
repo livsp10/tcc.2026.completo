@@ -321,9 +321,9 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Professores do Técnico",
             descricao: "Desenvolvimento de Sistemas e Efermagem.",
             professores: [
-                { nome: "Prof. Alex", disciplina: "Dev. Sistemas", img: "professores/prof.alex.tec.ds.jpeg" },
-                { nome: "Prof. Aparecido", disciplina: "Dev. Sistemas", img: "professores/prof.aparecido.jpeg" },
-                { nome: "Profª. Gláucia", disciplina: "Dev. Sistemas", img: "professores/prof.glaucia.tec.ds.jpeg" },
+                { nome: "Prof. Alex", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.alex.tec.ds.jpeg" },
+                { nome: "Prof. Aparecido", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.aparecido.jpeg" },
+                { nome: "Profª. Gláucia", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.glaucia.tec.ds.jpeg" },
                 { nome: "Profª. Fran", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" },
                 { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "professores/prof.jacke.ef.jpeg" },
                 { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "professores/prof.lidia.ef.jpeg" }
