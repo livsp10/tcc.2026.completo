@@ -1,0 +1,292 @@
+/* CORES DO SITE */
+:root {
+    --azul-marinho: #10294F;
+    --amarelo-claro: #FFE89A;
+    --branco: #FFFFFF;
+    --fundo: #F5F7FB;
+    --texto: #29364A;
+    --borda: #DCE4EF;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+ 
+/* CABEÇALHO */
+header {
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    padding: 22px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+ 
+.identidade {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+ 
+.logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 5px;
+}
+ 
+header h1 {
+    font-size: 25px;
+}
+ 
+header p {
+    color: var(--amarelo-claro);
+    font-size: 14px;
+}
+ 
+nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+ 
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+ 
+nav a:hover {
+    background-color: var(--amarelo-claro);
+    color: var(--azul-marinho);
+}
+ 
+/* APRESENTAÇÃO */
+main {
+    width: 90%;
+    max-width: 1050px;
+    margin: auto;
+}
+ 
+.apresentacao {
+    background-color: var(--amarelo-claro);
+    padding: 40px;
+    margin: 35px 0;
+    border-radius: 24px;
+}
+ 
+.etiqueta {
+    display: inline-block;
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+ 
+.apresentacao h2 {
+    color: var(--azul-marinho);
+    font-size: 34px;
+    margin: 12px 0;
+}
+ 
+/* SEÇÕES */
+.secao {
+    margin: 45px 0;
+    scroll-margin-top: 20px;
+}
+ 
+.secao > h2 {
+    color: var(--azul-marinho);
+    font-size: 27px;
+}
+ 
+.secao > p {
+    margin-bottom: 18px;
+    color: #64748B;
+}
+ 
+/* CARTÕES PRINCIPAIS */
+.cartao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(16, 41, 79, 0.08);
+}
+ 
+.imagem {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    padding: 15px;
+    background-color: #EAF0F8;
+}
+ 
+.conteudo {
+    padding: 30px;
+}
+ 
+.conteudo h3 {
+    color: var(--azul-marinho);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+ 
+.conteudo p {
+    margin-bottom: 20px;
+}
+ 
+/* BOTÕES */
+.botao {
+    display: inline-block;
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+ 
+.botao:hover {
+    background-color: #244B7D;
+    transform: translateY(-2px);
+}
+ 
+/* GALERIA DO GOOGLE AGENDA */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+ 
+.cartao-agenda {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 17px;
+    padding: 12px;
+    box-shadow: 0 8px 25px rgba(16, 41, 79, 0.07);
+}
+ 
+.cartao-agenda img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background-color: #EAF0F8;
+    border-radius: 10px;
+}
+ 
+.cartao-agenda h3 {
+    color: var(--azul-marinho);
+    font-size: 15px;
+    margin-top: 10px;
+}
+ 
+/* RODAPÉ */
+footer {
+    margin-top: 60px;
+    padding: 25px;
+    text-align: center;
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    font-size: 13px;
+}
+ 
+footer p + p {
+    color: var(--amarelo-claro);
+}
+ 
+/* ADAPTAÇÃO PARA CELULAR */
+@media (max-width: 700px) {
+    header {
+        align-items: flex-start;
+    }
+ 
+    nav {
+        width: 100%;
+    }
+ 
+    .apresentacao {
+        padding: 25px;
+    }
+ 
+    .apresentacao h2 {
+        font-size: 27px;
+    }
+ 
+    .cartao {
+        grid-template-columns: 1fr;
+    }
+ 
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+ 
+    .imagem {
+        height: auto;
+        max-height: 300px;
+    }
+ 
+    .cartao-agenda img {
+        height: auto;
+        max-height: 350px;
+    }
+}
+ 
+nav a.selecionado {
+    background-color: var(--amarelo-claro);
+    color: var(--azul-marinho);
+}
+.accessibility-floating {
+    position: fixed;
+    top: 90px;
+    right: 15px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: var(--cor-branca);
+    padding: 8px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--cor-primaria);
+  }
+  
+  .accessibility-floating__btn {
+    background-color: transparent;
+    color: var(--cor-primaria);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: var(--transicao-suave);
+  }
+  
