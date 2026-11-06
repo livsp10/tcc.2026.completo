@@ -170,7 +170,7 @@ button { cursor: pointer; border: none; background: none; }
   background-color: 
   var(--cor-secundaria-hover); 
   transform: translateY(-2px); 
-  box-shadow: 0 6px 15px rgba(244, 196, 48, 0.4); }
+  box-shadow: 0 6px 15px rgba(228, 244, 48, 0.4); }
 
 .btn--outline { 
   background-color: transparent; 
@@ -652,7 +652,19 @@ button { cursor: pointer; border: none; background: none; }
   color: #2a9d8f; }
 
   /* projetos */
-.projetos__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+  .projetos__grid {
+    display: flex;             /* <--- MUDAMOS DE GRID PARA FLEX */
+    flex-wrap: wrap;           /* Permite que os cards quebrem de linha se não couberem */
+    gap: 1.5rem;               /* Mantém o espaçamento correto entre os cards */
+    justify-content: center;   /* <--- ISSO VAI CENTRALIZAR O CARD QUE SOBRAR EMBAIXO! */
+}
+
+/* Garante que os cards mantenham um tamanho equilibrado na linha */
+.projetos__grid .card-projeto {
+    flex: 1 1 calc(33.333% - 1.5rem); /* Tenta ocupar 3 colunas se houver espaço */
+    min-width: 280px;                 /* Não deixa o card esmagar em telas menores */
+    max-width: 380px;                 /* Não deixa o card da última linha esticar demais */
+}
 .card-projeto { display: block; background-color: var(--cor-card-fundo); border: 1px solid var(--cor-borda); border-radius: var(--raio-borda); overflow: hidden; text-align: left; box-shadow: var(--sombra-card); transition: var(--transicao-suave); text-decoration: none; color: inherit; width: 100%; cursor: pointer;}
 .card-projeto:hover { transform: translateY(-5px); box-shadow: var(--sombra-hover); border-color: var(--cor-secundaria); }
 .card-projeto__img { height: 250px; background-color: #ddd; position: relative; }
@@ -787,66 +799,6 @@ button { cursor: pointer; border: none; background: none; }
   transition: transform 0.3s; }
 
 .galeria__item:hover { transform: scale(1.02); }
-
-/*lightbox*/
-.lightbox { 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  z-index: 2200; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; }
-
-.lightbox[hidden] { display: none; }
-
-.lightbox__backdrop { 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0, 0, 0, 0.85); 
-  backdrop-filter: blur(5px); }
-
-.lightbox__content { 
-  position: relative; 
-  z-index: 2201; 
-  max-width: 900px; 
-  width: 95%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: space-between; }
-
-.lightbox__body { 
-  flex-grow: 1; 
-  margin: 0 1rem; 
-  text-align: center;}
-
-.lightbox__close { 
-  position: absolute; 
-  top: -40px; 
-  right: 0; 
-  color: var(--cor-branca); 
-  font-size: 2.2rem; 
-  line-height: 1; }
-
-.lightbox__nav { 
-  color: var(--cor-branca); 
-  font-size: 1.8rem; 
-  padding: 0.75rem; 
-  transition: var(--transicao-suave); }
-
-.lightbox__nav:hover { color: var(--cor-secundaria); }
-
-.lightbox-caption-text { 
-  color: white; 
-  margin-top: 10px; 
-  display: block; 
-  font-family: var(--fonte-titulo); 
-  font-size: 1.1rem;}
 
 /* modais pastas */
 .modal-acervo, .modal-professores { 
@@ -1196,7 +1148,6 @@ button { cursor: pointer; border: none; background: none; }
   .livro-digital__acoes { justify-content: center; }
   .professores__grid, .integral__grid, .galeria__grid, .acervo__grid, .gestao__grid { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: repeat(2, 1fr); }
-  
 }
 
 @media (max-width: 768px) {
@@ -1223,16 +1174,16 @@ button { cursor: pointer; border: none; background: none; }
 
 
 body.alto-contraste {
-  --cor-primaria: #89cef9;
+  --cor-primaria: #4caae4;
   --cor-primaria-hover: #ffffff;
   --cor-secundaria: #132a5c;
   --cor-secundaria-hover: #1b6fa3;
-  --cor-branca: #fcfce1;
+  --cor-branca: #274f74;
   --cor-destaque: #f7f7ab;
   --cor-fundo: #010b21;
   --cor-fundo-alt: #010b21;
   --cor-card-fundo: #010b21;
-  --cor-texto: #fdfdf5;
+  --cor-texto: #fff8f8;
   --cor-texto-suave: #fafae8;
   --cor-borda: #f7f7ab;
   --sombra-card: none;
@@ -1254,8 +1205,13 @@ body.alto-contraste .header,
 body.alto-contraste .integral__card,
 body.alto-contraste .historia__livro-digital {
   border: 2px solid #ffffff !important;
-  background-color: #000000 !important;
+  background-color: #010b21 !important;
 }
+.contato__info {
+  padding: 3rem 2rem; /* Cria um espaço interno confortável */
+  min-height: 250px;  /* Garante que ela não fique muito baixa */
+}
+
 
 /*acessibilidade flutuante */
 .accessibility-floating {
@@ -1396,3 +1352,102 @@ body.alto-contraste .accessibility-floating__btn {
         font-size: 0.8rem;
     }
 }
+/* ==========================================================================
+   AJUSTES DE DESIGN: ABA APRESENTAÇÃO DO PROJETO (TCC)
+   ========================================================================== */
+
+/* Garante o comportamento flexível do bloco de texto interno */
+.projeto-historia__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Espaçamento e customização do bloco de créditos */
+.projeto-historia__content .contato__info {
+  margin-top: 1.5rem;
+  background-color: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  transition: var(--transicao-suave);
+}
+
+.projeto-historia__content .contato__info p {
+  display: flex;
+  align-items: center;
+  line-height: 1.6;
+}
+
+/* Força a imagem a respeitar os limites do container nativo */
+.acervo__placeholder-img .acervo__icon-img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--raio-borda);
+}
+/* ==========================================================================
+   AJUSTE DE DESIGN: REDUZINDO O TAMANHO DA FOTO DO GRUPO (PROPORCIONAL)
+   ========================================================================== */
+   .projeto-banner__container {
+    width: 100%;
+    max-width: 600px;           /* <--- ISSO REDUZ A LARGURA GERAL DA FOTO NA TELA */
+    margin: 0 auto 2.5rem auto;    /* <--- MANTÉM A FOTO PERFEITAMENTE CENTRALIZADA */
+}
+
+.projeto-banner__visual {
+    background-color: transparent; /* <--- REMOVE A COR ESCURA DA BORDA */
+    padding: 0;                    /* <--- REMOVE O ESPAÇAMENTO DA BORDA */
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-card);
+    overflow: hidden;              
+}
+
+.projeto-banner__img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  /* Remove a compensação anterior para alinhar perfeitamente com a legenda */
+  border-radius: 0; 
+}
+
+.projeto-banner__legenda {
+  display: block;
+  padding: 0.85rem 1rem;
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);  /* <--- COR DO TEXTO COMBINANDO COM O SITE PRINCIPAL */
+  background-color: transparent; /* <--- REMOVE O FUNDO ESCURO DA LEGENDA */
+  text-align: center;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   SUPORTE DE ALTO CONTRASTE INTEGRADO PARA A IMAGEM REDUZIDA
+   ========================================================================== */
+body.alto-contraste .projeto-banner__container {
+    max-width: 600px !important; /* Mantém o tamanho reduzido estável no modo escuro */
+}
+/* ==========================================================================
+   FORÇAR FUNDO AMARELADO NA SEÇÃO DE CONTATO
+   ========================================================================== */
+   #contato, 
+   .section#contato {
+       background-color: var(--cor-fundo-alt) !important;
+   }
+   
+   /* Mantém o formulário de contato e informações destacados em branco sobre o fundo amarelo */
+   #contato .contato__form,
+   #contato .contato__info {
+       background-color: var(--cor-card-fundo) !important;
+       border: 1px solid var(--cor-borda);
+   }
+   
+   /* Garante o funcionamento correto no modo Alto Contraste */
+   body.alto-contraste #contato,
+   body.alto-contraste .section#contato,
+   body.alto-contraste #contato .contato__form,
+   body.alto-contraste #contato .contato__info {
+       background-color: #000000 !important;
+       border: 2px solid #ffffff !important;
+   }
+   
