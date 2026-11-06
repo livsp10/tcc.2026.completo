@@ -143,8 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     { titulo: "Coletânea de Livros", img: "biblioteca/biblio.13.jpg" },
                     { titulo: "Coletânea de Livros", img: "biblioteca/biblio.14.jpg" },
                     { titulo: "Coletânea de Livros", img: "biblioteca/biblio.15.jpg" },
-                    { titulo: "Santos Drummond", img: "biblioteca/biblio.16.jpg" },
-                    { titulo: "Santos Drummond", img: "biblioteca/biblio.17.jpg" },
+                    { titulo: "Santos Dumont", img: "biblioteca/biblio.16.jpg" },
+                    { titulo: "Santos Dumont", img: "biblioteca/biblio.17.jpg" },
                     { titulo: "Bíblias Sagradas", img: "biblioteca/biblio.18.jpg" },
                     { titulo: "Geografia do Brasil", img: "biblioteca/biblio.19.jpg" },
                     { titulo: "Personagens da nossa história ", img: "biblioteca/biblio.20.jpg" },
@@ -224,9 +224,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 { titulo: "Parede Histórica", img: "curiosidades/curiosidade11.jpg" },
                 { titulo: "Tintas Antigas", img: "curiosidades/curiosidade12.jpg" },
                 { titulo: "Teste de Tintas", img: "curiosidades/curiosidade13.jpg", legenda: "Tijolo com o Brasão do Império usado na construção" },
-                { titulo: "Professores Homenagiados", img: "curiosidades/curiosidade14.jpg" },
-                { titulo: "Professores Homenagiados", img: "curiosidades/curiosidade15.jpg" },
-                { titulo: "Professores Homenagiados", img: "museu/acervo2.jpg" },
+                { titulo: "Professores Homenageados", img: "curiosidades/curiosidade14.jpg" },
+                { titulo: "Professores Homenageados", img: "curiosidades/curiosidade15.jpg" },
+                { titulo: "Professores Homenageados", img: "museu/acervo2.jpg" },
                 { titulo: "Pia Antiga", img: "curiosidades/curiosidade16.jpg" },
             ]
         }
@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
             descricao: "História, Geografia, Filosofia e Sociologia.",
             professores: [
                 { nome: "Prof. Guilherme", disciplina: "Filosofia/Sociologia", img: "professores/prof.guilherme.soci.jpeg" },
-                { nome: "Profª. Paty", disciplina: "Geografia", img: "professores/prof.paty.jpeg" },
+                { nome: "Profª. Patrícia", disciplina: "Geografia", img: "professores/prof.paty.jpeg" },
                 { nome: "Profª. Paula", disciplina: "História", img: "professores/prof.paula.jpeg" }
             ]
         },
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Professores de Ciências da Natureza",
             descricao: "Física, Química, Biologia e Práticas Experimentais.",
             professores: [
-                { nome: "Profª. Camila", disciplina: "Quimica", img: "professores/prof.camila.jpeg" },
+                { nome: "Profª. Camila", disciplina: "Química", img: "professores/prof.camila.jpeg" },
                 { nome: "Profª. Cláudia", disciplina: "Biologia", img: "professores/prof.claudia.jpeg" },
                 { nome: "Prof. Denilson", disciplina: "Física", img: "professores/prof.denilson.jpeg" },
                 { nome: "Prof. Flávio", disciplina: "Biologia", img: "professores/prof.flavio.jpeg" },
@@ -321,11 +321,11 @@ document.addEventListener('DOMContentLoaded', () => {
             titulo: "Professores do Técnico",
             descricao: "Desenvolvimento de Sistemas e Efermagem.",
             professores: [
-                { nome: "Prof. Alex", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.alex.tec.ds.jpeg" },
+                { nome: "Prof. Alexander", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.alex.tec.ds.jpeg" },
                 { nome: "Prof. Aparecido", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.aparecido.jpeg" },
-                { nome: "Profª. Gláucia", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.glaucia.tec.ds.jpeg" },
-                { nome: "Profª. Fran", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" },
-                { nome: "Profª. Jacke", disciplina: "Enfermagem", img: "professores/prof.jacke.ef.jpeg" },
+                { nome: "Profª. Gláucimara", disciplina: "Desenvolvimento de Sistemas", img: "professores/prof.glaucia.tec.ds.jpeg" },
+                { nome: "Profª. Francielle", disciplina: "Enfermagem", img: "professores/prof.fran.ef.jpeg" },
+                { nome: "Profª. Jackeline", disciplina: "Enfermagem", img: "professores/prof.jacke.ef.jpeg" },
                 { nome: "Profª. Lídia", disciplina: "Enfermagem", img: "professores/prof.lidia.ef.jpeg" }
             ]
         },
