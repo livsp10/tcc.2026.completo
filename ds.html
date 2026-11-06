@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culto Web | Organização do TCC</title>
+    <link rel="stylesheet" href="ds.css">
+</head>
+<body> 
+
+
+    
+    <!-- BARRA FLUTUANTE DE ACESSIBILIDADE -->
+    <div class="accessibility-floating" aria-label="Controles de Acessibilidade">
+        <button id="btn-aumentar-fonte" class="accessibility-floating__btn" title="Aumentar texto">A+</button>
+        <button id="btn-restaurar-fonte" class="accessibility-floating__btn" title="Restaurar tamanho">A</button>
+        <button id="btn-diminuir-fonte" class="accessibility-floating__btn" title="Diminuir texto">A-</button>
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
+    
+ 
+    <header>
+        
+        <div class="identidade">
+            <!-- Coloque o símbolo da escola na pasta imagens -->
+            <img src="portifólio/simbolo-escola.png"
+                 alt="Símbolo da Escola Culto à Ciência"
+                 class="logo">
+ 
+            <div>
+                <h1>Culto à Ciência</h1>
+                <p>Culto Web | Organização do TCC</p>
+            </div>
+        </div>
+ 
+        <nav>
+            <a href="#planilhas">Planilhas</a>
+            <a href="#kanban">Kanban</a>
+            <a href="#agenda">Agenda</a>
+            <a href="#desenvolvedores">Desenvolvedores</a>
+        </nav>
+        <div class="container" style="margin-top: 2rem; margin-bottom: 1rem; text-align: left;">
+            <button onclick="window.location.href='index.html'" class="btn btn--primary" style="cursor: pointer;">
+                <i class="fas fa-arrow-left"></i> Voltar ao Início
+            </button>
+        </div>
+    </header>
+ 
+    <main>
+        <section class="apresentacao">
+            <span class="etiqueta">PROJETO DE TCC</span>
+            <h2>Organização do nosso projeto</h2>
+            <p>
+                Um espaço para reunir o cronograma, a metodologia ágil
+                e os compromissos do grupo Culto Web.
+            </p>
+        </section>
+ 
+        <!-- SEÇÃO 1: GOOGLE PLANILHAS -->
+        <section class="secao" id="planilhas">
+            <h2>01. Google Planilhas</h2>
+            <p>Primeira versão do cronograma com as datas do projeto.</p>
+ 
+            <div class="cartao">
+                <img src="portifólio/cronograma.png"
+                     alt="Print da primeira versão da planilha"
+                     class="imagem">
+ 
+                <div class="conteudo">
+                    <h3>Cronograma de datas</h3>
+                    <p>
+                        Consulte as datas, etapas e entregas previstas
+                        para o desenvolvimento do TCC.
+                    </p>
+ 
+                    <a href="https://docs.google.com/spreadsheets/d/1FAldz8HzgShDDwXfo3PcqcvnW3nmd5qfmg3WvIGVex4/edit?usp=sharing%22"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="botao">
+                        Abrir Google Planilhas ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- SEÇÃO 2: GOOGLE DRIVE E KANBAN -->
+        <section class="secao" id="kanban">
+            <h2>02. Metodologia ágil</h2>
+            <p>Primeira versão do nosso quadro Kanban.</p>
+ 
+            <div class="cartao">
+                <img src="portifólio/V.8 (KANBAN).png"
+                     alt="Print da oitava versão do Kanban"
+                     class="imagem">
+ 
+                <div class="conteudo">
+                    <h3>Quadro Kanban</h3>
+                    <p>
+                        Organização das tarefas do grupo por etapas,
+                        acompanhando o andamento do projeto.
+                    </p>
+ 
+                    <a href="https://drive.google.com/drive/folders/1br6POq3XODMYmQQPQ0upS9NXGHw7sFBl?usp=sharing"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="botao">
+                        Abrir pasta do Google Drive ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+ 
+        <!-- SEÇÃO 3: GOOGLE AGENDA -->
+        <section class="secao" id="agenda">
+            <h2>03. Google Agenda</h2>
+            <p>Prints das reuniões, atividades e prazos do grupo.</p>
+ 
+            <div class="galeria">
+                <div class="cartao-agenda">
+                    <img src="portifólio/agenda-1.png"
+                         alt="Primeiro print do Google Agenda">
+                    <h3>Agenda — Registro 1</h3>
+                </div>
+ 
+                <div class="cartao-agenda">
+                    <img src="portifólio/agenda-2.png"
+                         alt="Segundo print do Google Agenda">
+                    <h3>Agenda — Registro 2</h3>
+                </div>
+ 
+                <div class="cartao-agenda">
+                    <img src="portifólio/agenda-3.png"
+                         alt="Terceiro print do Google Agenda">
+                    <h3>Agenda — Registro 3</h3>
+                </div>
+            </div>
+        </section>
+         <!-- SEÇÃO 4: DESENVOLVEDORES -->
+         <section class="secao" id="desenvolvedores">
+            <h2>04. Desenvolvedores</h2>
+            <p>Eduarda Leonel; Lívia Pimenta; Yasmin Soares, Miguel Eduardo.</p>
+ 
+            <div class="cartao">
+                <img src="portifólio/nós.jpg"
+                     alt="Foto desenvolvedores"
+                     class="imagem">
+ 
+                <div class="conteudo">
+                    <h3>TCC escrito</h3>
+                    <p>
+                    Em breve o nosso TCC escrito será disponibilizado!
+                    </p>
+ 
+                    <a href="."
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="botao">
+                        Aguardando TCC escrito ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+ 
+    <footer>
+        <p><strong>Culto Web</strong> | TCC de Desenvolvimento de Sistemas</p>
+        <p>Escola Estadual Culto à Ciência — Campinas, SP</p>
+    </footer>
+ 
+    <script src="ds.js"></script>
+</body>
+</html>
