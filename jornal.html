@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos | Culto à Ciência</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de Acessibilidade Flutuante -->
+    <div class="accessibility-floating" id="barra-acessibilidade">
+        <button type="button" id="btn-aumentar-fonte" class="accessibility-floating__btn" title="Aumentar Fonte">A+</button>
+        <button type="button" id="btn-restaurar-fonte" class="accessibility-floating__btn" title="Tamanho Padrão">A</button>
+        <button type="button" id="btn-diminuir-fonte" class="accessibility-floating__btn" title="Diminuir Fonte">A-</button>
+        <button type="button" id="btn-alto-contraste" class="accessibility-floating__btn" title="Alto Contraste">
+            <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- Cabeçalho Simples com Botão de Voltar -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__brand">
+                <div class="header__logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="header__titles">
+                    <span class="header__school-name">Culto à Ciência</span>
+                </div>
+            </a>
+            <a href="index.html" class="btn btn--outline" style="color: var(--cor-primaria); border-color: var(--cor-primaria); padding: 0.5rem 1rem;">
+                <i class="fa-solid fa-arrow-left"></i> Voltar ao Início
+            </a>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <section class="section galeria" style="padding-top: 3rem;">
+            <div class="container">
+                <header class="section__header">
+                    <span class="section__subtitle">Portifólio Semanal</span>
+                    <h1 class="section__title">Jornal da Semana</h1>
+                    <p class="section__description">Descubra o que vivemos de mais legal essa semana na escola.</p>
+                </header>
+
+    <style>
+        /* Estilos específicos para a área de conteúdo do jornal */
+        .jornal-page-content {
+            background-color: var(--cor-fundo);
+            padding: 3rem 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .jornal-container {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .jornal-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        /* O botão pílula exato que criamos anteriormente */
+        .botao-pill-voltar {
+            display: inline-block;
+            padding: 12px 30px;
+            font-family: var(--fonte-titulo), Arial, sans-serif;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--cor-primaria);
+            background-color: var(--cor-secundaria);
+            text-decoration: none;
+            border-radius: 100px;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transicao-suave);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .botao-pill-voltar:hover {
+            background-color: var(--cor-secundaria-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(244, 196, 48, 0.3);
+        }
+
+        /* CARD DO JORNAL - REMOVIDO PADDING PARA A FOTO OCUPAR TUDO */
+        .jornal-display-box {
+            background-color: var(--cor-card-fundo);
+            border: 1px solid var(--cor-borda);
+            border-radius: var(--raio-borda);
+            padding: 0; /* Ocupa o card inteiro */
+            overflow: hidden; /* Garante que a foto respeite as curvas do card */
+            box-shadow: var(--sombra-card);
+        }
+
+        .jornal-image-frame {
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto; /* Mantém a rolagem vertical para o jornal longo */
+            background-color: #fdfdf1;
+        }
+
+        .jornal-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* CAPA DA LEGENDA - ABAIXO DA FOTO, DENTRO DO CARD */
+        .jornal-legenda-box {
+            padding: 1.5rem 2rem;
+            background-color: var(--cor-card-fundo);
+            border-top: 1px solid var(--cor-borda);
+        }
+
+        .jornal-legenda {
+            font-family: var(--fonte-corpo);
+            font-size: 0.95rem;
+            color: var(--cor-texto-suave);
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Suporte completo ao modo Alto Contraste */
+        body.alto-contraste .jornal-display-box,
+        body.alto-contraste .jornal-legenda-box {
+            border: 2px solid #ffffff !important;
+            background-color: #010b21 !important;
+        }
+
+        body.alto-contraste .botao-pill-voltar {
+            border: 2px solid #ffffff !important;
+            background-color: #132a5c !important;
+            color: #fafae8 !important;
+        }
+        body.alto-contraste .botao-pill-voltar:hover {
+            background-color: #1b6fa3 !important;
+        }
+
+        @media (max-width: 768px) {
+            .jornal-legenda-box {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+
+            <!-- FOTO SEMANAL -->
+            <div class="jornal-display-box">
+                <div class="jornal-image-frame">
+                    <img src="jornal/jornal1.jpeg" alt="Edição impressa do Jornal Culto à Ciência - 23 de Outubro de 2026" class="jornal-img">
+                </div>
+                <!-- Área reservada para a legenda integrada no fundo do card -->
+                <div class="jornal-legenda-box">
+                    <p class="jornal-legenda">Edição de 23 de Outubro de 2026: Cobertura completa da 9ª Feira de Ciências, Congresso de Iniciação Científica na Unicamp e o Encontro Regional do Grêmio Estudantil.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SCRIPTS PARA FUNCIONAMENTO DO MENU MOBILE E ALTO CONTRASTE -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mainNav = document.getElementById('main-nav');
+        
+        if (hamburgerBtn && mainNav) {
+            hamburgerBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('is-open');
+                hamburgerBtn.classList.toggle('is-active');
+            });
+        }
+
+        if (localStorage.getItem('contraste') === 'true') {
+            document.body.classList.add('alto-contraste');
+        }
+    </script>
+</body>
+</html>
