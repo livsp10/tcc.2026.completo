@@ -3,7 +3,7 @@
     --azul-marinho: #10294F;
     --amarelo-claro: #FFE89A;
     --branco: #FFFFFF;
-    --fundo: #F5F7FB;
+    --fundo: #fcfceb;
     --texto: #29364A;
     --borda: #DCE4EF;
 }
@@ -289,4 +289,35 @@ nav a.selecionado {
     font-size: 0.9rem;
     transition: var(--transicao-suave);
   }
+  
+  /* BOTÃO FORMATO PÍLULA IGUAL À IMAGEM */
+.botao-pill-voltar {
+    display: inline-block;
+    padding: 14px 36px; /* Espaçamento interno (altura e largura) */
+    font-family: Arial, sans-serif; /* Alinhado com a fonte do seu body */
+    font-size: 16px;
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #1a1a1a; /* Cor do texto escura idêntica à foto */
+    background-color: #f4c430; /* O amarelo exato do seu site (var(--cor-secundaria)) */
+    text-decoration: none; /* Remove o sublinhado padrão de links */
+    border-radius: 100px; /* Garante as pontas perfeitamente arredondadas */
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efeito sutil ao passar o mouse por cima (Hover) */
+.botao-pill-voltar:hover {
+    background-color: #e0b324; /* Escurece o amarelo de leve */
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+/* Integração automática com o seu sistema de Alto Contraste */
+body.alto-contraste .botao-pill-voltar {
+    background-color: #132a5c !important;
+    color: #fafae8 !important;
+    border: 2px solid #ffffff !important;
+}
+
   
