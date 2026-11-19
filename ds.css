@@ -176,6 +176,22 @@ main {
     background-color: #244B7D;
     transform: translateY(-2px);
 }
+
+.botao-pdf {
+    display: inline-block;
+    background-color: var(--azul-marinho);
+    color: var(--branco);
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+  
+  .botao-pdf:hover {
+    background-color: #244B7D;
+    transform: translateY(-2px);
+  }
  
 /* GALERIA DO GOOGLE AGENDA */
 .galeria {
