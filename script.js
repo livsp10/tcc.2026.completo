@@ -304,18 +304,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('modal-acervo-close')?.addEventListener('click', () => { modalAcervo.setAttribute('hidden', ''); document.body.style.overflow = ''; });
     document.getElementById('modal-acervo-backdrop')?.addEventListener('click', () => { modalAcervo.setAttribute('hidden', ''); document.body.style.overflow = ''; });
 
-    /* botão Ler Online do Livro Digital (funciona por ID ou pelo texto do botão) */
-    document.getElementById('btn-ler-livro')?.addEventListener('click', (e) => {
-        e.preventDefault();
-        abrirLightbox(repositorioAcervo.livro_digital.itens, 0);
-    });
-
-    document.querySelectorAll('button, a').forEach(el => {
-        if (el.id !== 'btn-ler-livro' && el.textContent.trim().toLowerCase() === 'ler online') {
+    /* botão Ler Online do Livro Digital */
+    document.querySelectorAll('#btn-ler-livro, button, a').forEach(el => {
+        if (el.id === 'btn-ler-livro' || el.textContent.trim().toLowerCase() === 'ler online') {
             el.addEventListener('click', (e) => {
                 e.preventDefault();
+                e.stopImmediatePropagation(); // Impede que outro modal do livro abra junto
                 abrirLightbox(repositorioAcervo.livro_digital.itens, 0);
-            });
+            }, true); // O "true" faz esse código rodar antes de qualquer outro
         }
     });
 
