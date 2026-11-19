@@ -168,9 +168,9 @@
                             Explore a monografia oficial que detalha a fundação, a evolução estrutural e o impacto educacional da escola desde 1873. Um registro valioso compilado por educadores históricos.
                         </p>
                         <div class="livro-digital__acoes">
-                            <button class="btn btn--primary" id="btn-ler-livro">
-                                <i class="fa-solid fa-book-open-reader"></i> Ler Online
-                            </button>
+                            <button type="button" id="btn-ler-livro" class="btn btn--primary">
+                                Ler Online
+                              </button>
                             <a href="#" class="btn btn--outline" download style="border-color: var(--cor-primaria); color: var(--cor-primaria);">
                                 <i class="fa-solid fa-download"></i> Baixar PDF
                             </a>
@@ -371,7 +371,7 @@
 
                     
 
-                    <a href="https://sites.google.com/prof.educacao.sp.gov.br/cultoaciencia/culto-%C3%A0-ci%C3%AAncia/9%C2%AA-feira-de-ci%C3%AAncias" target="_blank" rel="noopener noreferrer" class="card-projeto">
+                    <a href="https://negritudeemfoco.netlify.app" target="_blank" rel="noopener noreferrer" class="card-projeto">
                         <div class="card-projeto__img">
                             <img src="projetos/negritude.png" alt="Consciência Negra" style="width:100%; height:100%; object-fit:cover;">
                         </div>
@@ -394,10 +394,10 @@
                     </a>
                     <a href="jornal.html" target="_blank" rel="noopener noreferrer" class="card-projeto">
                         <div class="card-projeto__img">
-                            <img src="projetos/jornal-semanal.jpg" alt="Jornal Semanal Culto à Ciência" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='curiosidades/curiosidade4.jpg';">
+                            <img src="projetos/jornal.png" alt="Boletim Semanal Culto à Ciência" style="width:100%; height:100%; object-fit:cover;" onerror="this.src='curiosidades/curiosidade4.jpg';">
                         </div>
                         <div class="card-projeto__content">
-                            <h3 class="card-projeto__title">Jornal Semanal</h3>
+                            <h3 class="card-projeto__title">Boletim Semanal</h3>
                             <p class="card-projeto__desc">Clique para acessar o Jornal da nossa escola.</p>
                             <span class="card-projeto__link-text"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ler Jornal da Semana</span>
                         </div>
@@ -511,7 +511,7 @@
                 </header>
                  <div class="ds__grid">
                     <div class="ds__item">
-                        <img src="galeria/galeria15.jpg" alt="Fachada em diagonal do prédio principal" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                        <img src="projetos/ds.png" alt="Fachada em diagonal do prédio principal" style="width: 100%; height: 200px; object-fit: cover; display: block;">
                     </div>
 
     
@@ -527,23 +527,7 @@
         </section>
 
         <!-- Lightbox Modal (amplia a foto)-->
-        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de Imagem" hidden>
-            <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
-            <div class="lightbox__content">
-                <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Fechar visualizador">&times;</button>
-                <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Imagem anterior">
-                    <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
-                </button>
-                <div class="lightbox__body">
-                    <div class="lightbox__placeholder" id="lightbox-display" style="background: none; border: none; padding: 0;">
-                        <!-- Imagem injetada via JS -->
-                    </div>
-                </div>
-                <button type="button" class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Próxima imagem">
-                    <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-                </button>
-            </div>
-        </div>
+        
 
         <!--contato-->
         <section class="section contato" id="contato" aria-labelledby="titulo-contato">
@@ -700,6 +684,70 @@
             </div>
         </div>
     </footer>
+    <script>
+window.addEventListener('load', function() {
+    // 1. Arredondar e diminuir a foto do Sobre Nós
+    document.querySelectorAll('h1, h2, h3, span').forEach(function(el) {
+        if (el.textContent.toLowerCase().includes('sobre nós')) {
+            var secao = el.closest('section') || el.parentElement.parentElement;
+            if (secao) {
+                var img = secao.querySelector('img');
+                if (img) {
+                    img.style.setProperty('width', '100%', 'important');
+                    img.style.setProperty('max-width', '350px', 'important');
+                    img.style.setProperty('border-radius', '24px', 'important');
+                    img.style.setProperty('display', 'block', 'important');
+                    img.style.setProperty('margin', '20px auto', 'important');
+                }
+            }
+        }
+    });
+
+    // 2. Forçar o botão "Ler Online" a abrir o Livro Digital
+    document.querySelectorAll('button, a').forEach(function(btn) {
+        if (btn.textContent.toLowerCase().includes('ler online')) {
+            btn.onclick = function(e) {
+                e.preventDefault();
+                var paginas = [
+                    "livro/pg1.png", "livro/pg2.png", "livro/pg3.png", "livro/pg4.png",
+                    "livro/pg5.png", "livro/pg6.png", "livro/pg7.png", "livro/pg8.png",
+                    "livro/pg9.png", "livro/pg10.png", "livro/pg11.png", "livro/pg12.png",
+                    "livro/pg13.png", "livro/pg14.png", "livro/pg15.png", "livro/pg16.png",
+                    "livro/pg17.png", "livro/pg18.png", "livro/pg19.png", "livro/pg20.png",
+                    "livro/pg21.png", "livro/pg22.png", "livro/pg23.png", "livro/pg24.png",
+                    "livro/pg25.png", "livro/pg26.png", "livro/pg27.png", "livro/pg28.png",
+                    "livro/pg29.png", "livro/pg30.png", "livro/pg31.png", "livro/pg32.png",
+                    "livro/pg34.png", "livro/pg35.png", "livro/pg36.png", "livro/pg37.png",
+                    "livro/pg40.png"
+                ];
+                var atual = 0;
+                var modal = document.createElement('div');
+                modal.style.cssText = "position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;";
+                modal.innerHTML = '<button id="fecharLivro" style="position:absolute;top:20px;right:30px;font-size:30px;background:#f4c430;border:none;border-radius:50%;width:45px;height:45px;cursor:pointer;">×</button>' +
+                                  '<div style="display:flex;align-items:center;gap:15px;">' +
+                                  '<button id="antLivro" style="font-size:25px;padding:10px 15px;border-radius:50%;border:none;cursor:pointer;">❮</button>' +
+                                  '<img id="imgLivro" src="' + paginas[0] + '" style="max-width:80vw;max-height:80vh;background:#fff;border-radius:8px;">' +
+                                  '<button id="proxLivro" style="font-size:25px;padding:10px 15px;border-radius:50%;border:none;cursor:pointer;">❯</button>' +
+                                  '</div><p id="legendaLivro" style="color:#fff;margin-top:10px;font-family:sans-serif;">Página 1 de ' + paginas.length + '</p>';
+                document.body.appendChild(modal);
+
+                document.getElementById('fecharLivro').onclick = function() { modal.remove(); };
+                document.getElementById('antLivro').onclick = function() {
+                    atual = (atual - 1 + paginas.length) % paginas.length;
+                    document.getElementById('imgLivro').src = paginas[atual];
+                    document.getElementById('legendaLivro').textContent = 'Página ' + (atual + 1) + ' de ' + paginas.length;
+                };
+                document.getElementById('proxLivro').onclick = function() {
+                    atual = (atual + 1) % paginas.length;
+                    document.getElementById('imgLivro').src = paginas[atual];
+                    document.getElementById('legendaLivro').textContent = 'Página ' + (atual + 1) + ' de ' + paginas.length;
+                };
+            };
+        }
+    });
+});
+</script>
+
 
 </body>
 </html>
