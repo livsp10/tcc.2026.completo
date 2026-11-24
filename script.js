@@ -494,6 +494,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "itinerarios":"A escola oferece os Itinerários Formativos de Matemática e Ciências da Natureza, Linguagens e Ciências Humanas e Sociais, Téc. em Enfermagem e Téc. em Desenvolvimento de Sistemas",
         "tecnico": "Temos os cursos técnicos integrados de Desenvolvimento de Sistemas e Enfermagem, com foco prático para o mercado de trabalho.",
         "ajuda": "Eu posso te ajudar com informações sobre a HISTÓRIA da escola, nosso ENDEREÇO, TELEFONE, CURSOS e ITINERÁRIOS oferecidos, HORÁRIOS de funcionamento! O que quer saber?",
+        "nos": "Saiba mais sobre os desenvolvimento do projeto clicando na aba 'NÓS' no menu!",
+        "desenvolvedores": "Saiba mais sobre os desenvolvimento do projeto clicando na aba 'NÓS' no menu!",
+        "codigo": "Saiba mais sobre os desenvolvimento do projeto clicando na aba 'NÓS' no menu!",
         "livro":"Temos um Livro Digital caso você queira saber mais afundo sobre a História da Escola Culto À Ciência",
         "bom dia": "Bom dia! Eu sou o Cultinho, assistente virtual da escola. Como eu posso te ajudar hoje?",
         "boa tarde": "Boa tarde! Eu sou o Cultinho, assistente virtual da escola. Como eu posso te ajudar hoje?",
@@ -555,4 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     btnTopo?.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+
+
 });
+
